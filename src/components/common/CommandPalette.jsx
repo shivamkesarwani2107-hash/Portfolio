@@ -190,7 +190,7 @@ export default function CommandPalette({
   let runningItemIndex = 0;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 sm:px-6">
+    <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-20 px-3 sm:px-6 w-full max-w-full overflow-hidden">
       {/* Backdrop */}
       <div 
         className="fixed inset-0 bg-black/70 backdrop-blur-sm transition-opacity"
@@ -257,8 +257,8 @@ export default function CommandPalette({
                         }`}
                       >
                         <div className="flex items-center gap-3 min-w-0 pr-2">
-                          <div className={`p-2 rounded-lg ${isSelected ? 'bg-emerald-500/20 text-emerald-300' : 'bg-dark-800 text-slate-400'}`}>
-                            <ItemIcon className="w-4 h-4 shrink-0" />
+                          <div className={`p-2 rounded-lg shrink-0 ${isSelected ? 'bg-emerald-500/20 text-emerald-300' : 'bg-dark-800 text-slate-400'}`}>
+                            <ItemIcon className="w-4 h-4" />
                           </div>
                           <div className="min-w-0">
                             <div className="text-sm font-medium truncate">{item.title}</div>
@@ -276,7 +276,7 @@ export default function CommandPalette({
         </div>
 
         {/* Footer shortcuts */}
-        <div className="px-4 py-2.5 border-t border-slate-800 bg-dark-950/60 flex items-center justify-between text-[11px] text-slate-400 font-mono">
+        <div className="px-4 py-2.5 border-t border-slate-800 bg-dark-950/60 flex items-center justify-between text-[11px] text-slate-400 font-mono gap-2">
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1">
               <kbd className="bg-dark-800 border border-slate-700 px-1.5 py-0.5 rounded text-[10px]">↑</kbd>
@@ -288,7 +288,7 @@ export default function CommandPalette({
               to select
             </span>
           </div>
-          <span>Shivam Kesarwani Portfolio</span>
+          <span className="hidden sm:inline">Shivam Kesarwani Portfolio</span>
         </div>
       </div>
     </div>

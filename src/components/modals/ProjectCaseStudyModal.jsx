@@ -35,7 +35,7 @@ export default function ProjectCaseStudyModal({ project, isOpen, onClose }) {
   if (!isOpen || !project) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto w-full max-w-full">
       {/* Backdrop */}
       <div 
         className="fixed inset-0 bg-black/80 backdrop-blur-md transition-opacity"
@@ -43,10 +43,10 @@ export default function ProjectCaseStudyModal({ project, isOpen, onClose }) {
       />
 
       {/* Modal Container */}
-      <div className="relative w-full max-w-4xl bg-dark-900 border border-slate-700/80 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden z-10 my-8 max-h-[90vh] flex flex-col">
+      <div className="relative w-full max-w-4xl bg-dark-900 border border-slate-700/80 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden z-10 my-4 sm:my-8 max-h-[90vh] flex flex-col">
         {/* Modal Header */}
-        <div className="flex items-start justify-between p-6 sm:p-8 border-b border-slate-800 bg-gradient-to-b from-dark-850 to-dark-900 shrink-0">
-          <div className="space-y-2 max-w-2xl">
+        <div className="flex items-start justify-between p-5 sm:p-8 border-b border-slate-800 bg-gradient-to-b from-dark-850 to-dark-900 shrink-0">
+          <div className="space-y-2 max-w-2xl min-w-0">
             <div className="flex flex-wrap items-center gap-2">
               <Badge variant="blue" size="sm">
                 {project.category}
@@ -55,7 +55,7 @@ export default function ProjectCaseStudyModal({ project, isOpen, onClose }) {
                 {project.badge}
               </Badge>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight font-display">
+            <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight font-display break-words">
               {project.title}
             </h2>
             <p className="text-sm sm:text-base text-slate-300">
@@ -65,7 +65,7 @@ export default function ProjectCaseStudyModal({ project, isOpen, onClose }) {
 
           <button
             onClick={onClose}
-            className="p-2 text-slate-400 hover:text-white bg-dark-800 hover:bg-dark-700 border border-slate-700/80 rounded-full transition-colors shrink-0 ml-4"
+            className="p-2 text-slate-400 hover:text-white bg-dark-800 hover:bg-dark-700 border border-slate-700/80 rounded-full transition-colors shrink-0 ml-3"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -73,9 +73,9 @@ export default function ProjectCaseStudyModal({ project, isOpen, onClose }) {
         </div>
 
         {/* Modal Scrollable Body */}
-        <div className="p-6 sm:p-8 space-y-8 overflow-y-auto custom-scrollbar">
+        <div className="p-5 sm:p-8 space-y-8 overflow-y-auto custom-scrollbar">
           {/* Action Links & Repository Links */}
-          <div className="flex flex-wrap items-center gap-3 p-4 rounded-xl bg-dark-950/60 border border-slate-800">
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 p-4 rounded-xl bg-dark-950/60 border border-slate-800">
             <Button
               variant="primary"
               size="sm"
@@ -127,9 +127,9 @@ export default function ProjectCaseStudyModal({ project, isOpen, onClose }) {
             )}
 
             {project.deployments && (
-              <div className="flex items-center gap-2 ml-auto text-xs text-slate-400 font-mono">
-                <Globe className="w-3.5 h-3.5 text-emerald-400" />
-                <span>Deployed: {project.deployments.map(d => `${d.name} (${d.platform})`).join(' • ')}</span>
+              <div className="flex items-center gap-2 w-full sm:w-auto sm:ml-auto text-xs text-slate-400 font-mono break-words pt-1 sm:pt-0">
+                <Globe className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                <span className="break-words">Deployed: {project.deployments.map(d => `${d.name} (${d.platform})`).join(' • ')}</span>
               </div>
             )}
           </div>

@@ -47,19 +47,19 @@ export default function Navbar({
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 w-full max-w-full ${
         scrolled
           ? 'bg-dark-950/80 backdrop-blur-xl border-b border-slate-800/80 py-3 shadow-lg shadow-black/40'
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex items-center justify-between gap-4">
           {/* Brand Logo & Availability Badge */}
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center gap-3 shrink-0 min-w-0">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-lg sm:text-xl font-bold tracking-tight text-white hover:text-emerald-400 transition-colors font-display text-left group"
+              className="text-lg sm:text-xl font-bold tracking-tight text-white hover:text-emerald-400 transition-colors font-display text-left group truncate"
             >
               <span>{PERSONAL_INFO.name}</span>
               <span className="text-emerald-400">.</span>

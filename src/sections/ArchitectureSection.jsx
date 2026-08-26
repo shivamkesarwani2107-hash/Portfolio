@@ -34,11 +34,11 @@ export default function ArchitectureSection() {
   const activeNode = ARCHITECTURE_FLOW.find(n => n.id === activeNodeId) || ARCHITECTURE_FLOW[0];
 
   return (
-    <section id="architecture" className="relative py-20 lg:py-28 border-t border-slate-800/80">
+    <section id="architecture" className="relative py-20 lg:py-28 border-t border-slate-800/80 overflow-hidden w-full max-w-full">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[300px] bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] max-w-full h-[300px] bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14 w-full">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-3 max-w-2xl">
@@ -47,7 +47,7 @@ export default function ArchitectureSection() {
                 System Architecture
               </Badge>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-display">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-display break-words">
               Full-Stack Application Flow.
             </h2>
             <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
@@ -56,7 +56,7 @@ export default function ArchitectureSection() {
           </div>
 
           {/* Flow Mode Switcher */}
-          <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-xl bg-dark-900 border border-slate-800 self-start md:self-auto">
+          <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-xl bg-dark-900 border border-slate-800 self-start md:self-auto max-w-full">
             <button
               onClick={() => setFlowMode('standard')}
               className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
@@ -144,10 +144,10 @@ export default function ArchitectureSection() {
           </div>
 
           {/* Active Node Detail Card */}
-          <div className="bg-dark-900 border border-slate-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 glow-card space-y-6">
+          <div className="bg-dark-900 border border-slate-800 rounded-2xl sm:rounded-3xl p-5 sm:p-8 glow-card space-y-6 max-w-full">
             <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-slate-800">
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-2xl bg-dark-800 border border-slate-700 text-emerald-400">
+                <div className="p-3 rounded-2xl bg-dark-800 border border-slate-700 text-emerald-400 shrink-0">
                   {React.createElement(iconMap[activeNode.icon] || Layers, { className: 'w-6 h-6' })}
                 </div>
                 <div>
@@ -159,13 +159,13 @@ export default function ArchitectureSection() {
                       {activeNode.badge}
                     </Badge>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white font-display">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white font-display break-words">
                     {activeNode.title}
                   </h3>
                 </div>
               </div>
 
-              <div className="text-xs font-mono text-slate-400 px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-800">
+              <div className="text-xs font-mono text-slate-400 px-3 py-1.5 rounded-lg bg-dark-850 border border-slate-800 break-words max-w-full">
                 Tech: {activeNode.tech}
               </div>
             </div>

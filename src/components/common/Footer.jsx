@@ -10,8 +10,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-slate-800 bg-dark-950/80 pt-16 pb-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    <footer className="relative border-t border-slate-800 bg-dark-950/80 pt-16 pb-12 overflow-hidden w-full max-w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 w-full">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           {/* Brand Info & Social Icons */}
           <div className="space-y-4 max-w-md">

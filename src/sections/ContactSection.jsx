@@ -62,11 +62,11 @@ export default function ContactSection({ showToast }) {
   };
 
   return (
-    <section id="contact" className="relative py-20 lg:py-28 border-t border-slate-800/80">
+    <section id="contact" className="relative py-20 lg:py-28 border-t border-slate-800/80 overflow-hidden w-full max-w-full">
       {/* Background glow */}
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 max-w-full h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 w-full">
         {/* Header */}
         <div className="space-y-3 max-w-2xl">
           <div className="inline-flex">
@@ -74,7 +74,7 @@ export default function ContactSection({ showToast }) {
               Get In Touch
             </Badge>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-display">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-display break-words">
             Let's Build Something Together.
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
@@ -86,13 +86,13 @@ export default function ContactSection({ showToast }) {
           {/* Direct Contact Cards (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
             {/* Email Card */}
-            <div className="p-6 rounded-2xl bg-dark-900 border border-slate-800 hover:border-slate-700 transition-colors space-y-3 glow-card">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <div className="p-5 sm:p-6 rounded-2xl bg-dark-900 border border-slate-800 hover:border-slate-700 transition-colors space-y-3 glow-card max-w-full">
+              <div className="flex items-center justify-between gap-2">
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <div className="text-xs text-slate-400 font-medium">Email Address</div>
                     <a
                       href={`mailto:${PERSONAL_INFO.email}`}
@@ -195,7 +195,7 @@ export default function ContactSection({ showToast }) {
 
           {/* Contact Message Form (7 cols) */}
           <div className="lg:col-span-7">
-            <div className="bg-dark-900 border border-slate-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 space-y-6 glow-card">
+            <div className="bg-dark-900 border border-slate-800 rounded-2xl sm:rounded-3xl p-5 sm:p-8 space-y-6 glow-card max-w-full">
               <div className="flex items-center justify-between pb-3 border-b border-slate-800">
                 <div className="flex items-center gap-2">
                   <MessageSquare className="w-5 h-5 text-emerald-400" />

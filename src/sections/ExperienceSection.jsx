@@ -5,8 +5,8 @@ import Badge from '../components/common/Badge';
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="relative py-20 lg:py-28 border-t border-slate-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <section id="experience" className="relative py-20 lg:py-28 border-t border-slate-800/80 overflow-hidden w-full max-w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 w-full">
         {/* Section Header */}
         <div className="space-y-3 max-w-2xl">
           <div className="inline-flex">
@@ -14,7 +14,7 @@ export default function ExperienceSection() {
               Work & Education
             </Badge>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-display">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-display break-words">
             Experience & Background.
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
@@ -32,15 +32,15 @@ export default function ExperienceSection() {
               </h3>
             </div>
 
-            <div className="relative pl-6 sm:pl-8 border-l border-slate-800 space-y-8">
+            <div className="relative pl-6 sm:pl-8 border-l border-slate-800 space-y-8 ml-3 sm:ml-2">
               {EXPERIENCES.map((exp, idx) => (
                 <div key={idx} className="relative group">
                   {/* Timeline Dot */}
-                  <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-dark-900 border-2 border-emerald-400 flex items-center justify-center">
+                  <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-dark-900 border-2 border-emerald-400 flex items-center justify-center shrink-0">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                   </div>
 
-                  <div className="bg-dark-900 border border-slate-800/90 hover:border-slate-700 rounded-2xl p-6 space-y-4 glow-card">
+                  <div className="bg-dark-900 border border-slate-800/90 hover:border-slate-700 rounded-2xl p-5 sm:p-6 space-y-4 glow-card max-w-full">
                     <div className="flex flex-wrap items-start justify-between gap-2">
                       <div>
                         <span className="text-xs font-semibold uppercase tracking-wider text-emerald-400">

@@ -43,7 +43,7 @@ export default function ResumeModal({ isOpen, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-6 overflow-y-auto w-full max-w-full">
       {/* Backdrop */}
       <div 
         className="fixed inset-0 bg-black/80 backdrop-blur-md transition-opacity"
@@ -51,17 +51,17 @@ export default function ResumeModal({ isOpen, onClose }) {
       />
 
       {/* Modal Container */}
-      <div className="relative w-full max-w-4xl bg-dark-900 border border-slate-700/80 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden z-10 my-4 max-h-[92vh] flex flex-col">
+      <div className="relative w-full max-w-4xl bg-dark-900 border border-slate-700/80 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden z-10 my-2 sm:my-4 max-h-[92vh] flex flex-col">
         {/* Modal Action Top Bar */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-dark-850 shrink-0">
-          <div className="flex items-center gap-2">
-            <FileText className="w-5 h-5 text-emerald-400" />
-            <h3 className="text-base font-bold text-white font-display">
+        <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 sm:py-4 border-b border-slate-800 bg-dark-850 shrink-0">
+          <div className="flex items-center gap-2 min-w-0 pr-2">
+            <FileText className="w-5 h-5 text-emerald-400 shrink-0" />
+            <h3 className="text-sm sm:text-base font-bold text-white font-display truncate">
               Resume Preview — {PERSONAL_INFO.name}
             </h3>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 shrink-0">
             <Button
               variant="primary"
               size="sm"
@@ -84,7 +84,7 @@ export default function ResumeModal({ isOpen, onClose }) {
             </Button>
             <button
               onClick={onClose}
-              className="p-1.5 text-slate-400 hover:text-white bg-dark-800 hover:bg-dark-700 border border-slate-700/80 rounded-full transition-colors ml-2"
+              className="p-1.5 text-slate-400 hover:text-white bg-dark-800 hover:bg-dark-700 border border-slate-700/80 rounded-full transition-colors ml-1"
               aria-label="Close modal"
             >
               <X className="w-5 h-5" />
@@ -93,25 +93,25 @@ export default function ResumeModal({ isOpen, onClose }) {
         </div>
 
         {/* Modal Scrollable Resume Sheet */}
-        <div className="p-6 sm:p-10 overflow-y-auto custom-scrollbar space-y-8 bg-dark-950/60 font-sans">
+        <div className="p-4 sm:p-10 overflow-y-auto custom-scrollbar space-y-6 sm:space-y-8 bg-dark-950/60 font-sans">
           {/* Resume Header */}
           <div className="text-center space-y-3 pb-6 border-b border-slate-800">
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-display">
+            <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight font-display break-words">
               {PERSONAL_INFO.name}
             </h1>
-            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm text-slate-300">
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-6 text-xs sm:text-sm text-slate-300">
               <a href={`tel:${PERSONAL_INFO.phone}`} className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
-                <Phone className="w-3.5 h-3.5 text-emerald-400" />
+                <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
                 <span>{PERSONAL_INFO.phone}</span>
               </a>
               <span className="text-slate-600 hidden sm:inline">•</span>
-              <a href={`mailto:${PERSONAL_INFO.email}`} className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
-                <Mail className="w-3.5 h-3.5 text-blue-400" />
+              <a href={`mailto:${PERSONAL_INFO.email}`} className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors break-all">
+                <Mail className="w-3.5 h-3.5 text-blue-400 shrink-0" />
                 <span>{PERSONAL_INFO.email}</span>
               </a>
               <span className="text-slate-600 hidden sm:inline">•</span>
               <span className="flex items-center gap-1.5 text-slate-400">
-                <MapPin className="w-3.5 h-3.5 text-rose-400" />
+                <MapPin className="w-3.5 h-3.5 text-rose-400 shrink-0" />
                 <span>{PERSONAL_INFO.location}</span>
               </span>
             </div>

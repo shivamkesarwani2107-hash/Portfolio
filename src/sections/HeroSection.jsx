@@ -16,29 +16,29 @@ export default function HeroSection({ onOpenContact, onOpenResume }) {
   };
 
   return (
-    <section id="home" className="relative min-h-[90vh] flex flex-col justify-center pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden">
+    <section id="home" className="relative min-h-[90vh] flex flex-col justify-center pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden w-full max-w-full">
       {/* Background Ambient Glow & Grid Lines */}
       <div className="absolute inset-0 bg-grid-mesh opacity-50 pointer-events-none" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-emerald-500/10 via-blue-500/10 to-indigo-500/0 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] max-w-full h-[350px] bg-gradient-to-tr from-emerald-500/10 via-blue-500/10 to-indigo-500/0 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-10 lg:space-y-14">
         {/* Hero Content */}
         <div className="max-w-4xl space-y-6">
           {/* Availability Pill Banner (Matches Reference) */}
-          <div className="inline-flex">
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-dark-900/90 border border-slate-700/60 backdrop-blur-md shadow-sm">
-              <span className="relative flex h-2 w-2">
+          <div className="inline-flex max-w-full">
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-dark-900/90 border border-slate-700/60 backdrop-blur-md shadow-sm max-w-full">
+              <span className="relative flex h-2 w-2 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
               </span>
-              <span className="text-xs sm:text-sm font-medium text-slate-300">
+              <span className="text-xs sm:text-sm font-medium text-slate-300 truncate">
                 {PERSONAL_INFO.noticeNotice}
               </span>
             </div>
           </div>
 
           {/* Main Hero Heading */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] font-display">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] font-display break-words">
             Hi, I'm <span className="text-white">{PERSONAL_INFO.name}.</span>
           </h1>
 
@@ -88,10 +88,10 @@ export default function HeroSection({ onOpenContact, onOpenResume }) {
 
         {/* Honest Developer Metrics Bar (Matches Reference Layout with 100% truthful stats) */}
         <div className="pt-6 border-t border-slate-800/80">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {HONEST_METRICS.map((metric, idx) => (
-              <div key={idx} className="space-y-1">
-                <div className="text-xs sm:text-sm font-medium text-slate-400">
+              <div key={idx} className="space-y-1 min-w-0">
+                <div className="text-xs sm:text-sm font-medium text-slate-400 truncate">
                   {metric.label}
                 </div>
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight font-display">

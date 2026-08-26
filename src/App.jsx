@@ -79,7 +79,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#090a0f] text-slate-100 selection:bg-emerald-500/20 selection:text-emerald-300 relative">
+    <div className="min-h-screen bg-[#090a0f] text-slate-100 selection:bg-emerald-500/20 selection:text-emerald-300 relative w-full max-w-full overflow-x-hidden">
       {/* Top Fixed Header */}
       <Navbar
         activeSection={activeSection}
@@ -90,7 +90,7 @@ export default function App() {
       />
 
       {/* Main Page Sections */}
-      <main>
+      <main className="w-full max-w-full overflow-x-hidden">
         <HeroSection
           onOpenContact={() => {
             const el = document.getElementById('contact');

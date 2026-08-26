@@ -12,8 +12,8 @@ const iconMap = {
 
 export default function AboutSection() {
   return (
-    <section id="about" className="relative py-20 lg:py-28 border-t border-slate-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    <section id="about" className="relative py-20 lg:py-28 border-t border-slate-800/80 overflow-hidden w-full max-w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 w-full">
         {/* Header */}
         <div className="space-y-3 max-w-2xl">
           <div className="inline-flex">
@@ -21,7 +21,7 @@ export default function AboutSection() {
               About Me
             </Badge>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-display">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-display break-words">
             Driven by Code & Problem Solving.
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
@@ -33,7 +33,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Personal Journey Narrative (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="bg-dark-900 border border-slate-800 rounded-2xl sm:rounded-3xl p-6 sm:p-8 space-y-6 glow-card">
+            <div className="bg-dark-900 border border-slate-800 rounded-2xl sm:rounded-3xl p-5 sm:p-8 space-y-6 glow-card max-w-full">
               <div className="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
                 <p className="text-slate-200 font-medium text-base sm:text-lg">
                   {ABOUT_INFO.summary}

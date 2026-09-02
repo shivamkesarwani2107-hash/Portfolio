@@ -165,15 +165,23 @@ export default function ResumeModal({ isOpen, onClose }) {
               </div>
               <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80">
                 <span className="font-semibold text-white">Backend: </span>
-                <span className="text-slate-300">Node.js, Express.js</span>
+                <span className="text-slate-300">Node.js, Express.js, RESTful APIs</span>
               </div>
               <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80">
-                <span className="font-semibold text-white">Database & Auth: </span>
-                <span className="text-slate-300">MongoDB, Mongoose, JWT Authentication</span>
+                <span className="font-semibold text-white">Database: </span>
+                <span className="text-slate-300">MongoDB, Mongoose, Redis</span>
+              </div>
+              <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80">
+                <span className="font-semibold text-white">Authentication & Payment: </span>
+                <span className="text-slate-300">JWT, Authorization, bcrypt.js, Razorpay</span>
+              </div>
+              <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80">
+                <span className="font-semibold text-white">Tools: </span>
+                <span className="text-slate-300">Git, GitHub, Postman, VS Code, Vercel, Render, Nodemailer</span>
               </div>
               <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80 sm:col-span-2">
-                <span className="font-semibold text-white">Tools & Concepts: </span>
-                <span className="text-slate-300">Git, GitHub, Postman, VS Code, Vercel, Render • REST APIs, CRUD, Pagination, Search, Filtering, Responsive Design</span>
+                <span className="font-semibold text-white">Core Concepts: </span>
+                <span className="text-slate-300">CRUD, Pagination, Search, Filtering, Sorting, Protected Routes, API Integration, Responsive Design</span>
               </div>
             </div>
           </div>

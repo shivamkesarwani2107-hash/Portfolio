@@ -33,8 +33,8 @@ export default function CommandPalette({
       category: "Navigation",
       items: [
         { id: "nav-home", title: "Home / Hero", subtitle: "Jump to introduction & overview", icon: Sparkles, action: () => scrollToSection('home') },
-        { id: "nav-projects", title: "Featured Projects", subtitle: "Movie Ticket App & Library Management System", icon: FolderGit2, action: () => scrollToSection('projects') },
-        { id: "nav-experience", title: "Experience & Timeline", subtitle: "Full Stack Development Intern at Devlupers", icon: Briefcase, action: () => scrollToSection('experience') },
+        { id: "nav-projects", title: "Featured Projects", subtitle: "MegaMart, Library System & Movie Ticket Platform", icon: FolderGit2, action: () => scrollToSection('projects') },
+        { id: "nav-experience", title: "Experience & Timeline", subtitle: "MERN Developer Intern at Devlupers", icon: Briefcase, action: () => scrollToSection('experience') },
         { id: "nav-skills", title: "Technical Skills", subtitle: "Frontend, Backend, Database, Tools", icon: Code, action: () => scrollToSection('skills') },
         { id: "nav-architecture", title: "Full-Stack Architecture", subtitle: "MERN system flow & service integrations", icon: Layers, action: () => scrollToSection('architecture') },
         { id: "nav-about", title: "About Me & Education", subtitle: "B.Com background & software engineering focus", icon: User, action: () => scrollToSection('about') },
@@ -43,28 +43,16 @@ export default function CommandPalette({
     },
     {
       category: "Projects",
-      items: [
-        { 
-          id: "proj-movie", 
-          title: "Movie Ticket Booking Platform", 
-          subtitle: "View detailed case study (React, Node, Express, MongoDB, Seat Matrix)", 
-          icon: FolderGit2, 
-          action: () => {
-            onClose();
-            onOpenCaseStudy(PROJECTS[0]);
-          } 
-        },
-        { 
-          id: "proj-library", 
-          title: "Library Management System", 
-          subtitle: "View detailed case study (CRUD, JWT, Vercel, Render, Atlas)", 
-          icon: FolderGit2, 
-          action: () => {
-            onClose();
-            onOpenCaseStudy(PROJECTS[1]);
-          } 
+      items: PROJECTS.map((proj) => ({
+        id: `proj-${proj.id}`,
+        title: proj.title,
+        subtitle: `View detailed case study (${proj.techStack.slice(0, 5).join(', ')})`,
+        icon: FolderGit2,
+        action: () => {
+          onClose();
+          onOpenCaseStudy(proj);
         }
-      ]
+      }))
     },
     {
       category: "Quick Actions",
@@ -231,7 +219,7 @@ export default function CommandPalette({
           {flatFilteredItems.length === 0 ? (
             <div className="text-center py-10 px-4">
               <p className="text-sm text-slate-400">No results found for "{query}"</p>
-              <p className="text-xs text-slate-500 mt-1">Try searching for "Movie Ticket", "Node.js", "Resume", or "Contact"</p>
+              <p className="text-xs text-slate-500 mt-1">Try searching for "MegaMart", "Movie Ticket", "Node.js", "Resume", or "Contact"</p>
             </div>
           ) : (
             filteredGroups.map((group) => (

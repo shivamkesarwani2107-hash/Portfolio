@@ -2,14 +2,14 @@ export const PERSONAL_INFO = {
   name: "Shivam Kesarwani",
   firstName: "Shivam",
   title: "MERN Stack Developer",
-  roleHeadline: "Aspiring MERN Stack Developer with hands-on experience building full-stack web applications using React.js, Node.js, Express.js, and MongoDB. Skilled in REST APIs, JWT Authentication, TanStack Query, responsive UI development, and deployment with Vercel and Render.",
+  roleHeadline: "MERN Stack Developer with hands-on experience developing and deploying full-stack web applications using React.js, Node.js, Express.js and MongoDB. Skilled in RESTful API development, JWT authentication, React Query, Redis caching, Razorpay integration and responsive UI development. Currently working as a MERN Stack Developer Intern with experience in Git, GitHub, Postman and cloud deployment using Vercel and Render.",
   location: "Prayagraj, Uttar Pradesh, India",
   email: "shivamkesarwani2107@gmail.com",
   phone: "+91 9336991973",
   careerGoal: "Software Developer / MERN Stack Developer",
   availability: "Immediately available / Short notice",
   availabilityBadge: "Immediately available",
-  noticeNotice: "On notice period — immediately available to join",
+  noticeNotice: "Immediately available for Full-time Roles & Internships",
   resumeUrl: "/resume.pdf",
   socials: {
     github: "https://github.com/shivamkesarwani2107-hash",
@@ -20,12 +20,12 @@ export const PERSONAL_INFO = {
 };
 
 export const RESUME_DATA = {
-  summary: "Aspiring MERN Stack Developer with hands-on experience building full-stack web applications using React.js, Node.js, Express.js and MongoDB. Skilled in REST APIs, JWT Authentication, TanStack Query, responsive UI development and deployment using Vercel and Render. Passionate about building scalable web applications and continuously learning modern technologies.",
+  summary: "MERN Stack Developer with hands-on experience developing and deploying full-stack web applications using React.js, Node.js, Express.js and MongoDB. Skilled in RESTful API development, JWT authentication, React Query, Redis caching, Razorpay integration and responsive UI development. Currently working as a MERN Stack Developer Intern with experience in Git, GitHub, Postman and cloud deployment using Vercel and Render.",
   achievements: [
     "Built multiple full-stack MERN applications from scratch.",
-    "Successfully deployed full-stack applications using Vercel and Render.",
-    "Implemented Authentication, REST APIs, Pagination and Role-Based Access Control.",
-    "Strong practical understanding of React.js, Node.js, Express.js and MongoDB."
+    "Integrated Razorpay payment gateway and Nodemailer for automated order/booking emails.",
+    "Implemented Redis caching and JWT authentication with protected routes.",
+    "Successfully deployed full-stack applications using Vercel and Render."
   ]
 };
 
@@ -36,14 +36,14 @@ export const HONEST_METRICS = [
     detail: "React, Node, Express, MongoDB"
   },
   {
-    value: "2+",
+    value: "3+",
     label: "Deployed Full-Stack Apps",
-    detail: "Vercel, Render & MongoDB Atlas"
+    detail: "MegaMart, Library, Movie Ticket"
   },
   {
     value: "6 Months",
     label: "Internship Experience",
-    detail: "Full Stack Dev Intern at Devlupers"
+    detail: "MERN Developer Intern at Devlupers"
   },
   {
     value: "100%",
@@ -55,51 +55,33 @@ export const HONEST_METRICS = [
 export const EDUCATION = [
   {
     degree: "Bachelor of Commerce (B.Com.)",
-    institution: "University of Allahabad / Allahabad Degree College",
+    institution: "University of Allahabad",
     duration: "2024 – 2027",
     location: "Prayagraj, Uttar Pradesh",
     type: "Undergraduate Degree",
-    highlight: "Expected Graduation: 2027. Combining academic rigor with intense dedication to modern full-stack software development.",
-    description: "Building production-quality full-stack applications from scratch with modern JavaScript, REST APIs, and database modeling."
+    highlight: "Expected Graduation: 2027. Combining academic discipline with rigorous, hands-on dedication to modern full-stack web engineering.",
+    description: "Engineering production-ready full-stack web applications with modern JavaScript, REST APIs, Redis caching, and database schema modeling."
   }
 ];
 
 export const EXPERIENCES = [
   {
-    role: "Full Stack Development Intern",
+    role: "MERN Stack Developer Intern",
     company: "Devlupers",
     duration: "Nov 2025 – May 2026",
     period: "6 Months",
-    location: "Remote / Hybrid",
+    location: "Prayagraj, Uttar Pradesh / Remote",
     type: "Internship",
-    badge: "Practical Experience",
-    description: "Worked on full-stack web development using React, Node.js, Express.js, MongoDB, REST APIs, authentication, and Git/GitHub while building and improving web application features.",
+    badge: "MERN Stack Developer Intern",
+    description: "Developed and maintained full-stack web applications using React.js, Node.js, Express.js and MongoDB with RESTful APIs, JWT authentication, and modern UI components.",
     highlights: [
-      "Built responsive and interactive user interfaces using React.js and modern CSS / Tailwind CSS.",
-      "Developed robust backend REST API endpoints with Node.js and Express.js for data management.",
-      "Implemented secure JWT-based user authentication, protected routes, and authorization middleware.",
-      "Designed and queried MongoDB database schemas using Mongoose ODM for reliable data persistence.",
-      "Collaborated via Git and GitHub for version control, code reviews, and project tracking."
+      "Developed and maintained full-stack web applications using React.js, Node.js, Express.js and MongoDB.",
+      "Built reusable and responsive UI components using React.js, Tailwind CSS and React Router DOM.",
+      "Developed RESTful APIs and implemented JWT-based Authentication, Authorization and Protected Routes.",
+      "Integrated third-party APIs, debugged application issues and contributed to feature development and performance improvements.",
+      "Used Git and GitHub for version control, collaboration and maintaining application code."
     ],
-    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "JWT", "JavaScript (ES6+)", "Git/GitHub"]
-  },
-  {
-    role: "Full Stack Projects & Development",
-    company: "Self Learning Projects",
-    duration: "2026 – Present",
-    period: "Ongoing",
-    location: "Remote",
-    type: "Hands-on Engineering",
-    badge: "Independent Projects",
-    description: "Built and deployed multiple production-ready full-stack applications using React.js, Node.js, Express.js, and MongoDB.",
-    highlights: [
-      "Built multiple full-stack web applications using React.js, Node.js, Express.js and MongoDB.",
-      "Developed secure REST APIs with JWT Authentication and role authorization.",
-      "Implemented CRUD Operations, Pagination, Search, Sorting and Dynamic Filtering.",
-      "Used TanStack Query for efficient server-state management and client caching.",
-      "Deployed frontend client on Vercel and backend services on Render with MongoDB Atlas."
-    ],
-    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Mongoose", "TanStack Query", "Tailwind CSS", "Vercel", "Render"]
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "JWT", "Tailwind CSS", "Git/GitHub"]
   }
 ];
 
@@ -112,9 +94,10 @@ export const SKILL_CATEGORIES = [
       { name: "React.js", level: "Proficient", icon: "Atom" },
       { name: "JavaScript (ES6+)", level: "Proficient", icon: "FileCode" },
       { name: "Tailwind CSS", level: "Proficient", icon: "Palette" },
-      { name: "HTML5 & CSS3", level: "Proficient", icon: "Code2" },
       { name: "React Router DOM", level: "Proficient", icon: "Network" },
-      { name: "Axios", level: "Proficient", icon: "ArrowLeftRight" }
+      { name: "TanStack Query", level: "Proficient", icon: "RefreshCw" },
+      { name: "Axios", level: "Proficient", icon: "ArrowLeftRight" },
+      { name: "HTML5 & CSS3", level: "Proficient", icon: "Code2" }
     ]
   },
   {
@@ -124,28 +107,30 @@ export const SKILL_CATEGORIES = [
     skills: [
       { name: "Node.js", level: "Proficient", icon: "Cpu" },
       { name: "Express.js", level: "Proficient", icon: "Boxes" },
-      { name: "REST APIs", level: "Proficient", icon: "Network" },
-      { name: "JWT Authentication", level: "Proficient", icon: "ShieldCheck" },
-      { name: "Role Authorization", level: "Proficient", icon: "ShieldCheck" }
+      { name: "RESTful APIs", level: "Proficient", icon: "Network" },
+      { name: "JWT & Auth", level: "Proficient", icon: "ShieldCheck" },
+      { name: "bcrypt.js", level: "Proficient", icon: "ShieldCheck" },
+      { name: "Nodemailer", level: "Proficient", icon: "Send" }
     ]
   },
   {
     id: "database",
-    title: "Database & Storage",
+    title: "Database & Caching",
     icon: "Database",
     skills: [
       { name: "MongoDB", level: "Proficient", icon: "Database" },
       { name: "Mongoose ODM", level: "Proficient", icon: "Table" },
-      { name: "CRUD Operations", level: "Proficient", icon: "Layers" },
-      { name: "Schema Modeling", level: "Proficient", icon: "GitCommit" }
+      { name: "Redis Caching", level: "Proficient", icon: "Zap" },
+      { name: "Schema Modeling", level: "Proficient", icon: "GitCommit" },
+      { name: "CRUD Operations", level: "Proficient", icon: "Layers" }
     ]
   },
   {
     id: "tools",
-    title: "State, Tools & Cloud",
+    title: "Tools, Payment & Cloud",
     icon: "Wrench",
     skills: [
-      { name: "TanStack / React Query", level: "Proficient", icon: "RefreshCw" },
+      { name: "Razorpay Integration", level: "Proficient", icon: "CreditCard" },
       { name: "Git & GitHub", level: "Proficient", icon: "GitBranch" },
       { name: "Postman", level: "Proficient", icon: "Send" },
       { name: "Vercel & Render", level: "Proficient", icon: "Zap" },
@@ -155,93 +140,91 @@ export const SKILL_CATEGORIES = [
 ];
 
 export const CORE_CONCEPTS = [
-  "REST APIs Architecture",
+  "RESTful APIs Architecture",
   "JWT Authentication & Authorization",
-  "Protected Route Guards",
+  "Protected Routes & Middleware",
   "CRUD Operations",
-  "Pagination & Sorting",
-  "Search & Filtering",
+  "Pagination, Search & Filtering",
+  "Sorting & Query Optimization",
+  "Redis In-Memory Caching",
+  "Razorpay Payment Gateway",
   "TanStack Query State Caching",
   "Responsive Web Design"
 ];
 
 export const PROJECTS = [
   {
-    id: "movie-ticket",
-    title: "BookMyShow Clone — Movie Ticket Booking App",
-    shortTitle: "BookMyShow Clone",
-    tagline: "Responsive Movie Ticket Booking Application with Dynamic Seat Matrix & Showtimes",
+    id: "megamart",
+    title: "MegaMart – Grocery Shopping Platform",
+    shortTitle: "MegaMart Grocery Platform",
+    tagline: "Full-Stack Grocery Shopping Platform with Redis Caching, Razorpay Payments & Nodemailer",
     category: "Full-Stack MERN Application",
     featured: true,
-    badge: "Featured Full-Stack",
-    overview: "A responsive movie ticket booking application inspired by BookMyShow, engineered with React.js, Tailwind CSS, Node.js, Express.js, and MongoDB. Features reusable components for Home, Movies, Booking, Payment, and Profile pages with interactive seat booking UI.",
-    problemSolved: "Cinema ticket booking requires real-time seat matrix status management, preventing seat collision, intuitive showtime scheduling, and responsive mobile-first interfaces. This platform delivers high-performance client state caching and structured backend controllers.",
-    imageBg: "from-rose-600/20 via-amber-600/20 to-purple-600/20",
-    accentColor: "rose",
+    badge: "Featured E-Commerce",
+    overview: "A full-stack grocery shopping platform with product browsing, categories, cart, wishlist, and order management. Built RESTful APIs for products, categories, subcategories, cart, wishlist and orders with JWT-based authentication and protected routes. Integrated Razorpay for online payments and Nodemailer for automated order confirmation emails, alongside Redis caching for fast category and product retrieval.",
+    problemSolved: "E-commerce grocery platforms demand sub-second catalog response times, fault-tolerant checkout flows, and automated transaction updates. MegaMart implements Redis caching to drastically reduce MongoDB read queries, coupled with secure Razorpay gateway processing.",
+    imageBg: "from-amber-500/20 via-emerald-600/20 to-teal-600/20",
+    accentColor: "amber",
     techStack: [
       "React.js",
-      "React Router DOM",
-      "Tailwind CSS",
       "Node.js",
       "Express.js",
       "MongoDB",
-      "Mongoose",
-      "REST APIs",
+      "Redis",
+      "Razorpay",
+      "Nodemailer",
+      "Tailwind CSS",
       "JWT Auth",
-      "TanStack Query",
-      "Axios",
-      "Git/GitHub"
+      "RESTful APIs",
+      "Axios"
     ],
     features: [
       {
-        title: "BookMyShow Inspired Experience",
-        desc: "Developed a responsive movie ticket booking application inspired by BookMyShow with seamless navigation."
+        title: "Full-Stack Grocery Platform",
+        desc: "Developed a full-stack grocery shopping platform with product browsing, categories, cart, wishlist and order management."
       },
       {
-        title: "Reusable Component Architecture",
-        desc: "Built reusable React components for Home, Movies, Booking, Payment, and Profile pages."
+        title: "RESTful APIs & JWT Authentication",
+        desc: "Built RESTful APIs for products, categories, subcategories, cart, wishlist and orders with JWT-based authentication and protected routes."
       },
       {
-        title: "Dynamic Seat Matrix Booking UI",
-        desc: "Implemented seat booking UI with modern component-based architecture and real-time state feedback."
+        title: "Razorpay Payments & Nodemailer",
+        desc: "Integrated Razorpay for online payments and Nodemailer for automated order confirmation emails."
       },
       {
-        title: "Showtime & Theater Scheduling",
-        desc: "Dynamic showtime selection, date filters, and theater venue listings backed by Express REST APIs."
+        title: "Redis Caching & Admin CRUD",
+        desc: "Implemented Redis caching and admin CRUD operations for categories, subcategories and products."
       },
       {
-        title: "JWT Authentication & User Profiles",
-        desc: "Secure user signup and login with token-based authorization to access personalized booking tickets and past history."
-      },
-      {
-        title: "Responsive Layouts with Tailwind CSS",
-        desc: "Pixel-perfect responsive design crafted with Tailwind CSS for mobile, tablet, and desktop viewports."
+        title: "Responsive Tailwind UI & Cloud Deployment",
+        desc: "Designed a responsive interface using Tailwind CSS and deployed the frontend on Vercel and backend on Render."
       }
     ],
     architecture: {
-      client: "React SPA + React Router DOM + Tailwind CSS + TanStack Query / Axios for data fetching",
-      server: "Node.js & Express RESTful API with structured controllers, route handlers, and error middleware",
-      auth: "JWT token verification middleware protecting checkout, ticket history, and profile routes",
-      database: "MongoDB Atlas with Mongoose schemas for Movies, Theaters, Shows, and Bookings",
-      integrations: "Frontend hosted on Vercel and backend services on Render"
+      client: "React SPA + Tailwind CSS + Axios for product catalog, dynamic filtering, cart state, wishlist and checkout UI",
+      server: "Node.js & Express RESTful API with structured controllers, Redis caching layer, and error handling middleware",
+      auth: "JWT-based authentication protecting cart, wishlist, checkout, and admin management endpoints",
+      database: "MongoDB Atlas for persistence with Mongoose schemas for Users, Products, Categories, Orders",
+      integrations: "Razorpay payment gateway, Nodemailer SMTP service, Redis in-memory cache, Vercel & Render cloud hosting"
     },
     myContribution: [
-      "Developed a responsive movie ticket booking application inspired by BookMyShow.",
-      "Built reusable React components for Home, Movies, Booking, Payment, and Profile pages.",
-      "Designed responsive layouts using Tailwind CSS and modern component-based architecture.",
-      "Implemented seat booking UI with dynamic state transitions and selection validation.",
-      "Connected client and server repositories via Git and GitHub version control."
+      "Developed a full-stack grocery shopping platform with product browsing, categories, cart, wishlist and order management.",
+      "Built RESTful APIs for products, categories, subcategories, cart, wishlist and orders with JWT-based authentication and protected routes.",
+      "Integrated Razorpay for online payments and Nodemailer for automated order confirmation emails.",
+      "Implemented Redis caching and admin CRUD operations for categories, subcategories and products.",
+      "Designed a responsive interface using Tailwind CSS and deployed the frontend on Vercel and backend on Render."
     ],
     deployments: [
       { name: "Frontend", platform: "Vercel" },
       { name: "Backend", platform: "Render" },
-      { name: "Database", platform: "MongoDB Atlas" }
+      { name: "Database", platform: "MongoDB Atlas" },
+      { name: "Cache", platform: "Redis" }
     ],
     links: {
-      github: "https://github.com/shivamkesarwani2107-hash/movie-ticket-frontend",
-      githubFrontend: "https://github.com/shivamkesarwani2107-hash/movie-ticket-frontend",
-      githubBackend: "https://github.com/shivamkesarwani2107-hash/movie-backend",
-      live: "https://movie-frontend-seven-dun.vercel.app/"
+      github: "https://github.com/shivamkesarwani2107-hash/mega-mart-frontend",
+      githubFrontend: "https://github.com/shivamkesarwani2107-hash/mega-mart-frontend",
+      githubBackend: "https://github.com/shivamkesarwani2107-hash/mega-mart-backend",
+      live: "https://mega-mart-frontend-kr6t.vercel.app/"
     }
   },
   {
@@ -252,8 +235,8 @@ export const PROJECTS = [
     category: "Full-Stack MERN Application",
     featured: true,
     badge: "Full-Stack Deployed",
-    overview: "A full-stack Library Management System built using React.js, Node.js, Express.js, and MongoDB. Features JWT Authentication with role-based authorization, REST APIs for Books, Categories, and Authors, CRUD Operations, Pagination, Search, Sorting, and Wishlist functionality with TanStack Query caching.",
-    problemSolved: "Traditional library tracking suffers from inventory tracking delays and disorganized student checkouts. This application digitizes the entire catalog lifecycle with structured relational Mongoose models, fast full-text filtering, and multi-tier cloud deployment.",
+    overview: "A full-stack library management system for managing books, authors, categories, users and wishlists. Implemented JWT Authentication, Authorization, Protected Routes, and RESTful APIs for secure application access, CRUD operations, pagination, search, sorting and wishlist functionality with TanStack Query for API fetching, caching and mutations with a responsive Tailwind CSS interface.",
+    problemSolved: "Traditional library tracking suffers from inventory tracking delays and disorganized checkouts. This application digitizes the entire catalog lifecycle with structured relational Mongoose models, fast full-text filtering, and multi-tier cloud deployment.",
     imageBg: "from-emerald-600/20 via-teal-600/20 to-cyan-600/20",
     accentColor: "emerald",
     deployments: [
@@ -266,33 +249,28 @@ export const PROJECTS = [
       "Node.js",
       "Express.js",
       "MongoDB",
-      "Mongoose",
-      "JWT Auth",
-      "REST APIs",
       "TanStack Query",
-      "Axios",
-      "Tailwind CSS"
+      "JWT Auth",
+      "RESTful APIs",
+      "Tailwind CSS",
+      "Axios"
     ],
     features: [
       {
-        title: "Full-Stack MERN Architecture",
-        desc: "Built a full-stack Library Management System using React.js, Node.js, Express.js and MongoDB."
+        title: "Full-Stack Library Management",
+        desc: "Developed a full-stack library management system for managing books, authors, categories, users and wishlists."
       },
       {
-        title: "JWT Authentication & Role Authorization",
-        desc: "Implemented JWT Authentication with role-based authorization and protected route guards."
+        title: "JWT Authentication & Authorization",
+        desc: "Implemented JWT Authentication, Authorization, Protected Routes and RESTful APIs for secure application access."
       },
       {
-        title: "REST APIs for Books, Categories & Authors",
-        desc: "Developed modular REST APIs for Books, Categories and Authors with strict backend validation."
+        title: "CRUD Operations, Pagination & Search",
+        desc: "Implemented CRUD operations, pagination, search, sorting and wishlist functionality."
       },
       {
-        title: "CRUD Operations, Pagination, Search & Sorting",
-        desc: "Implemented complete CRUD Operations, Pagination, Search, Sorting and Wishlist functionality."
-      },
-      {
-        title: "TanStack Query Data Caching",
-        desc: "Integrated TanStack Query for efficient API fetching, client caching, and automatic cache invalidation."
+        title: "TanStack Query State Caching",
+        desc: "Used TanStack Query for API fetching, caching and mutations with a responsive Tailwind CSS interface."
       },
       {
         title: "Multi-Platform Cloud Deployment",
@@ -300,24 +278,94 @@ export const PROJECTS = [
       }
     ],
     architecture: {
-      client: "React SPA on Vercel with responsive tables, cards, and modal forms",
+      client: "React SPA on Vercel with TanStack Query caching, responsive tables, cards, and modal forms",
       server: "Node.js + Express API on Render with CORS and structured REST routes",
       auth: "JWT-based Bearer token verification on all mutation endpoints",
       database: "MongoDB Atlas with relational population for Book-Author-Category entities"
     },
     myContribution: [
-      "Built a full-stack Library Management System using React.js, Node.js, Express.js and MongoDB.",
-      "Implemented JWT Authentication with role-based authorization.",
-      "Developed REST APIs for Books, Categories and Authors.",
-      "Implemented CRUD Operations, Pagination, Search, Sorting and Wishlist functionality.",
-      "Integrated TanStack Query for API fetching and caching.",
+      "Developed a full-stack library management system for managing books, authors, categories, users and wishlists.",
+      "Implemented JWT Authentication, Authorization, Protected Routes and RESTful APIs for secure application access.",
+      "Implemented CRUD operations, pagination, search, sorting and wishlist functionality.",
+      "Used TanStack Query for API fetching, caching and mutations with a responsive Tailwind CSS interface.",
       "Deployed frontend on Vercel and backend on Render."
     ],
     links: {
-      github: "https://github.com/shivamkesarwani2107-hash/library-management-system",
+      github: "https://github.com/shivamkesarwani2107-hash/frontend-library",
       githubFrontend: "https://github.com/shivamkesarwani2107-hash/frontend-library",
       githubBackend: "https://github.com/shivamkesarwani2107-hash/library-management-backend",
       live: "https://frontend-library-pearl.vercel.app/"
+    }
+  },
+  {
+    id: "movie-ticket",
+    title: "Movie Ticket Booking Platform",
+    shortTitle: "Movie Ticket Booking App",
+    tagline: "Responsive Movie Ticket Booking Application with Dynamic Seat Selection, Razorpay & Nodemailer",
+    category: "Full-Stack MERN Application",
+    featured: true,
+    badge: "Featured Full-Stack",
+    overview: "A full-stack movie ticket booking platform with authentication, movie browsing, seat selection, and booking workflow. Implemented JWT Authentication, Protected Routes and RESTful APIs for users, movies and bookings, integrated Razorpay for online payments and Nodemailer for booking confirmation emails, and built responsive React components with React Router DOM and MongoDB/Mongoose for application data management.",
+    problemSolved: "Cinema ticket booking requires real-time seat matrix status management, preventing seat collision, intuitive showtime scheduling, and automated ticket confirmation notifications. This platform delivers high-performance client state caching and structured backend controllers.",
+    imageBg: "from-rose-600/20 via-amber-600/20 to-purple-600/20",
+    accentColor: "rose",
+    techStack: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Razorpay",
+      "Nodemailer",
+      "React Router DOM",
+      "Tailwind CSS",
+      "JWT Auth",
+      "RESTful APIs"
+    ],
+    features: [
+      {
+        title: "Movie Browsing & Booking Workflow",
+        desc: "Developed a full-stack movie ticket booking platform with authentication, movie browsing, seat selection and booking workflow."
+      },
+      {
+        title: "JWT Authentication & Protected Routes",
+        desc: "Implemented JWT Authentication, Protected Routes and RESTful APIs for users, movies and bookings."
+      },
+      {
+        title: "Razorpay & Nodemailer Integration",
+        desc: "Integrated Razorpay for online payments and Nodemailer for booking confirmation emails."
+      },
+      {
+        title: "Interactive Seat Selection Matrix",
+        desc: "Built responsive React components with React Router DOM and MongoDB/Mongoose for application data management."
+      },
+      {
+        title: "Responsive Layouts with Tailwind CSS",
+        desc: "Pixel-perfect responsive design crafted with Tailwind CSS for mobile, tablet, and desktop viewports."
+      }
+    ],
+    architecture: {
+      client: "React SPA + React Router DOM + Tailwind CSS for seat matrix, movie catalog, and checkout flow",
+      server: "Node.js & Express RESTful API with structured controllers, route handlers, and error middleware",
+      auth: "JWT token verification middleware protecting checkout, ticket history, and profile routes",
+      database: "MongoDB Atlas with Mongoose schemas for Movies, Theaters, Shows, and Bookings",
+      integrations: "Razorpay payment gateway, Nodemailer SMTP service, Vercel & Render hosting"
+    },
+    myContribution: [
+      "Developed a full-stack movie ticket booking platform with authentication, movie browsing, seat selection and booking workflow.",
+      "Implemented JWT Authentication, Protected Routes and RESTful APIs for users, movies and bookings.",
+      "Integrated Razorpay for online payments and Nodemailer for booking confirmation emails.",
+      "Built responsive React components with React Router DOM and MongoDB/Mongoose for application data management."
+    ],
+    deployments: [
+      { name: "Frontend", platform: "Vercel" },
+      { name: "Backend", platform: "Render" },
+      { name: "Database", platform: "MongoDB Atlas" }
+    ],
+    links: {
+      github: "https://github.com/shivamkesarwani2107-hash/movie-ticket-frontend",
+      githubFrontend: "https://github.com/shivamkesarwani2107-hash/movie-ticket-frontend",
+      githubBackend: "https://github.com/shivamkesarwani2107-hash/movie-backend",
+      live: "https://movie-frontend-seven-dun.vercel.app/"
     }
   }
 ];
@@ -328,7 +376,7 @@ export const ARCHITECTURE_FLOW = [
     step: "01",
     title: "React Frontend Layer",
     tech: "React.js, React Router DOM, Tailwind CSS, TanStack Query, Axios",
-    description: "Responsive Single Page Application delivering intuitive user interfaces, handling client-side form validations, managing query cache, and dispatching asynchronous HTTP requests.",
+    description: "Responsive Single Page Application delivering intuitive user interfaces, handling client-side form validations, managing query cache, cart/wishlist states, and dispatching asynchronous HTTP requests.",
     badge: "Client Tier",
     icon: "Layout",
     color: "blue"
@@ -336,8 +384,8 @@ export const ARCHITECTURE_FLOW = [
   {
     id: "api",
     step: "02",
-    title: "REST API Gateway",
-    tech: "HTTP/HTTPS, REST APIs, JSON Payloads, CORS",
+    title: "RESTful API Gateway",
+    tech: "HTTP/HTTPS, RESTful APIs, JSON Payloads, CORS",
     description: "Standardized RESTful interface handling HTTP verbs (GET, POST, PUT, DELETE), JSON payload serialization, CORS configuration, and route dispatching.",
     badge: "Transport Layer",
     icon: "Network",
@@ -348,7 +396,7 @@ export const ARCHITECTURE_FLOW = [
     step: "03",
     title: "Node.js & Express Server",
     tech: "Node.js, Express.js, Controllers, Error Middleware",
-    description: "High-performance asynchronous runtime executing request controllers, input sanitization, and structured business logic with centralized error handling.",
+    description: "High-performance asynchronous runtime executing request controllers, input sanitization, business logic, and centralized error handling.",
     badge: "Application Core",
     icon: "Server",
     color: "indigo"
@@ -356,9 +404,9 @@ export const ARCHITECTURE_FLOW = [
   {
     id: "auth",
     step: "04",
-    title: "JWT Authentication & Guards",
-    tech: "JWT Authentication, Role-Based Access Control, Protected Routes",
-    description: "Stateless security layer verifying bearer tokens, decoding user claims, enforcing role-based permissions, and safeguarding private routes.",
+    title: "JWT Authentication & Security",
+    tech: "JWT Authentication, bcrypt.js, Authorization, Protected Routes",
+    description: "Stateless security layer verifying bearer tokens, decoding user claims, hashing passwords with bcrypt.js, and safeguarding private routes.",
     badge: "Security Layer",
     icon: "ShieldCheck",
     color: "emerald"
@@ -366,27 +414,27 @@ export const ARCHITECTURE_FLOW = [
   {
     id: "database",
     step: "05",
-    title: "MongoDB Atlas & Mongoose",
-    tech: "MongoDB, Mongoose ODM, Schema Modeling",
-    description: "Scalable document database storing collections with strict Mongoose schema validation, index optimization, and relational document population.",
-    badge: "Data Persistence",
+    title: "MongoDB & Redis Caching",
+    tech: "MongoDB Atlas, Mongoose ODM, Redis Caching",
+    description: "Scalable document database storing collections with strict Mongoose schema validation, combined with Redis in-memory caching for lightning-fast catalog query responses.",
+    badge: "Data & Cache Layer",
     icon: "Database",
     color: "green"
   },
   {
     id: "external",
     step: "06",
-    title: "Cloud Deployment & Tools",
-    tech: "Vercel, Render, Postman, Git & GitHub",
-    description: "Production deployment with frontend hosted on Vercel, backend hosted on Render, tested with Postman and version controlled via Git & GitHub.",
-    badge: "Cloud Deployment",
+    title: "Payment, Emails & Cloud",
+    tech: "Razorpay, Nodemailer, Vercel, Render, Postman, Git",
+    description: "Production integrations including Razorpay payment processing, Nodemailer automated confirmation emails, and deployment on Vercel & Render.",
+    badge: "Services & Cloud",
     icon: "CreditCard",
     color: "purple"
   }
 ];
 
 export const ABOUT_INFO = {
-  summary: "Aspiring MERN Stack Developer with hands-on experience building full-stack web applications using React.js, Node.js, Express.js and MongoDB. Skilled in REST APIs, JWT Authentication, TanStack Query, responsive UI development and deployment using Vercel and Render.",
+  summary: "MERN Stack Developer with hands-on experience developing and deploying full-stack web applications using React.js, Node.js, Express.js and MongoDB. Skilled in RESTful API development, JWT authentication, React Query, Redis caching, Razorpay integration and responsive UI development.",
   pillars: [
     {
       title: "Practical MERN Stack Development",
@@ -395,16 +443,16 @@ export const ABOUT_INFO = {
     },
     {
       title: "API Architecture & Security",
-      desc: "Skilled in developing REST APIs, JWT Authentication with role-based authorization, and backend input validations.",
+      desc: "Skilled in developing RESTful APIs, JWT Authentication with role-based authorization, bcrypt.js, and backend input validations.",
       icon: "Sparkles"
     },
     {
-      title: "Modern State & UI Design",
-      desc: "Proficient in TanStack Query caching, Axios, React Router DOM, and crafting responsive designs using Tailwind CSS.",
-      icon: "CheckCircle2"
+      title: "Caching & Payment Integration",
+      desc: "Experienced with Redis in-memory caching for low-latency queries and Razorpay gateway integration with Nodemailer email receipts.",
+      icon: "CreditCard"
     },
     {
-      title: "Production Deployment",
+      title: "Production Cloud Deployment",
       desc: "Successfully deployed full-stack applications to cloud platforms including Vercel, Render, and MongoDB Atlas.",
       icon: "Target"
     }

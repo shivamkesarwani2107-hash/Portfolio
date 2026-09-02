@@ -44,7 +44,7 @@ export default function AboutSection() {
                 </p>
 
                 <p className="text-slate-400">
-                  Rather than relying on theoretical tutorials, I immersed myself in project-driven development — designing full-stack systems like <strong className="text-slate-200 font-semibold">Movie Ticket Booking Platform</strong> (with seat matrix allocation & showtime scheduling) and a multi-role <strong className="text-slate-200 font-semibold">Library Management System</strong> deployed across cloud platforms.
+                  Rather than relying on theoretical tutorials, I immersed myself in project-driven development — engineering full-stack systems like <strong className="text-slate-200 font-semibold">MegaMart</strong> (a grocery shopping platform with Redis caching & Razorpay), <strong className="text-slate-200 font-semibold">Movie Ticket Booking Platform</strong> (with dynamic seat selection & email receipts), and a multi-tier <strong className="text-slate-200 font-semibold">Library Management System</strong> deployed across cloud platforms.
                 </p>
 
                 <p className="text-slate-400">

@@ -1,10 +1,14 @@
 import React from 'react';
-import { ExternalLink, FolderGit2, BookOpen, Check, Layers, ArrowUpRight, ShieldCheck, Sparkles, Film, BookMarked, Code2 } from 'lucide-react';
+import { ExternalLink, FolderGit2, BookOpen, Check, Layers, ArrowUpRight, ShieldCheck, Sparkles, Film, BookMarked, Code2, ShoppingCart } from 'lucide-react';
 import Button from './Button';
 import Badge from './Badge';
 
 export default function ProjectCard({ project, onOpenCaseStudy }) {
-  const isMovieProject = project.id === 'movie-ticket';
+  const getProjectIcon = () => {
+    if (project.id === 'megamart') return <ShoppingCart className="w-5 h-5 text-amber-400" />;
+    if (project.id === 'movie-ticket') return <Film className="w-5 h-5 text-rose-400" />;
+    return <BookMarked className="w-5 h-5 text-emerald-400" />;
+  };
 
   return (
     <div className="group relative bg-dark-900 border border-slate-800/90 hover:border-slate-700/80 rounded-2xl sm:rounded-3xl p-5 sm:p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-black/60 glow-card flex flex-col justify-between overflow-hidden w-full max-w-full">
@@ -16,7 +20,7 @@ export default function ProjectCard({ project, onOpenCaseStudy }) {
         <div className="flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2">
             <span className="p-2 rounded-xl bg-dark-800 border border-slate-700/60 text-emerald-400">
-              {isMovieProject ? <Film className="w-5 h-5 text-rose-400" /> : <BookMarked className="w-5 h-5 text-emerald-400" />}
+              {getProjectIcon()}
             </span>
             <Badge variant="blue" size="sm">
               {project.category}

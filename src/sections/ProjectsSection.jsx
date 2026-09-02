@@ -28,12 +28,12 @@ export default function ProjectsSection({ onOpenCaseStudy }) {
           </div>
 
           <div className="text-xs font-mono text-slate-400">
-            [ 02 Featured Applications ]
+            [ 0{PROJECTS.length} Featured Applications ]
           </div>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
           {PROJECTS.map((project) => (
             <ProjectCard
               key={project.id}

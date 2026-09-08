@@ -5,9 +5,9 @@ import Badge from './Badge';
 
 export default function ProjectCard({ project, onOpenCaseStudy }) {
   const getProjectIcon = () => {
-    if (project.id === 'megamart') return <ShoppingCart className="w-5 h-5 text-amber-400" />;
-    if (project.id === 'movie-ticket') return <Film className="w-5 h-5 text-rose-400" />;
-    return <BookMarked className="w-5 h-5 text-emerald-400" />;
+    if (project.id === 'astroganesh') return <Sparkles className="w-5 h-5 text-amber-400" />;
+    if (project.id === 'megamart') return <ShoppingCart className="w-5 h-5 text-emerald-400" />;
+    return <BookMarked className="w-5 h-5 text-blue-400" />;
   };
 
   return (
@@ -93,27 +93,31 @@ export default function ProjectCard({ project, onOpenCaseStudy }) {
           View Case Study
         </Button>
 
-        <Button
-          variant="secondary"
-          size="sm"
-          href={project.links.live}
-          target="_blank"
-          icon={ExternalLink}
-          iconPosition="right"
-        >
-          Live Demo
-        </Button>
+        {project.links.live && (
+          <Button
+            variant="secondary"
+            size="sm"
+            href={project.links.live}
+            target="_blank"
+            icon={ExternalLink}
+            iconPosition="right"
+          >
+            {project.id === 'astroganesh' ? 'Live Website' : 'Live Demo'}
+          </Button>
+        )}
 
-        <Button
-          variant="outline"
-          size="sm"
-          href={project.links.github}
-          target="_blank"
-          icon={FolderGit2}
-          iconPosition="left"
-        >
-          GitHub Repo
-        </Button>
+        {project.links.github && (
+          <Button
+            variant="outline"
+            size="sm"
+            href={project.links.github}
+            target="_blank"
+            icon={FolderGit2}
+            iconPosition="left"
+          >
+            GitHub Repo
+          </Button>
+        )}
       </div>
     </div>
   );

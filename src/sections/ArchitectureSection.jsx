@@ -29,7 +29,7 @@ const iconMap = {
 
 export default function ArchitectureSection() {
   const [activeNodeId, setActiveNodeId] = useState('frontend');
-  const [flowMode, setFlowMode] = useState('standard'); // 'standard' | 'movie' | 'library'
+  const [flowMode, setFlowMode] = useState('standard'); // 'standard' | 'astroganesh' | 'megamart' | 'library'
 
   const activeNode = ARCHITECTURE_FLOW.find(n => n.id === activeNodeId) || ARCHITECTURE_FLOW[0];
 
@@ -68,30 +68,30 @@ export default function ArchitectureSection() {
               Standard MERN
             </button>
             <button
+              onClick={() => setFlowMode('astroganesh')}
+              className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
+                flowMode === 'astroganesh'
+                  ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
+                  : 'text-slate-400 hover:text-slate-200'
+              }`}
+            >
+              AstroGanesh Flow
+            </button>
+            <button
               onClick={() => setFlowMode('megamart')}
               className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
                 flowMode === 'megamart'
-                  ? 'bg-amber-500/20 text-amber-300 border border-amber-500/30'
+                  ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
                   : 'text-slate-400 hover:text-slate-200'
               }`}
             >
               MegaMart Flow
             </button>
             <button
-              onClick={() => setFlowMode('movie')}
-              className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
-                flowMode === 'movie'
-                  ? 'bg-rose-500/20 text-rose-300 border border-rose-500/30'
-                  : 'text-slate-400 hover:text-slate-200'
-              }`}
-            >
-              Movie Booking Flow
-            </button>
-            <button
               onClick={() => setFlowMode('library')}
               className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
                 flowMode === 'library'
-                  ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30'
+                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/30'
                   : 'text-slate-400 hover:text-slate-200'
               }`}
             >
@@ -197,14 +197,14 @@ export default function ArchitectureSection() {
               </div>
             )}
 
-            {flowMode === 'movie' && (
-              <div className="p-4 rounded-xl bg-rose-950/20 border border-rose-800/40 text-xs sm:text-sm text-rose-200 space-y-1">
-                <div className="font-semibold text-rose-300 flex items-center gap-2">
-                  <Zap className="w-4 h-4" />
-                  <span>Movie Ticket Reservation Lifecycle:</span>
+            {flowMode === 'astroganesh' && (
+              <div className="p-4 rounded-xl bg-amber-950/20 border border-amber-800/40 text-xs sm:text-sm text-amber-200 space-y-1">
+                <div className="font-semibold text-amber-300 flex items-center gap-2">
+                  <Sparkles className="w-4 h-4" />
+                  <span>AstroGanesh Production Platform Flow:</span>
                 </div>
                 <p className="text-slate-300">
-                  React Client (Interactive seat layout & showtime selector) ➔ Express Booking API (/api/bookings) ➔ JWT Verification ➔ Seat Availability Lock ➔ MongoDB Booking Document Creation ➔ Ticket Confirmation Receipt & History.
+                  React SPA (Responsive customer UI & admin dashboard) ➔ Express REST APIs (/api/services, /api/consultations) ➔ Payment Integration Gateway ➔ Call-Based Consultation Workflows ➔ MongoDB Persistence & Dashboard Operations.
                 </p>
               </div>
             )}

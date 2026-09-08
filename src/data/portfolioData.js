@@ -38,7 +38,7 @@ export const HONEST_METRICS = [
   {
     value: "3+",
     label: "Deployed Full-Stack Apps",
-    detail: "MegaMart, Library, Movie Ticket"
+    detail: "AstroGanesh, MegaMart, Library"
   },
   {
     value: "6 Months",
@@ -153,6 +153,76 @@ export const CORE_CONCEPTS = [
 ];
 
 export const PROJECTS = [
+  {
+    id: "astroganesh",
+    title: "AstroGanesh – Production Astrology Platform",
+    shortTitle: "AstroGanesh Platform",
+    tagline: "Production Astrology Platform with Responsive Client Interfaces, Admin Dashboards & Payment Integration",
+    category: "Production Astrology Platform",
+    featured: true,
+    badge: "Production Platform",
+    overview: "Contributed to a production astrology platform by developing responsive customer-facing interfaces and integrating application workflows across frontend and administrative modules.",
+    problemSolved: "Production astrology platforms require intuitive user flows, real-time consultation access, secure transaction processing, and responsive administrative dashboards for content and workflow management.",
+    imageBg: "from-amber-600/20 via-orange-600/20 to-purple-600/20",
+    accentColor: "amber",
+    techStack: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Payment Integration",
+      "Tailwind CSS",
+      "RESTful APIs",
+      "Axios"
+    ],
+    features: [
+      {
+        title: "Responsive Customer-Facing Interfaces",
+        desc: "Contributed to a production astrology platform by developing responsive customer-facing interfaces and integrating application workflows across frontend and administrative modules."
+      },
+      {
+        title: "Reusable Component Architecture",
+        desc: "Developed reusable, component-driven React interfaces with responsive layouts, focusing on usability, consistency, and maintainable frontend implementation."
+      },
+      {
+        title: "Administrative Dashboard Interfaces",
+        desc: "Implemented and enhanced administrative dashboard interfaces for managing platform operations, content, and user-facing service workflows."
+      },
+      {
+        title: "Online Payment Workflows",
+        desc: "Integrated online payment workflows, coordinating frontend payment interactions with backend services to support secure transaction flows."
+      },
+      {
+        title: "Call-Based Service Workflows",
+        desc: "Implemented call-based service workflows that enable users to access astrology consultation services through the application interface."
+      },
+      {
+        title: "Cross-Module API Integration",
+        desc: "Collaborated across application modules to integrate APIs, troubleshoot functional issues, and deliver production-ready features for the live platform."
+      }
+    ],
+    architecture: {
+      client: "React.js SPA with component-driven architecture and responsive layouts for customer interfaces & administrative dashboard",
+      server: "Node.js & Express RESTful APIs for platform operations, booking and service workflows",
+      auth: "Secure transaction pipelines and administrative access authorization",
+      database: "MongoDB for managing platform content, user records, and consultation service data",
+      integrations: "Online payment gateway integration and live consultation service workflows"
+    },
+    myContribution: [
+      "Contributed to a production astrology platform by developing responsive customer-facing interfaces and integrating application workflows across frontend and administrative modules.",
+      "Developed reusable, component-driven React interfaces with responsive layouts, focusing on usability, consistency, and maintainable frontend implementation.",
+      "Implemented and enhanced administrative dashboard interfaces for managing platform operations, content, and user-facing service workflows.",
+      "Integrated online payment workflows, coordinating frontend payment interactions with backend services to support secure transaction flows.",
+      "Implemented call-based service workflows that enable users to access astrology consultation services through the application interface.",
+      "Collaborated across application modules to integrate APIs, troubleshoot functional issues, and deliver production-ready features for the live platform."
+    ],
+    deployments: [
+      { name: "Production Web", platform: "Live Platform" }
+    ],
+    links: {
+      live: "https://www.astroganesh.in/"
+    }
+  },
   {
     id: "megamart",
     title: "MegaMart – Grocery Shopping Platform",
@@ -295,77 +365,6 @@ export const PROJECTS = [
       githubFrontend: "https://github.com/shivamkesarwani2107-hash/frontend-library",
       githubBackend: "https://github.com/shivamkesarwani2107-hash/library-management-backend",
       live: "https://frontend-library-pearl.vercel.app/"
-    }
-  },
-  {
-    id: "movie-ticket",
-    title: "Movie Ticket Booking Platform",
-    shortTitle: "Movie Ticket Booking App",
-    tagline: "Responsive Movie Ticket Booking Application with Dynamic Seat Selection, Razorpay & Nodemailer",
-    category: "Full-Stack MERN Application",
-    featured: true,
-    badge: "Featured Full-Stack",
-    overview: "A full-stack movie ticket booking platform with authentication, movie browsing, seat selection, and booking workflow. Implemented JWT Authentication, Protected Routes and RESTful APIs for users, movies and bookings, integrated Razorpay for online payments and Nodemailer for booking confirmation emails, and built responsive React components with React Router DOM and MongoDB/Mongoose for application data management.",
-    problemSolved: "Cinema ticket booking requires real-time seat matrix status management, preventing seat collision, intuitive showtime scheduling, and automated ticket confirmation notifications. This platform delivers high-performance client state caching and structured backend controllers.",
-    imageBg: "from-rose-600/20 via-amber-600/20 to-purple-600/20",
-    accentColor: "rose",
-    techStack: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Razorpay",
-      "Nodemailer",
-      "React Router DOM",
-      "Tailwind CSS",
-      "JWT Auth",
-      "RESTful APIs"
-    ],
-    features: [
-      {
-        title: "Movie Browsing & Booking Workflow",
-        desc: "Developed a full-stack movie ticket booking platform with authentication, movie browsing, seat selection and booking workflow."
-      },
-      {
-        title: "JWT Authentication & Protected Routes",
-        desc: "Implemented JWT Authentication, Protected Routes and RESTful APIs for users, movies and bookings."
-      },
-      {
-        title: "Razorpay & Nodemailer Integration",
-        desc: "Integrated Razorpay for online payments and Nodemailer for booking confirmation emails."
-      },
-      {
-        title: "Interactive Seat Selection Matrix",
-        desc: "Built responsive React components with React Router DOM and MongoDB/Mongoose for application data management."
-      },
-      {
-        title: "Responsive Layouts with Tailwind CSS",
-        desc: "Pixel-perfect responsive design crafted with Tailwind CSS for mobile, tablet, and desktop viewports."
-      }
-    ],
-    architecture: {
-      client: "React SPA + React Router DOM + Tailwind CSS for seat matrix, movie catalog, and checkout flow",
-      server: "Node.js & Express RESTful API with structured controllers, route handlers, and error middleware",
-      auth: "JWT token verification middleware protecting checkout, ticket history, and profile routes",
-      database: "MongoDB Atlas with Mongoose schemas for Movies, Theaters, Shows, and Bookings",
-      integrations: "Razorpay payment gateway, Nodemailer SMTP service, Vercel & Render hosting"
-    },
-    myContribution: [
-      "Developed a full-stack movie ticket booking platform with authentication, movie browsing, seat selection and booking workflow.",
-      "Implemented JWT Authentication, Protected Routes and RESTful APIs for users, movies and bookings.",
-      "Integrated Razorpay for online payments and Nodemailer for booking confirmation emails.",
-      "Built responsive React components with React Router DOM and MongoDB/Mongoose for application data management."
-    ],
-    deployments: [
-      { name: "Frontend", platform: "Vercel" },
-      { name: "Backend", platform: "Render" },
-      { name: "Database", platform: "MongoDB Atlas" }
-    ],
-    links: {
-      github: "https://github.com/shivamkesarwani2107-hash/movie-ticket-frontend",
-      githubFrontend: "https://github.com/shivamkesarwani2107-hash/movie-ticket-frontend",
-      githubBackend: "https://github.com/shivamkesarwani2107-hash/movie-backend",
-      live: "https://movie-frontend-seven-dun.vercel.app/"
     }
   }
 ];

@@ -33,7 +33,7 @@ export default function CommandPalette({
       category: "Navigation",
       items: [
         { id: "nav-home", title: "Home / Hero", subtitle: "Jump to introduction & overview", icon: Sparkles, action: () => scrollToSection('home') },
-        { id: "nav-projects", title: "Featured Projects", subtitle: "MegaMart, Library System & Movie Ticket Platform", icon: FolderGit2, action: () => scrollToSection('projects') },
+        { id: "nav-projects", title: "Featured Projects", subtitle: "AstroGanesh, MegaMart & Library System", icon: FolderGit2, action: () => scrollToSection('projects') },
         { id: "nav-experience", title: "Experience & Timeline", subtitle: "MERN Developer Intern at Devlupers", icon: Briefcase, action: () => scrollToSection('experience') },
         { id: "nav-skills", title: "Technical Skills", subtitle: "Frontend, Backend, Database, Tools", icon: Code, action: () => scrollToSection('skills') },
         { id: "nav-architecture", title: "Full-Stack Architecture", subtitle: "MERN system flow & service integrations", icon: Layers, action: () => scrollToSection('architecture') },
@@ -219,7 +219,7 @@ export default function CommandPalette({
           {flatFilteredItems.length === 0 ? (
             <div className="text-center py-10 px-4">
               <p className="text-sm text-slate-400">No results found for "{query}"</p>
-              <p className="text-xs text-slate-500 mt-1">Try searching for "MegaMart", "Movie Ticket", "Node.js", "Resume", or "Contact"</p>
+              <p className="text-xs text-slate-500 mt-1">Try searching for "AstroGanesh", "MegaMart", "Node.js", "Resume", or "Contact"</p>
             </div>
           ) : (
             filteredGroups.map((group) => (

@@ -164,7 +164,7 @@ export default function SkillsSection() {
               <span>Full-Stack Development Competencies & Patterns</span>
             </h3>
             <span className="text-xs text-slate-400 font-mono">
-              Applied in Movie Ticket & Library Systems
+              Applied in AstroGanesh, MegaMart & Library Systems
             </span>
           </div>
 

@@ -13,15 +13,17 @@ import {
   Code, 
   User, 
   Briefcase,
-  GraduationCap
+  GraduationCap,
+  Award
 } from 'lucide-react';
-import { PERSONAL_INFO, PROJECTS } from '../../data/portfolioData';
+import { PERSONAL_INFO, PROJECTS, COMPLETION_LETTER } from '../../data/portfolioData';
 
 export default function CommandPalette({
   isOpen,
   onClose,
   onOpenCaseStudy,
   onOpenResume,
+  onOpenCompletionLetter,
   showToast
 }) {
   const [query, setQuery] = useState('');
@@ -34,7 +36,7 @@ export default function CommandPalette({
       items: [
         { id: "nav-home", title: "Home / Hero", subtitle: "Jump to introduction & overview", icon: Sparkles, action: () => scrollToSection('home') },
         { id: "nav-projects", title: "Featured Projects", subtitle: "AstroGanesh, MegaMart & Library System", icon: FolderGit2, action: () => scrollToSection('projects') },
-        { id: "nav-experience", title: "Experience & Timeline", subtitle: "MERN Developer Intern at Devlupers", icon: Briefcase, action: () => scrollToSection('experience') },
+        { id: "nav-experience", title: "Experience & Certifications", subtitle: "MERN Stack Developer Intern at Devlupers", icon: Briefcase, action: () => scrollToSection('experience') },
         { id: "nav-skills", title: "Technical Skills", subtitle: "Frontend, Backend, Database, Tools", icon: Code, action: () => scrollToSection('skills') },
         { id: "nav-architecture", title: "Full-Stack Architecture", subtitle: "MERN system flow & service integrations", icon: Layers, action: () => scrollToSection('architecture') },
         { id: "nav-about", title: "About Me & Education", subtitle: "B.Com background & software engineering focus", icon: User, action: () => scrollToSection('about') },
@@ -66,6 +68,17 @@ export default function CommandPalette({
             onClose();
             if (onOpenResume) onOpenResume();
             else window.open(PERSONAL_INFO.resumeUrl, '_blank');
+          }
+        },
+        {
+          id: "act-completion-letter",
+          title: "View Letter of Completion",
+          subtitle: "Devlupers MERN Stack Internship (Feb 2026 – Aug 2026)",
+          icon: Award,
+          action: () => {
+            onClose();
+            if (onOpenCompletionLetter) onOpenCompletionLetter();
+            else window.open(COMPLETION_LETTER.pdfUrl, '_blank');
           }
         },
         {

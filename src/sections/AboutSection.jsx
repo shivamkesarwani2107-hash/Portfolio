@@ -40,7 +40,7 @@ export default function AboutSection() {
                 </p>
 
                 <p className="text-slate-400">
-                  While pursuing my Bachelor of Commerce degree at Allahabad Degree College, I realized my true passion lies in computer science and building software that people interact with every day.
+                  While pursuing my Bachelor of Commerce degree at University of Allahabad, I realized my true passion lies in computer science and building software that people interact with every day.
                 </p>
 
                 <p className="text-slate-400">

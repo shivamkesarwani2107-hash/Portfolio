@@ -121,7 +121,7 @@ function createResumePdf() {
   curY -= 11;
 
   drawText('F1', 9.5, 40, curY, 'MERN Stack Developer Intern');
-  drawText('F2', 8.5, 470, curY, 'Nov 2025 – May 2026');
+  drawText('F2', 8.5, 475, curY, 'Feb 2026 – Aug 2026');
   curY -= 10.5;
   drawText('F3', 8.5, 40, curY, 'Devlupers');
   curY -= 11;

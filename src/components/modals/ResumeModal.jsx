@@ -160,28 +160,28 @@ export default function ResumeModal({ isOpen, onClose }) {
                 <span className="text-slate-300">JavaScript (ES6+), HTML5, CSS3</span>
               </div>
               <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80">
-                <span className="font-semibold text-white">Frontend: </span>
-                <span className="text-slate-300">React.js, React Router DOM, Tailwind CSS, TanStack Query, Axios</span>
+                <span className="font-semibold text-white">Frontend Engineering: </span>
+                <span className="text-slate-300">React.js, React Router DOM, Tailwind CSS, TanStack Query, Axios, Responsive Web Design</span>
               </div>
               <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80">
-                <span className="font-semibold text-white">Backend: </span>
-                <span className="text-slate-300">Node.js, Express.js, RESTful APIs</span>
+                <span className="font-semibold text-white">Backend Engineering: </span>
+                <span className="text-slate-300">Node.js, Express.js, RESTful APIs, API Design, API Integration, CRUD Operations</span>
               </div>
               <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80">
-                <span className="font-semibold text-white">Database: </span>
-                <span className="text-slate-300">MongoDB, Mongoose, Redis</span>
+                <span className="font-semibold text-white">Databases & Caching: </span>
+                <span className="text-slate-300">MongoDB, Mongoose, Redis, Data Modeling, Database Operations</span>
               </div>
               <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80">
-                <span className="font-semibold text-white">Authentication & Payment: </span>
-                <span className="text-slate-300">JWT, Authorization, bcrypt.js, Razorpay</span>
+                <span className="font-semibold text-white">Security & Payments: </span>
+                <span className="text-slate-300">JWT, Authentication, Authorization, Protected Routes, bcrypt.js, Razorpay, Payment Integration</span>
               </div>
               <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80">
-                <span className="font-semibold text-white">Tools: </span>
+                <span className="font-semibold text-white">Developer Tools & Deployment: </span>
                 <span className="text-slate-300">Git, GitHub, Postman, VS Code, Vercel, Render, Nodemailer</span>
               </div>
               <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80 sm:col-span-2">
-                <span className="font-semibold text-white">Core Concepts: </span>
-                <span className="text-slate-300">CRUD, Pagination, Search, Filtering, Sorting, Protected Routes, API Integration, Responsive Design</span>
+                <span className="font-semibold text-white">Software Engineering Concepts: </span>
+                <span className="text-slate-300">Client-Server Architecture, Server-Side Pagination, Search, Filtering, Sorting, API Caching, Query Invalidation, State Management, Data Validation, Debugging</span>
               </div>
             </div>
           </div>

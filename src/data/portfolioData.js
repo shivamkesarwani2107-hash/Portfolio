@@ -2,7 +2,7 @@ export const PERSONAL_INFO = {
   name: "Shivam Kesarwani",
   firstName: "Shivam",
   title: "MERN Stack Developer",
-  roleHeadline: "MERN Stack Developer with hands-on experience developing and deploying full-stack web applications using React.js, Node.js, Express.js and MongoDB. Skilled in RESTful API development, JWT authentication, React Query, Redis caching, Razorpay integration and responsive UI development. Currently working as a MERN Stack Developer Intern with experience in Git, GitHub, Postman and cloud deployment using Vercel and Render.",
+  roleHeadline: "Software Engineer and MERN Stack Developer with hands-on experience developing, integrating, debugging and deploying full-stack web applications using React.js, Node.js, Express.js and MongoDB. Proficient in RESTful API development, JWT-based Authentication and Authorization, Protected Routes, CRUD workflows, server-side pagination, search, filtering, sorting, API integration and responsive UI development.",
   location: "Prayagraj, Uttar Pradesh, India",
   email: "shivamkesarwani2107@gmail.com",
   phone: "+91 9336991973",
@@ -20,7 +20,7 @@ export const PERSONAL_INFO = {
 };
 
 export const RESUME_DATA = {
-  summary: "MERN Stack Developer with hands-on experience developing and deploying full-stack web applications using React.js, Node.js, Express.js and MongoDB. Skilled in RESTful API development, JWT authentication, React Query, Redis caching, Razorpay integration and responsive UI development. Currently working as a MERN Stack Developer Intern with experience in Git, GitHub, Postman and cloud deployment using Vercel and Render.",
+  summary: "Software Engineer and MERN Stack Developer with hands-on experience developing, integrating, debugging and deploying full-stack web applications using React.js, Node.js, Express.js and MongoDB. Proficient in RESTful API development, JWT-based Authentication and Authorization, Protected Routes, CRUD workflows, server-side pagination, search, filtering, sorting, API integration and responsive UI development. Experienced with Redis caching, TanStack Query, payment gateway integration, third-party service integration, Git-based development and production deployment using Vercel and Render.",
   achievements: [
     "Built multiple full-stack MERN applications from scratch.",
     "Integrated Razorpay payment gateway and Nodemailer for automated order/booking emails.",
@@ -68,22 +68,41 @@ export const EXPERIENCES = [
   {
     role: "MERN Stack Developer Intern",
     company: "Devlupers",
-    duration: "Nov 2025 – May 2026",
+    duration: "Feb 2026 – Aug 2026",
     period: "6 Months",
     location: "Prayagraj, Uttar Pradesh / Remote",
     type: "Internship",
     badge: "MERN Stack Developer Intern",
-    description: "Developed and maintained full-stack web applications using React.js, Node.js, Express.js and MongoDB with RESTful APIs, JWT authentication, and modern UI components.",
+    description: "Developed and maintained full-stack application features across React.js frontends and Node.js/Express.js backend services, implementing end-to-end business workflows and client-server communication.",
     highlights: [
-      "Developed and maintained full-stack web applications using React.js, Node.js, Express.js and MongoDB.",
-      "Built reusable and responsive UI components using React.js, Tailwind CSS and React Router DOM.",
-      "Developed RESTful APIs and implemented JWT-based Authentication, Authorization and Protected Routes.",
-      "Integrated third-party APIs, debugged application issues and contributed to feature development and performance improvements.",
-      "Used Git and GitHub for version control, collaboration and maintaining application code."
+      "Developed and maintained full-stack application features across React.js frontends and Node.js/Express.js backend services, implementing end-to-end business workflows and client-server communication.",
+      "Built modular, reusable and component-driven React interfaces using React.js, Tailwind CSS and React Router DOM, following responsive UI development practices.",
+      "Designed and implemented RESTful API services using Node.js and Express.js for resource management, request processing, CRUD operations and MongoDB integration.",
+      "Implemented JWT-based Authentication and Authorization workflows with token-based identity verification, protected API resources and route-level access control.",
+      "Integrated third-party APIs and application services while troubleshooting functional issues, debugging API workflows and delivering feature enhancements across web application modules.",
+      "Utilized Git and GitHub for source-code management, version control, feature development and maintaining collaborative software development workflows."
     ],
-    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "JWT", "Tailwind CSS", "Git/GitHub"]
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "React Router DOM", "RESTful APIs", "JWT", "Git & GitHub"]
   }
 ];
+
+export const COMPLETION_LETTER = {
+  title: "Letter of Completion",
+  issuer: "Devlupers",
+  recipient: "Shivam Kesarwani",
+  role: "MERN Stack Intern",
+  duration: "20.2.2026 – 20.08.2026 (Feb 2026 – Aug 2026)",
+  period: "6 Months",
+  signatory: "Shivam Prajapati",
+  designation: "CEO, Devlupers",
+  pdfUrl: "/letter-of-completion.pdf",
+  phone: "+91 6386821819",
+  email: "info@devlupers.com",
+  contactEmail: "shivam@devlupers.com",
+  website: "https://devlupers.com/",
+  badge: "Official Letter of Completion",
+  summary: "Official certification of successful completion of MERN Stack Internship at Devlupers, recognizing dedication in full-stack architecture, complex business logic, API development, and frontend/backend integration."
+};
 
 export const SKILL_CATEGORIES = [
   {

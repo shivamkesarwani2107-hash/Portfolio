@@ -5,6 +5,7 @@ import CommandPalette from './components/common/CommandPalette';
 import Toast from './components/common/Toast';
 import ProjectCaseStudyModal from './components/modals/ProjectCaseStudyModal';
 import ResumeModal from './components/modals/ResumeModal';
+import LetterOfCompletionModal from './components/modals/LetterOfCompletionModal';
 
 import HeroSection from './sections/HeroSection';
 import ProjectsSection from './sections/ProjectsSection';
@@ -18,6 +19,7 @@ export default function App() {
   const [activeSection, setActiveSection] = useState('home');
   const [commandPaletteOpen, setCommandPaletteOpen] = useState(false);
   const [resumeModalOpen, setResumeModalOpen] = useState(false);
+  const [completionModalOpen, setCompletionModalOpen] = useState(false);
   const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
   const [darkMode, setDarkMode] = useState(true);
   const [toast, setToast] = useState({ message: '', type: 'success' });
@@ -103,7 +105,9 @@ export default function App() {
           onOpenCaseStudy={(project) => setSelectedCaseStudy(project)}
         />
 
-        <ExperienceSection />
+        <ExperienceSection
+          onOpenCompletionLetter={() => setCompletionModalOpen(true)}
+        />
 
         <SkillsSection />
 
@@ -125,6 +129,7 @@ export default function App() {
         onClose={() => setCommandPaletteOpen(false)}
         onOpenCaseStudy={(project) => setSelectedCaseStudy(project)}
         onOpenResume={() => setResumeModalOpen(true)}
+        onOpenCompletionLetter={() => setCompletionModalOpen(true)}
         showToast={showToast}
       />
 
@@ -139,6 +144,12 @@ export default function App() {
       <ResumeModal
         isOpen={resumeModalOpen}
         onClose={() => setResumeModalOpen(false)}
+      />
+
+      {/* Letter of Completion Preview & Download Modal */}
+      <LetterOfCompletionModal
+        isOpen={completionModalOpen}
+        onClose={() => setCompletionModalOpen(false)}
       />
 
       {/* Toast Notification Alert */}

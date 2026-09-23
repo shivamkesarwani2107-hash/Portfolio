@@ -21,10 +21,11 @@ function createResumePdf() {
     currentPageOps.push(`0.75 w 0.2 0.2 0.2 RG ${x1} ${y} m ${x2} ${y} l S`);
   };
 
-  const drawText = (font, size, x, y, text) => {
+  const drawText = (font, size, x, y, text, color = [0, 0, 0]) => {
     // Escape PDF special characters: ( ) \
     const escaped = text.replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)');
-    currentPageOps.push(`BT /${font} ${size} Tf 1 0 0 1 ${x} ${y} Tm (${escaped}) Tj ET`);
+    const [r, g, b] = color;
+    currentPageOps.push(`BT /${font} ${size} Tf ${r} ${g} ${b} rg 1 0 0 1 ${x} ${y} Tm (${escaped}) Tj ET`);
   };
 
   const addLink = (x1, y1, x2, y2, url) => {
@@ -55,84 +56,99 @@ function createResumePdf() {
   let curY = 755;
 
   // Header (Centered)
-  drawText('F1', 19, 185, curY, 'SHIVAM KESARWANI');
-  curY -= 14;
-  drawText('F2', 8.5, 138, curY, '+91-9336991973   |   shivamkesarwani2107@gmail.com   |   Prayagraj, Uttar Pradesh');
-  addLink(138, curY - 2, 215, curY + 9, 'tel:+919336991973');
-  addLink(225, curY - 2, 360, curY + 9, 'mailto:shivamkesarwani2107@gmail.com');
+  drawText('F1', 19, 210, curY, 'Shivam Kesarwani');
+  curY -= 15;
   
-  curY -= 11;
-  drawText('F2', 8.5, 122, curY, 'github.com/shivamkesarwani2107-hash   |   linkedin.com/in/shivam-kesarwani-634162353');
-  addLink(122, curY - 2, 305, curY + 9, 'https://github.com/shivamkesarwani2107-hash');
-  addLink(315, curY - 2, 490, curY + 9, 'https://linkedin.com/in/shivam-kesarwani-634162353');
-  curY -= 14;
+  // Contact row with clickable links
+  const contactY = curY;
+  drawText('F2', 8.5, 90, contactY, '+91-9336991973');
+  addLink(90, contactY - 2, 160, contactY + 9, 'tel:+919336991973');
 
-  // SECTION 1: Professional Summary
-  drawText('F1', 10.5, 40, curY, 'Professional Summary');
+  drawText('F2', 8.5, 168, contactY, '|');
+
+  drawText('F2', 8.5, 178, contactY, 'shivamkesarwani2107@gmail.com');
+  addLink(178, contactY - 2, 320, contactY + 9, 'mailto:shivamkesarwani2107@gmail.com');
+
+  drawText('F2', 8.5, 328, contactY, '|');
+
+  drawText('F2', 8.5, 338, contactY, 'LinkedIn', [0, 0.35, 0.75]);
+  addLink(338, contactY - 2, 375, contactY + 9, 'https://www.linkedin.com/in/shivam-kesarwani-634162353');
+
+  drawText('F2', 8.5, 383, contactY, '|', [0, 0, 0]);
+
+  drawText('F2', 8.5, 393, contactY, 'Portfolio', [0, 0.35, 0.75]);
+  addLink(393, contactY - 2, 435, contactY + 9, 'https://github.com/shivamkesarwani2107-hash');
+
+  drawText('F2', 8.5, 443, contactY, '|', [0, 0, 0]);
+
+  drawText('F2', 8.5, 453, contactY, 'GitHub', [0, 0.35, 0.75]);
+  addLink(453, contactY - 2, 490, contactY + 9, 'https://github.com/shivamkesarwani2107-hash');
+
+  curY -= 16;
+
+  // SECTION 1: SUMMARY
+  drawText('F1', 10.5, 40, curY, 'SUMMARY', [0, 0.35, 0.75]);
   curY -= 3;
   drawLine(curY);
   curY -= 11;
 
-  const summaryText = 'Software Engineer and MERN Stack Developer with hands-on experience developing, integrating, debugging and deploying full-stack web applications using React.js, Node.js, Express.js and MongoDB. Proficient in RESTful API development, JWT-based Authentication and Authorization, Protected Routes, CRUD workflows, server-side pagination, search, filtering, sorting, API integration and responsive UI development. Experienced with Redis caching, TanStack Query, payment gateway integration, third-party service integration, Git-based development and production deployment using Vercel and Render.';
-  const summaryLines = wrapText(summaryText, 532, 4.8);
+  const summaryText = 'MERN Stack Developer with 6 months of internship experience designing and developing full-stack web applications using React.js, Node.js, Express.js and MongoDB. Hands-on experience in RESTful API development, authentication and authorization, CRUD operations, database integration, responsive UI engineering, API integration, debugging and deployment. Worked on applications involving AI-powered features, payment processing, Redis caching, third-party APIs and production workflows. Strong understanding of client-server architecture, asynchronous programming, reusable components and Git-based software development.';
+  const summaryLines = wrapText(summaryText, 532, 4.75);
   for (const line of summaryLines) {
     drawText('F2', 8.5, 40, curY, line);
     curY -= 10.5;
   }
   curY -= 4;
 
-  // SECTION 2: Technical Skills
-  drawText('F1', 10.5, 40, curY, 'Technical Skills');
+  // SECTION 2: TECHNICAL SKILLS
+  drawText('F1', 10.5, 40, curY, 'TECHNICAL SKILLS', [0, 0.35, 0.75]);
   curY -= 3;
   drawLine(curY);
   curY -= 11;
 
   const technicalSkills = [
-    { label: 'Languages:', val: 'JavaScript (ES6+), HTML5, CSS3' },
-    { label: 'Frontend Engineering:', val: 'React.js, React Router DOM, Tailwind CSS, TanStack Query, Axios, Responsive Web Design' },
-    { label: 'Backend Engineering:', val: 'Node.js, Express.js, RESTful APIs, API Design, API Integration, CRUD Operations' },
-    { label: 'Databases & Caching:', val: 'MongoDB, Mongoose, Redis, Data Modeling, Database Operations' },
-    { label: 'Security & Payments:', val: 'JWT, Authentication, Authorization, Protected Routes, bcrypt.js, Razorpay, Payment Integration' },
-    { label: 'Developer Tools & Deployment:', val: 'Git, GitHub, Postman, VS Code, Vercel, Render, Nodemailer' },
-    { label: 'Software Engineering Concepts:', val: 'Client-Server Architecture, Server-Side Pagination, Search, Filtering, Sorting, API Caching, Query Invalidation, State Management, Data Validation, Debugging' }
+    { label: 'Languages: ', val: 'JavaScript (ES6+), HTML5, CSS3' },
+    { label: 'Frontend: ', val: 'React.js, React Router DOM, Tailwind CSS, TanStack Query, Axios, Responsive Web Design, Component-Based Architecture' },
+    { label: 'Backend: ', val: 'Node.js, Express.js, RESTful APIs, API Development, API Integration, CRUD Operations, Middleware, Asynchronous Programming' },
+    { label: 'Database & Caching: ', val: 'MongoDB, Mongoose, Redis, Data Modeling, Database Operations, Query Handling, Server-Side Caching' },
+    { label: 'AI & Integration: ', val: 'OpenRouter AI, AI API Integration, AI-Powered Features, Prompt-Based AI Workflows, Third-Party API Integration' },
+    { label: 'Authentication & Payments: ', val: 'JWT, Authentication, Authorization, Protected Routes, bcrypt.js, Razorpay, Payment Gateway Integration' },
+    { label: 'Tools & Deployment: ', val: 'Git, GitHub, Postman, Vercel, Render, Nodemailer, VS Code' }
   ];
 
   for (const s of technicalSkills) {
     drawText('F1', 8.5, 40, curY, s.label);
     const labelWidth = s.label.length * 4.9;
     
-    // Check if value fits on one line or needs wrapping
-    const valMaxWidth = 532 - (labelWidth + 4);
+    const valMaxWidth = 532 - labelWidth;
     const valLines = wrapText(s.val, valMaxWidth, 4.6);
     
-    drawText('F2', 8.5, 40 + labelWidth + 4, curY, valLines[0]);
+    drawText('F2', 8.5, 40 + labelWidth, curY, valLines[0]);
     curY -= 10.5;
     for (let i = 1; i < valLines.length; i++) {
-      drawText('F2', 8.5, 40 + labelWidth + 4, curY, valLines[i]);
+      drawText('F2', 8.5, 40 + labelWidth, curY, valLines[i]);
       curY -= 10.5;
     }
   }
   curY -= 4;
 
-  // SECTION 3: Experience
-  drawText('F1', 10.5, 40, curY, 'Experience');
+  // SECTION 3: EXPERIENCE
+  drawText('F1', 10.5, 40, curY, 'EXPERIENCE', [0, 0.35, 0.75]);
   curY -= 3;
   drawLine(curY);
   curY -= 11;
 
-  drawText('F1', 9.5, 40, curY, 'MERN Stack Developer Intern');
+  drawText('F1', 9.5, 40, curY, 'Devlupers – MERN Stack Developer Intern');
   drawText('F2', 8.5, 475, curY, 'Feb 2026 – Aug 2026');
-  curY -= 10.5;
-  drawText('F3', 8.5, 40, curY, 'Devlupers');
-  curY -= 11;
+  curY -= 12;
 
   const expBullets = [
-    'Developed and maintained full-stack application features across React.js frontends and Node.js/Express.js backend services, implementing end-to-end business workflows and client-server communication.',
-    'Built modular, reusable and component-driven React interfaces using React.js, Tailwind CSS and React Router DOM, following responsive UI development practices.',
-    'Designed and implemented RESTful API services using Node.js and Express.js for resource management, request processing, CRUD operations and MongoDB integration.',
-    'Implemented JWT-based Authentication and Authorization workflows with token-based identity verification, protected API resources and route-level access control.',
-    'Integrated third-party APIs and application services while troubleshooting functional issues, debugging API workflows and delivering feature enhancements across web application modules.',
-    'Utilized Git and GitHub for source-code management, version control, feature development and maintaining collaborative software development workflows.'
+    'Contributed to full-stack web application development using React.js, Node.js, Express.js and MongoDB across frontend, backend and database layers.',
+    'Engineered responsive React.js interfaces and reusable UI components using Tailwind CSS and React Router DOM for application workflows.',
+    'Developed and integrated RESTful APIs using Node.js and Express.js, implementing CRUD operations, middleware and MongoDB data workflows.',
+    'Implemented JWT-based authentication and authorization with protected routes and secure API access.',
+    'Integrated frontend applications with backend REST APIs using asynchronous JavaScript and handled API responses, errors and integration issues.',
+    'Contributed to feature development, debugging, code improvements and application maintenance using Git and GitHub.'
   ];
 
   for (const b of expBullets) {
@@ -147,30 +163,58 @@ function createResumePdf() {
   }
   curY -= 4;
 
-  // SECTION 4: Projects (Starts on Page 1)
-  drawText('F1', 10.5, 40, curY, 'Projects');
+  // SECTION 4: KEY PROJECTS (Starts on Page 1)
+  drawText('F1', 10.5, 40, curY, 'KEY PROJECTS', [0, 0.35, 0.75]);
   curY -= 3;
   drawLine(curY);
   curY -= 11;
 
   // Project 1: AstroGanesh – Production Astrology Platform
   drawText('F1', 9.5, 40, curY, 'AstroGanesh – Production Astrology Platform');
-  drawText('F1', 8.5, 510, curY, 'Live Website');
-  addLink(510, curY - 2, 572, curY + 9, 'https://www.astroganesh.in/');
+  drawText('F1', 8.5, 520, curY, 'LIVE URL', [0, 0.35, 0.75]);
+  addLink(520, curY - 2, 572, curY + 9, 'https://www.astroganesh.in/');
   curY -= 10.5;
-  drawText('F3', 8.5, 40, curY, 'React.js  |  Node.js  |  Express.js  |  MongoDB  |  Payment Integration');
+  drawText('F3', 8.5, 40, curY, 'React.js | Node.js | Express.js | MongoDB | REST APIs | Payment Integration');
   curY -= 11;
 
   const astroGaneshBullets = [
-    'Contributed to a production astrology platform by developing responsive customer-facing interfaces and integrating application workflows across frontend and administrative modules.',
-    'Developed reusable, component-driven React interfaces with responsive layouts, focusing on usability, consistency, and maintainable frontend implementation.',
-    'Implemented and enhanced administrative dashboard interfaces for managing platform operations, content, and user-facing service workflows.',
-    'Integrated online payment workflows, coordinating frontend payment interactions with backend services to support secure transaction flows.',
-    'Implemented call-based service workflows that enable users to access astrology consultation services through the application interface.',
-    'Collaborated across application modules to integrate APIs, troubleshoot functional issues, and deliver production-ready features for the live platform.'
+    'Contributed to a production astrology platform by improving customer-facing interfaces, administrative modules and application workflows.',
+    'Engineered reusable React.js components and responsive UI layouts for user-facing features and service workflows.',
+    'Contributed to administrative dashboard modules for platform operations, content management and service workflows.',
+    'Integrated frontend workflows with backend REST APIs and worked on payment and consultation-related application functionality.',
+    'Troubleshot frontend-backend integration issues and supported production feature enhancements and API integrations.'
   ];
 
   for (const b of astroGaneshBullets) {
+    const lines = wrapText(b, 514, 4.6);
+    drawText('F2', 8.5, 40, curY, '–');
+    drawText('F2', 8.5, 50, curY, lines[0]);
+    curY -= 10;
+    for (let i = 1; i < lines.length; i++) {
+      drawText('F2', 8.5, 50, curY, lines[i]);
+      curY -= 10;
+    }
+  }
+  curY -= 7;
+
+  // Project 2: FitAI – AI-Powered Fitness Platform (Page 1)
+  drawText('F1', 9.5, 40, curY, 'FitAI – AI-Powered Fitness Platform');
+  drawText('F1', 8.5, 520, curY, 'LIVE URL', [0, 0.35, 0.75]);
+  addLink(520, curY - 2, 572, curY + 9, 'https://fit-ai-frontend-seven.vercel.app/');
+  curY -= 10.5;
+  drawText('F3', 8.5, 40, curY, 'React.js | Node.js | Express.js | MongoDB | OpenRouter AI | REST APIs');
+  curY -= 11;
+
+  const fitAiBullets = [
+    'Engineered a full-stack AI-powered fitness platform using React.js, Node.js, Express.js and MongoDB for personalized fitness, nutrition and product recommendation workflows.',
+    'Integrated OpenRouter AI to generate AI-powered workout plans, AI diet plans and AI-based product recommendations using user inputs and application context.',
+    'Implemented AI API integration and prompt-based workflows between the React.js frontend, Node.js backend and external AI services for dynamic personalized responses.',
+    'Engineered reusable React.js components for Profile, Workout, Nutrition, Progress, Shop, Cart, Orders and Checkout workflows.',
+    'Implemented authentication, protected routes and user-specific workflows with token-based access control and REST API integration.',
+    'Designed frontend-backend data flows for user fitness data, AI-generated recommendations and application state management.'
+  ];
+
+  for (const b of fitAiBullets) {
     const lines = wrapText(b, 514, 4.6);
     drawText('F2', 8.5, 40, curY, '–');
     drawText('F2', 8.5, 50, curY, lines[0]);
@@ -187,26 +231,28 @@ function createResumePdf() {
   // ================= PAGE 2 =================
   curY = 755;
 
-  // Project 2: MegaMart – Full-Stack Grocery E-Commerce Platform
+  // Project 3: MegaMart – Full-Stack Grocery E-Commerce Platform
   drawText('F1', 9.5, 40, curY, 'MegaMart – Full-Stack Grocery E-Commerce Platform');
-  drawText('F1', 8.5, 520, curY, 'Live Demo');
+  drawText('F1', 8.5, 520, curY, 'LIVE URL', [0, 0.35, 0.75]);
   addLink(520, curY - 2, 572, curY + 9, 'https://mega-mart-frontend-kr6t.vercel.app/');
   curY -= 10.5;
-  drawText('F3', 8.5, 40, curY, 'React.js  |  Node.js  |  Express.js  |  MongoDB  |  Redis  |  Razorpay');
+  drawText('F3', 8.5, 40, curY, 'React.js | Node.js | Express.js | MongoDB | Redis | Razorpay');
   curY -= 11;
 
   const megaMartBullets = [
-    'Developed a full-stack e-commerce application using React.js, Node.js, Express.js and MongoDB, implementing product discovery, category management, cart, wishlist and order-processing workflows.',
-    'Designed and implemented RESTful backend services for products, categories, subcategories, cart, wishlist and orders with JWT-based Authentication, Authorization and protected resources.',
-    'Implemented Redis-based server-side caching for frequently accessed application data and improved backend data-access workflows.',
-    'Integrated Razorpay payment processing and Nodemailer-based transactional email workflows for online payments and automated order confirmations.',
-    'Developed administrative CRUD workflows for product, category and subcategory management with structured frontend-backend API communication.',
-    'Built responsive, component-driven React interfaces using Tailwind CSS and configured production deployment across Vercel and Render.'
+    'Engineered a full-stack grocery e-commerce platform using React.js, Node.js, Express.js and MongoDB with product, category, cart, wishlist and order management workflows.',
+    'Designed and implemented RESTful APIs for products, categories, subcategories, cart, wishlist and orders with protected resources.',
+    'Implemented JWT-based authentication and authorization for secure user sessions and protected e-commerce operations.',
+    'Integrated Redis caching for frequently accessed application data to optimize backend data retrieval and reduce repeated database operations.',
+    'Integrated Razorpay payment gateway for online payment processing and implemented payment-success order workflows.',
+    'Implemented Nodemailer transactional email workflows and administrative CRUD operations for product and category management.',
+    'Built responsive React.js interfaces using Tailwind CSS for product discovery, search, filtering, cart, wishlist, checkout and order workflows.',
+    'Configured production deployment using Vercel for frontend and Render for backend services.'
   ];
 
   for (const b of megaMartBullets) {
     const lines = wrapText(b, 514, 4.6);
-    drawText('F2', 8.5, 40, curY, '–');
+    drawText('F2', 8.5, 40, curY, '•');
     drawText('F2', 8.5, 50, curY, lines[0]);
     curY -= 10;
     for (let i = 1; i < lines.length; i++) {
@@ -214,27 +260,28 @@ function createResumePdf() {
       curY -= 10;
     }
   }
-  curY -= 10;
+  curY -= 12;
 
-  // Project 3: Library Management System
+  // Project 4: Library Management System
   drawText('F1', 9.5, 40, curY, 'Library Management System');
-  drawText('F1', 8.5, 520, curY, 'Live Demo');
+  drawText('F1', 8.5, 520, curY, 'LIVE URL', [0, 0.35, 0.75]);
   addLink(520, curY - 2, 572, curY + 9, 'https://frontend-library-pearl.vercel.app/');
   curY -= 10.5;
-  drawText('F3', 8.5, 40, curY, 'React.js  |  Node.js  |  Express.js  |  MongoDB  |  TanStack Query');
+  drawText('F3', 8.5, 40, curY, 'React.js | Node.js | Express.js | MongoDB | JWT | REST APIs');
   curY -= 11;
 
   const libraryBullets = [
-    'Developed a full-stack library management application using React.js, Node.js, Express.js and MongoDB for managing books, authors, categories, users and wishlist workflows.',
-    'Designed and implemented RESTful API endpoints with JWT-based Authentication, Authorization and protected resources for secure application access.',
-    'Implemented end-to-end CRUD workflows with server-side pagination, search, filtering and sorting for efficient book-data retrieval and management.',
-    'Integrated TanStack Query for asynchronous server-state management, API caching, mutation handling, query invalidation and data synchronization.',
-    'Developed reusable React components and responsive interfaces using Tailwind CSS and integrated the frontend with the production backend API.'
+    'Engineered a full-stack library management system using React.js, Node.js, Express.js and MongoDB for book, user and wishlist management.',
+    'Designed and implemented RESTful APIs for authentication, user management, book management and wishlist operations.',
+    'Implemented JWT-based authentication, authorization and protected API resources for secure application access.',
+    'Implemented CRUD operations with server-side pagination, search, filtering and sorting for efficient data retrieval.',
+    'Implemented age-group filtering and query-based data retrieval using Express.js request parameters and MongoDB operations.',
+    'Developed reusable React.js components and responsive interfaces using Tailwind CSS with frontend-backend API integration.'
   ];
 
   for (const b of libraryBullets) {
     const lines = wrapText(b, 514, 4.6);
-    drawText('F2', 8.5, 40, curY, '–');
+    drawText('F2', 8.5, 40, curY, '•');
     drawText('F2', 8.5, 50, curY, lines[0]);
     curY -= 10;
     for (let i = 1; i < lines.length; i++) {
@@ -242,19 +289,19 @@ function createResumePdf() {
       curY -= 10;
     }
   }
-  curY -= 14;
+  curY -= 16;
 
-  // SECTION 5: Education
-  drawText('F1', 10.5, 40, curY, 'Education');
+  // SECTION 5: EDUCATION
+  drawText('F1', 10.5, 40, curY, 'EDUCATION', [0, 0.35, 0.75]);
   curY -= 3;
   drawLine(curY);
   curY -= 11;
 
   drawText('F1', 9.5, 40, curY, 'University of Allahabad');
-  drawText('F2', 8.5, 445, curY, 'Expected Graduation: 2027');
+  drawText('F2', 8.5, 440, curY, 'Expected Graduation: 2027');
   curY -= 10.5;
   drawText('F2', 8.5, 40, curY, 'Bachelor of Commerce (B.Com.)');
-  drawText('F2', 8.5, 460, curY, 'Prayagraj, Uttar Pradesh');
+  drawText('F2', 8.5, 455, curY, 'Prayagraj, Uttar Pradesh');
 
   // Finish current page
   startNewPage();
@@ -292,7 +339,7 @@ function createResumePdf() {
 
   objects[fontF1Id] = `${fontF1Id} 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>\nendobj\n`;
   objects[fontF2Id] = `${fontF2Id} 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>\nendobj\n`;
-  objects[fontF3Id] = `${fontF3Id} 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>\nendobj\n`;
+  objects[fontF3Id] = `${fontF3Id} 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>\nendobj\n`;
 
   const totalObjCount = fontF3Id;
 

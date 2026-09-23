@@ -2,10 +2,10 @@ export const PERSONAL_INFO = {
   name: "Shivam Kesarwani",
   firstName: "Shivam",
   title: "MERN Stack Developer",
-  roleHeadline: "Software Engineer and MERN Stack Developer with hands-on experience developing, integrating, debugging and deploying full-stack web applications using React.js, Node.js, Express.js and MongoDB. Proficient in RESTful API development, JWT-based Authentication and Authorization, Protected Routes, CRUD workflows, server-side pagination, search, filtering, sorting, API integration and responsive UI development.",
+  roleHeadline: "MERN Stack Developer with 6 months of internship experience designing and developing full-stack web applications using React.js, Node.js, Express.js and MongoDB. Hands-on experience in RESTful API development, authentication and authorization, CRUD operations, database integration, responsive UI engineering, API integration, debugging and deployment.",
   location: "Prayagraj, Uttar Pradesh, India",
   email: "shivamkesarwani2107@gmail.com",
-  phone: "+91 9336991973",
+  phone: "+91-9336991973",
   careerGoal: "Software Developer / MERN Stack Developer",
   availability: "Immediately available / Short notice",
   availabilityBadge: "Immediately available",
@@ -20,11 +20,11 @@ export const PERSONAL_INFO = {
 };
 
 export const RESUME_DATA = {
-  summary: "Software Engineer and MERN Stack Developer with hands-on experience developing, integrating, debugging and deploying full-stack web applications using React.js, Node.js, Express.js and MongoDB. Proficient in RESTful API development, JWT-based Authentication and Authorization, Protected Routes, CRUD workflows, server-side pagination, search, filtering, sorting, API integration and responsive UI development. Experienced with OpenAI/OpenRouter AI integration, Redis caching, TanStack Query, payment gateway integration, third-party service integration, Git-based development and production deployment using Vercel and Render.",
+  summary: "MERN Stack Developer with 6 months of internship experience designing and developing full-stack web applications using React.js, Node.js, Express.js and MongoDB. Hands-on experience in RESTful API development, authentication and authorization, CRUD operations, database integration, responsive UI engineering, API integration, debugging and deployment. Worked on applications involving AI-powered features, payment processing, Redis caching, third-party APIs and production workflows. Strong understanding of client-server architecture, asynchronous programming, reusable components and Git-based software development.",
   achievements: [
     "Built multiple production-ready full-stack MERN & AI applications from scratch.",
     "Integrated Razorpay payment gateway and Nodemailer for automated order/booking emails.",
-    "Implemented AI workout & diet planners using OpenAI / OpenRouter APIs.",
+    "Implemented AI workout & diet planners using OpenRouter AI APIs.",
     "Implemented Redis caching and JWT authentication with protected routes.",
     "Successfully deployed full-stack applications using Vercel, Render, and MongoDB Atlas."
   ]
@@ -74,14 +74,14 @@ export const EXPERIENCES = [
     location: "Prayagraj, Uttar Pradesh / Remote",
     type: "Internship",
     badge: "MERN Stack Developer Intern",
-    description: "Developed and maintained full-stack application features across React.js frontends and Node.js/Express.js backend services, implementing end-to-end business workflows and client-server communication.",
+    description: "Contributed to full-stack web application development using React.js, Node.js, Express.js and MongoDB across frontend, backend and database layers.",
     highlights: [
-      "Developed and maintained full-stack application features across React.js frontends and Node.js/Express.js backend services, implementing end-to-end business workflows and client-server communication.",
-      "Built modular, reusable and component-driven React interfaces using React.js, Tailwind CSS and React Router DOM, following responsive UI development practices.",
-      "Designed and implemented RESTful API services using Node.js and Express.js for resource management, request processing, CRUD operations and MongoDB integration.",
-      "Implemented JWT-based Authentication and Authorization workflows with token-based identity verification, protected API resources and route-level access control.",
-      "Integrated third-party APIs and application services while troubleshooting functional issues, debugging API workflows and delivering feature enhancements across web application modules.",
-      "Utilized Git and GitHub for source-code management, version control, feature development and maintaining collaborative software development workflows."
+      "Contributed to full-stack web application development using React.js, Node.js, Express.js and MongoDB across frontend, backend and database layers.",
+      "Engineered responsive React.js interfaces and reusable UI components using Tailwind CSS and React Router DOM for application workflows.",
+      "Developed and integrated RESTful APIs using Node.js and Express.js, implementing CRUD operations, middleware and MongoDB data workflows.",
+      "Implemented JWT-based authentication and authorization with protected routes and secure API access.",
+      "Integrated frontend applications with backend REST APIs using asynchronous JavaScript and handled API responses, errors and integration issues.",
+      "Contributed to feature development, debugging, code improvements and application maintenance using Git and GitHub."
     ],
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "React Router DOM", "RESTful APIs", "JWT", "Git & GitHub"]
   }
@@ -129,7 +129,7 @@ export const SKILL_CATEGORIES = [
       { name: "Express.js", level: "Proficient", icon: "Boxes" },
       { name: "RESTful APIs", level: "Proficient", icon: "Network" },
       { name: "JWT & Auth", level: "Proficient", icon: "ShieldCheck" },
-      { name: "Joi Validation", level: "Proficient", icon: "ShieldCheck" },
+      { name: "Middleware & CRUD", level: "Proficient", icon: "ShieldCheck" },
       { name: "bcrypt.js", level: "Proficient", icon: "ShieldCheck" },
       { name: "Nodemailer", level: "Proficient", icon: "Send" }
     ]
@@ -139,10 +139,10 @@ export const SKILL_CATEGORIES = [
     title: "AI & External Integrations",
     icon: "Sparkles",
     skills: [
-      { name: "OpenAI / OpenRouter", level: "Proficient", icon: "Sparkles" },
+      { name: "OpenRouter AI", level: "Proficient", icon: "Sparkles" },
+      { name: "AI API Integration", level: "Proficient", icon: "Sparkles" },
       { name: "Razorpay Gateway", level: "Proficient", icon: "CreditCard" },
-      { name: "HMAC Signatures", level: "Proficient", icon: "ShieldCheck" },
-      { name: "AI Prompt Workflows", level: "Proficient", icon: "Atom" }
+      { name: "Prompt Workflows", level: "Proficient", icon: "Atom" }
     ]
   },
   {
@@ -153,8 +153,8 @@ export const SKILL_CATEGORIES = [
       { name: "MongoDB", level: "Proficient", icon: "Database" },
       { name: "Mongoose ODM", level: "Proficient", icon: "Table" },
       { name: "Redis Caching", level: "Proficient", icon: "Zap" },
-      { name: "Schema Modeling", level: "Proficient", icon: "GitCommit" },
-      { name: "CRUD Operations", level: "Proficient", icon: "Layers" }
+      { name: "Data Modeling", level: "Proficient", icon: "GitCommit" },
+      { name: "Server-Side Caching", level: "Proficient", icon: "Layers" }
     ]
   },
   {
@@ -172,93 +172,19 @@ export const SKILL_CATEGORIES = [
 
 export const CORE_CONCEPTS = [
   "RESTful APIs Architecture",
-  "OpenAI & AI Engine Integration",
+  "OpenRouter AI Engine Integration",
   "JWT Authentication & Authorization",
   "Protected Routes & Middleware",
   "CRUD Operations",
   "Pagination, Search & Filtering",
-  "Sorting & Query Optimization",
-  "Redis In-Memory Caching",
+  "Sorting & Query Handling",
+  "Redis Server-Side Caching",
   "Razorpay Payment Gateway",
   "TanStack Query State Caching",
   "Responsive Web Design"
 ];
 
 export const PROJECTS = [
-  {
-    id: "fitai",
-    title: "FitAI – AI-Powered Fitness & Workout Platform",
-    shortTitle: "FitAI Fitness Platform",
-    tagline: "Full-Stack AI Fitness & Workout Planner with OpenAI / OpenRouter, Razorpay Memberships & JWT Auth",
-    category: "Full-Stack MERN & AI Platform",
-    featured: true,
-    badge: "Featured AI Platform",
-    overview: "An AI-powered full-stack fitness platform that dynamically generates personalized workout routines and custom meal plans using OpenAI / OpenRouter AI models. Features secure JWT authentication, bcrypt password hashing, Joi validation schema, interactive workout logging, product and order management, and Razorpay payment integration for premium membership tiers.",
-    problemSolved: "Personalized fitness coaching and nutrition consulting are typically costly or rigid. FitAI utilizes AI automation to instantly generate personalized workout routines and customized nutrition strategies tailored to individual fitness metrics, backed by secure subscription billing and profile management.",
-    imageBg: "from-cyan-500/20 via-blue-600/20 to-purple-600/20",
-    accentColor: "cyan",
-    techStack: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "OpenAI API",
-      "Razorpay",
-      "JWT Auth",
-      "Joi Validation",
-      "Tailwind CSS",
-      "Axios"
-    ],
-    features: [
-      {
-        title: "AI Workout & Nutrition Generation",
-        desc: "Integrated OpenAI / OpenRouter API to dynamically generate personalized fitness regimens and custom nutrition plans based on user profiles and fitness goals."
-      },
-      {
-        title: "JWT Authentication & Joi Validation",
-        desc: "Engineered secure user registration and login workflows with bcrypt password hashing, JWT token authorization, cookie parsing, and Joi payload validation."
-      },
-      {
-        title: "Razorpay Memberships & Billing",
-        desc: "Integrated Razorpay payment gateway with cryptographic HMAC-SHA256 signature verification for subscription plans and membership tier upgrades."
-      },
-      {
-        title: "Fitness Products & Order Tracking",
-        desc: "Implemented fitness equipment catalog, cart workflows, and order lifecycle management with MongoDB and Mongoose ODM persistence."
-      },
-      {
-        title: "Responsive Frontend & Cloud Deployment",
-        desc: "Developed a modern, responsive user interface deployed on Vercel with a resilient Node.js / Express backend hosted on Render."
-      }
-    ],
-    architecture: {
-      client: "React.js Single Page Application with dynamic fitness forms, AI workout dashboard, membership checkout, and responsive Tailwind UI",
-      server: "Node.js & Express.js REST API with structured controllers, OpenAI / OpenRouter prompt handlers, and error middleware",
-      auth: "JWT-based authentication with bcrypt password encryption, cookie tokens, and Joi input validation schema",
-      database: "MongoDB Atlas persistence with structured Mongoose schemas for Users, Workouts, Memberships, Products, and Orders",
-      integrations: "OpenAI / OpenRouter API, Razorpay Payment Gateway, Vercel & Render cloud hosting"
-    },
-    myContribution: [
-      "Designed and built the full-stack AI fitness platform architecture connecting React frontend with Express REST APIs.",
-      "Integrated OpenAI / OpenRouter API endpoints to generate custom workout plans and dietary suggestions.",
-      "Implemented JWT authentication, cookie management, bcrypt password hashing, and Joi validation schemas.",
-      "Integrated Razorpay payment checkout with cryptographic HMAC-SHA256 signature verification for membership purchases.",
-      "Structured Mongoose schemas for users, workouts, memberships, products, and order lifecycle persistence.",
-      "Deployed frontend client to Vercel and backend services with MongoDB Atlas database cluster."
-    ],
-    deployments: [
-      { name: "Frontend", platform: "Vercel" },
-      { name: "Backend", platform: "Render" },
-      { name: "Database", platform: "MongoDB Atlas" },
-      { name: "AI Engine", platform: "OpenAI / OpenRouter" }
-    ],
-    links: {
-      github: "https://github.com/shivamkesarwani2107-hash/FitAI-frontend",
-      githubFrontend: "https://github.com/shivamkesarwani2107-hash/FitAI-frontend",
-      githubBackend: "https://github.com/shivamkesarwani2107-hash/FitAI-backend",
-      live: "https://fit-ai-frontend-seven.vercel.app/"
-    }
-  },
   {
     id: "astroganesh",
     title: "AstroGanesh – Production Astrology Platform",
@@ -267,7 +193,7 @@ export const PROJECTS = [
     category: "Production Astrology Platform",
     featured: true,
     badge: "Production Platform",
-    overview: "Contributed to a production astrology platform by developing responsive customer-facing interfaces and integrating application workflows across frontend and administrative modules.",
+    overview: "Contributed to a production astrology platform by improving customer-facing interfaces, administrative modules and application workflows.",
     problemSolved: "Production astrology platforms require intuitive user flows, real-time consultation access, secure transaction processing, and responsive administrative dashboards for content and workflow management.",
     imageBg: "from-amber-600/20 via-orange-600/20 to-purple-600/20",
     accentColor: "amber",
@@ -276,35 +202,31 @@ export const PROJECTS = [
       "Node.js",
       "Express.js",
       "MongoDB",
+      "REST APIs",
       "Payment Integration",
       "Tailwind CSS",
-      "RESTful APIs",
       "Axios"
     ],
     features: [
       {
-        title: "Responsive Customer-Facing Interfaces",
-        desc: "Contributed to a production astrology platform by developing responsive customer-facing interfaces and integrating application workflows across frontend and administrative modules."
+        title: "Platform & Workflow Improvement",
+        desc: "Contributed to a production astrology platform by improving customer-facing interfaces, administrative modules and application workflows."
       },
       {
-        title: "Reusable Component Architecture",
-        desc: "Developed reusable, component-driven React interfaces with responsive layouts, focusing on usability, consistency, and maintainable frontend implementation."
+        title: "Responsive UI & Reusable Components",
+        desc: "Engineered reusable React.js components and responsive UI layouts for user-facing features and service workflows."
       },
       {
-        title: "Administrative Dashboard Interfaces",
-        desc: "Implemented and enhanced administrative dashboard interfaces for managing platform operations, content, and user-facing service workflows."
+        title: "Administrative Dashboard Modules",
+        desc: "Contributed to administrative dashboard modules for platform operations, content management and service workflows."
       },
       {
-        title: "Online Payment Workflows",
-        desc: "Integrated online payment workflows, coordinating frontend payment interactions with backend services to support secure transaction flows."
+        title: "Payment & Consultation Integration",
+        desc: "Integrated frontend workflows with backend REST APIs and worked on payment and consultation-related application functionality."
       },
       {
-        title: "Call-Based Service Workflows",
-        desc: "Implemented call-based service workflows that enable users to access astrology consultation services through the application interface."
-      },
-      {
-        title: "Cross-Module API Integration",
-        desc: "Collaborated across application modules to integrate APIs, troubleshoot functional issues, and deliver production-ready features for the live platform."
+        title: "Integration Troubleshooting & Support",
+        desc: "Troubleshot frontend-backend integration issues and supported production feature enhancements and API integrations."
       }
     ],
     architecture: {
@@ -315,12 +237,11 @@ export const PROJECTS = [
       integrations: "Online payment gateway integration and live consultation service workflows"
     },
     myContribution: [
-      "Contributed to a production astrology platform by developing responsive customer-facing interfaces and integrating application workflows across frontend and administrative modules.",
-      "Developed reusable, component-driven React interfaces with responsive layouts, focusing on usability, consistency, and maintainable frontend implementation.",
-      "Implemented and enhanced administrative dashboard interfaces for managing platform operations, content, and user-facing service workflows.",
-      "Integrated online payment workflows, coordinating frontend payment interactions with backend services to support secure transaction flows.",
-      "Implemented call-based service workflows that enable users to access astrology consultation services through the application interface.",
-      "Collaborated across application modules to integrate APIs, troubleshoot functional issues, and deliver production-ready features for the live platform."
+      "Contributed to a production astrology platform by improving customer-facing interfaces, administrative modules and application workflows.",
+      "Engineered reusable React.js components and responsive UI layouts for user-facing features and service workflows.",
+      "Contributed to administrative dashboard modules for platform operations, content management and service workflows.",
+      "Integrated frontend workflows with backend REST APIs and worked on payment and consultation-related application functionality.",
+      "Troubleshot frontend-backend integration issues and supported production feature enhancements and API integrations."
     ],
     deployments: [
       { name: "Production Web", platform: "Live Platform" }
@@ -330,14 +251,91 @@ export const PROJECTS = [
     }
   },
   {
+    id: "fitai",
+    title: "FitAI – AI-Powered Fitness Platform",
+    shortTitle: "FitAI Fitness Platform",
+    tagline: "Full-Stack AI-Powered Fitness Platform with OpenRouter AI, Personalized Workout/Diet Plans & REST APIs",
+    category: "Full-Stack MERN & AI Platform",
+    featured: true,
+    badge: "Featured AI Platform",
+    overview: "Engineered a full-stack AI-powered fitness platform using React.js, Node.js, Express.js and MongoDB for personalized fitness, nutrition and product recommendation workflows.",
+    problemSolved: "Personalized fitness coaching and nutrition consulting are typically costly or rigid. FitAI utilizes AI automation via OpenRouter AI to generate customized workout routines, diet plans, and contextual fitness recommendations instantly.",
+    imageBg: "from-cyan-500/20 via-blue-600/20 to-purple-600/20",
+    accentColor: "cyan",
+    techStack: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "OpenRouter AI",
+      "REST APIs",
+      "Razorpay",
+      "JWT Auth",
+      "Tailwind CSS"
+    ],
+    features: [
+      {
+        title: "Full-Stack AI Fitness Engineering",
+        desc: "Engineered a full-stack AI-powered fitness platform using React.js, Node.js, Express.js and MongoDB for personalized fitness, nutrition and product recommendation workflows."
+      },
+      {
+        title: "OpenRouter AI Workout & Diet Generation",
+        desc: "Integrated OpenRouter AI to generate AI-powered workout plans, AI diet plans and AI-based product recommendations using user inputs and application context."
+      },
+      {
+        title: "Prompt-Based AI API Workflows",
+        desc: "Implemented AI API integration and prompt-based workflows between the React.js frontend, Node.js backend and external AI services for dynamic personalized responses."
+      },
+      {
+        title: "Comprehensive Component Suite",
+        desc: "Engineered reusable React.js components for Profile, Workout, Nutrition, Progress, Shop, Cart, Orders and Checkout workflows."
+      },
+      {
+        title: "Authentication & User Workflows",
+        desc: "Implemented authentication, protected routes and user-specific workflows with token-based access control and REST API integration."
+      },
+      {
+        title: "Data Flow & State Management",
+        desc: "Designed frontend-backend data flows for user fitness data, AI-generated recommendations and application state management."
+      }
+    ],
+    architecture: {
+      client: "React.js Single Page Application with dynamic fitness forms, AI workout dashboard, membership checkout, and responsive Tailwind UI",
+      server: "Node.js & Express.js REST API with structured controllers, OpenRouter prompt handlers, and error middleware",
+      auth: "JWT-based authentication with bcrypt password encryption, cookie tokens, and input validation schema",
+      database: "MongoDB Atlas persistence with structured Mongoose schemas for Users, Workouts, Memberships, Products, and Orders",
+      integrations: "OpenRouter AI API, Razorpay Payment Gateway, Vercel & Render cloud hosting"
+    },
+    myContribution: [
+      "Engineered a full-stack AI-powered fitness platform using React.js, Node.js, Express.js and MongoDB for personalized fitness, nutrition and product recommendation workflows.",
+      "Integrated OpenRouter AI to generate AI-powered workout plans, AI diet plans and AI-based product recommendations using user inputs and application context.",
+      "Implemented AI API integration and prompt-based workflows between the React.js frontend, Node.js backend and external AI services for dynamic personalized responses.",
+      "Engineered reusable React.js components for Profile, Workout, Nutrition, Progress, Shop, Cart, Orders and Checkout workflows.",
+      "Implemented authentication, protected routes and user-specific workflows with token-based access control and REST API integration.",
+      "Designed frontend-backend data flows for user fitness data, AI-generated recommendations and application state management."
+    ],
+    deployments: [
+      { name: "Frontend", platform: "Vercel" },
+      { name: "Backend", platform: "Render" },
+      { name: "Database", platform: "MongoDB Atlas" },
+      { name: "AI Engine", platform: "OpenRouter AI" }
+    ],
+    links: {
+      github: "https://github.com/shivamkesarwani2107-hash/FitAI-frontend",
+      githubFrontend: "https://github.com/shivamkesarwani2107-hash/FitAI-frontend",
+      githubBackend: "https://github.com/shivamkesarwani2107-hash/FitAI-backend",
+      live: "https://fit-ai-frontend-seven.vercel.app/"
+    }
+  },
+  {
     id: "megamart",
-    title: "MegaMart – Grocery Shopping Platform",
+    title: "MegaMart – Full-Stack Grocery E-Commerce Platform",
     shortTitle: "MegaMart Grocery Platform",
-    tagline: "Full-Stack Grocery Shopping Platform with Redis Caching, Razorpay Payments & Nodemailer",
+    tagline: "Full-Stack Grocery E-Commerce Platform with Redis Caching, Razorpay Payments & Nodemailer",
     category: "Full-Stack MERN Application",
     featured: true,
     badge: "Featured E-Commerce",
-    overview: "A full-stack grocery shopping platform with product browsing, categories, cart, wishlist, and order management. Built RESTful APIs for products, categories, subcategories, cart, wishlist and orders with JWT-based authentication and protected routes. Integrated Razorpay for online payments and Nodemailer for automated order confirmation emails, alongside Redis caching for fast category and product retrieval.",
+    overview: "Engineered a full-stack grocery e-commerce platform using React.js, Node.js, Express.js and MongoDB with product, category, cart, wishlist and order management workflows.",
     problemSolved: "E-commerce grocery platforms demand sub-second catalog response times, fault-tolerant checkout flows, and automated transaction updates. MegaMart implements Redis caching to drastically reduce MongoDB read queries, coupled with secure Razorpay gateway processing.",
     imageBg: "from-amber-500/20 via-emerald-600/20 to-teal-600/20",
     accentColor: "amber",
@@ -351,29 +349,40 @@ export const PROJECTS = [
       "Nodemailer",
       "Tailwind CSS",
       "JWT Auth",
-      "RESTful APIs",
-      "Axios"
+      "REST APIs"
     ],
     features: [
       {
-        title: "Full-Stack Grocery Platform",
-        desc: "Developed a full-stack grocery shopping platform with product browsing, categories, cart, wishlist and order management."
+        title: "Full-Stack Grocery E-Commerce",
+        desc: "Engineered a full-stack grocery e-commerce platform using React.js, Node.js, Express.js and MongoDB with product, category, cart, wishlist and order management workflows."
       },
       {
-        title: "RESTful APIs & JWT Authentication",
-        desc: "Built RESTful APIs for products, categories, subcategories, cart, wishlist and orders with JWT-based authentication and protected routes."
+        title: "RESTful APIs & Protected Endpoints",
+        desc: "Designed and implemented RESTful APIs for products, categories, subcategories, cart, wishlist and orders with protected resources."
       },
       {
-        title: "Razorpay Payments & Nodemailer",
-        desc: "Integrated Razorpay for online payments and Nodemailer for automated order confirmation emails."
+        title: "JWT Authentication & Secure Sessions",
+        desc: "Implemented JWT-based authentication and authorization for secure user sessions and protected e-commerce operations."
       },
       {
-        title: "Redis Caching & Admin CRUD",
-        desc: "Implemented Redis caching and admin CRUD operations for categories, subcategories and products."
+        title: "Redis Server-Side Caching",
+        desc: "Integrated Redis caching for frequently accessed application data to optimize backend data retrieval and reduce repeated database operations."
       },
       {
-        title: "Responsive Tailwind UI & Cloud Deployment",
-        desc: "Designed a responsive interface using Tailwind CSS and deployed the frontend on Vercel and backend on Render."
+        title: "Razorpay Online Payments",
+        desc: "Integrated Razorpay payment gateway for online payment processing and implemented payment-success order workflows."
+      },
+      {
+        title: "Nodemailer & Admin CRUD",
+        desc: "Implemented Nodemailer transactional email workflows and administrative CRUD operations for product and category management."
+      },
+      {
+        title: "Responsive React & Tailwind UI",
+        desc: "Built responsive React.js interfaces using Tailwind CSS for product discovery, search, filtering, cart, wishlist, checkout and order workflows."
+      },
+      {
+        title: "Cloud Production Deployment",
+        desc: "Configured production deployment using Vercel for frontend and Render for backend services."
       }
     ],
     architecture: {
@@ -384,11 +393,14 @@ export const PROJECTS = [
       integrations: "Razorpay payment gateway, Nodemailer SMTP service, Redis in-memory cache, Vercel & Render cloud hosting"
     },
     myContribution: [
-      "Developed a full-stack grocery shopping platform with product browsing, categories, cart, wishlist and order management.",
-      "Built RESTful APIs for products, categories, subcategories, cart, wishlist and orders with JWT-based authentication and protected routes.",
-      "Integrated Razorpay for online payments and Nodemailer for automated order confirmation emails.",
-      "Implemented Redis caching and admin CRUD operations for categories, subcategories and products.",
-      "Designed a responsive interface using Tailwind CSS and deployed the frontend on Vercel and backend on Render."
+      "Engineered a full-stack grocery e-commerce platform using React.js, Node.js, Express.js and MongoDB with product, category, cart, wishlist and order management workflows.",
+      "Designed and implemented RESTful APIs for products, categories, subcategories, cart, wishlist and orders with protected resources.",
+      "Implemented JWT-based authentication and authorization for secure user sessions and protected e-commerce operations.",
+      "Integrated Redis caching for frequently accessed application data to optimize backend data retrieval and reduce repeated database operations.",
+      "Integrated Razorpay payment gateway for online payment processing and implemented payment-success order workflows.",
+      "Implemented Nodemailer transactional email workflows and administrative CRUD operations for product and category management.",
+      "Built responsive React.js interfaces using Tailwind CSS for product discovery, search, filtering, cart, wishlist, checkout and order workflows.",
+      "Configured production deployment using Vercel for frontend and Render for backend services."
     ],
     deployments: [
       { name: "Frontend", platform: "Vercel" },
@@ -407,11 +419,11 @@ export const PROJECTS = [
     id: "library-management",
     title: "Library Management System",
     shortTitle: "Library Management System",
-    tagline: "Full-Stack Digital Catalog with JWT Auth, CRUD, Search, Pagination & TanStack Query",
+    tagline: "Full-Stack Library Management System with JWT, CRUD, Search, Pagination & REST APIs",
     category: "Full-Stack MERN Application",
     featured: true,
     badge: "Full-Stack Deployed",
-    overview: "A full-stack library management system for managing books, authors, categories, users and wishlists. Implemented JWT Authentication, Authorization, Protected Routes, and RESTful APIs for secure application access, CRUD operations, pagination, search, sorting and wishlist functionality with TanStack Query for API fetching, caching and mutations with a responsive Tailwind CSS interface.",
+    overview: "Engineered a full-stack library management system using React.js, Node.js, Express.js and MongoDB for book, user and wishlist management.",
     problemSolved: "Traditional library tracking suffers from inventory tracking delays and disorganized checkouts. This application digitizes the entire catalog lifecycle with structured relational Mongoose models, fast full-text filtering, and multi-tier cloud deployment.",
     imageBg: "from-emerald-600/20 via-teal-600/20 to-cyan-600/20",
     accentColor: "emerald",
@@ -425,46 +437,50 @@ export const PROJECTS = [
       "Node.js",
       "Express.js",
       "MongoDB",
-      "TanStack Query",
-      "JWT Auth",
-      "RESTful APIs",
+      "JWT",
+      "REST APIs",
       "Tailwind CSS",
       "Axios"
     ],
     features: [
       {
-        title: "Full-Stack Library Management",
-        desc: "Developed a full-stack library management system for managing books, authors, categories, users and wishlists."
+        title: "Full-Stack Library Platform",
+        desc: "Engineered a full-stack library management system using React.js, Node.js, Express.js and MongoDB for book, user and wishlist management."
       },
       {
-        title: "JWT Authentication & Authorization",
-        desc: "Implemented JWT Authentication, Authorization, Protected Routes and RESTful APIs for secure application access."
+        title: "RESTful APIs for Resources",
+        desc: "Designed and implemented RESTful APIs for authentication, user management, book management and wishlist operations."
       },
       {
-        title: "CRUD Operations, Pagination & Search",
-        desc: "Implemented CRUD operations, pagination, search, sorting and wishlist functionality."
+        title: "JWT Authentication & Protected APIs",
+        desc: "Implemented JWT-based authentication, authorization and protected API resources for secure application access."
       },
       {
-        title: "TanStack Query State Caching",
-        desc: "Used TanStack Query for API fetching, caching and mutations with a responsive Tailwind CSS interface."
+        title: "CRUD with Pagination & Search",
+        desc: "Implemented CRUD operations with server-side pagination, search, filtering and sorting for efficient data retrieval."
       },
       {
-        title: "Multi-Platform Cloud Deployment",
-        desc: "Deployed frontend on Vercel and backend on Render with MongoDB Atlas database persistence."
+        title: "Age-Group & Query Filtering",
+        desc: "Implemented age-group filtering and query-based data retrieval using Express.js request parameters and MongoDB operations."
+      },
+      {
+        title: "Reusable React.js Components",
+        desc: "Developed reusable React.js components and responsive interfaces using Tailwind CSS with frontend-backend API integration."
       }
     ],
     architecture: {
-      client: "React SPA on Vercel with TanStack Query caching, responsive tables, cards, and modal forms",
+      client: "React SPA on Vercel with responsive tables, cards, and modal forms",
       server: "Node.js + Express API on Render with CORS and structured REST routes",
       auth: "JWT-based Bearer token verification on all mutation endpoints",
       database: "MongoDB Atlas with relational population for Book-Author-Category entities"
     },
     myContribution: [
-      "Developed a full-stack library management system for managing books, authors, categories, users and wishlists.",
-      "Implemented JWT Authentication, Authorization, Protected Routes and RESTful APIs for secure application access.",
-      "Implemented CRUD operations, pagination, search, sorting and wishlist functionality.",
-      "Used TanStack Query for API fetching, caching and mutations with a responsive Tailwind CSS interface.",
-      "Deployed frontend on Vercel and backend on Render."
+      "Engineered a full-stack library management system using React.js, Node.js, Express.js and MongoDB for book, user and wishlist management.",
+      "Designed and implemented RESTful APIs for authentication, user management, book management and wishlist operations.",
+      "Implemented JWT-based authentication, authorization and protected API resources for secure application access.",
+      "Implemented CRUD operations with server-side pagination, search, filtering and sorting for efficient data retrieval.",
+      "Implemented age-group filtering and query-based data retrieval using Express.js request parameters and MongoDB operations.",
+      "Developed reusable React.js components and responsive interfaces using Tailwind CSS with frontend-backend API integration."
     ],
     links: {
       github: "https://github.com/shivamkesarwani2107-hash/frontend-library",
@@ -501,7 +517,7 @@ export const ARCHITECTURE_FLOW = [
     step: "03",
     title: "Node.js & Express Server",
     tech: "Node.js, Express.js, Controllers, Error Middleware",
-    description: "High-performance asynchronous runtime executing request controllers, input sanitization, business logic, OpenAI integration, and centralized error handling.",
+    description: "High-performance asynchronous runtime executing request controllers, input sanitization, business logic, OpenRouter AI integration, and centralized error handling.",
     badge: "Application Core",
     icon: "Server",
     color: "indigo"
@@ -510,8 +526,8 @@ export const ARCHITECTURE_FLOW = [
     id: "auth",
     step: "04",
     title: "JWT Authentication & Security",
-    tech: "JWT Authentication, bcrypt.js, Joi Validation, Protected Routes",
-    description: "Stateless security layer verifying bearer tokens, decoding user claims, validating request payloads with Joi, hashing passwords with bcrypt.js, and safeguarding private routes.",
+    tech: "JWT Authentication, bcrypt.js, Protected Routes",
+    description: "Stateless security layer verifying bearer tokens, decoding user claims, hashing passwords with bcrypt.js, and safeguarding private routes.",
     badge: "Security Layer",
     icon: "ShieldCheck",
     color: "emerald"
@@ -530,8 +546,8 @@ export const ARCHITECTURE_FLOW = [
     id: "external",
     step: "06",
     title: "AI, Payments & Cloud",
-    tech: "OpenAI API, Razorpay, Nodemailer, Vercel, Render, Postman, Git",
-    description: "Production integrations including OpenAI / OpenRouter intelligent workout planning, Razorpay payment processing with HMAC signature verification, automated emails, and cloud deployments.",
+    tech: "OpenRouter AI, Razorpay, Nodemailer, Vercel, Render, Postman, Git",
+    description: "Production integrations including OpenRouter AI workout planning, Razorpay payment processing, automated emails, and cloud deployments.",
     badge: "Services & Cloud",
     icon: "CreditCard",
     color: "purple"
@@ -539,7 +555,7 @@ export const ARCHITECTURE_FLOW = [
 ];
 
 export const ABOUT_INFO = {
-  summary: "MERN Stack Developer with hands-on experience developing and deploying full-stack web applications using React.js, Node.js, Express.js, and MongoDB. Skilled in RESTful API development, OpenAI / AI integration, JWT authentication, React Query, Redis caching, Razorpay payment integration, and modern responsive UI development.",
+  summary: "MERN Stack Developer with 6 months of internship experience designing and developing full-stack web applications using React.js, Node.js, Express.js and MongoDB. Hands-on experience in RESTful API development, authentication and authorization, CRUD operations, database integration, responsive UI engineering, OpenRouter AI integration, Redis caching, Razorpay payment integration, and Git-based software development.",
   pillars: [
     {
       title: "Practical MERN Stack Development",
@@ -548,12 +564,12 @@ export const ABOUT_INFO = {
     },
     {
       title: "API Architecture & Security",
-      desc: "Skilled in developing RESTful APIs, JWT Authentication with role-based authorization, Joi schema validation, and bcrypt.js password encryption.",
+      desc: "Skilled in developing RESTful APIs, JWT Authentication with role-based authorization, protected routes, and bcrypt.js password encryption.",
       icon: "Sparkles"
     },
     {
       title: "AI & Payment Integration",
-      desc: "Experienced with OpenAI / OpenRouter AI models for personalized automation, Redis in-memory caching, and Razorpay gateway integration.",
+      desc: "Experienced with OpenRouter AI models for personalized fitness automation, Redis in-memory caching, and Razorpay gateway integration.",
       icon: "CreditCard"
     },
     {
@@ -563,4 +579,3 @@ export const ABOUT_INFO = {
     }
   ]
 };
-

@@ -20,12 +20,13 @@ export const PERSONAL_INFO = {
 };
 
 export const RESUME_DATA = {
-  summary: "Software Engineer and MERN Stack Developer with hands-on experience developing, integrating, debugging and deploying full-stack web applications using React.js, Node.js, Express.js and MongoDB. Proficient in RESTful API development, JWT-based Authentication and Authorization, Protected Routes, CRUD workflows, server-side pagination, search, filtering, sorting, API integration and responsive UI development. Experienced with Redis caching, TanStack Query, payment gateway integration, third-party service integration, Git-based development and production deployment using Vercel and Render.",
+  summary: "Software Engineer and MERN Stack Developer with hands-on experience developing, integrating, debugging and deploying full-stack web applications using React.js, Node.js, Express.js and MongoDB. Proficient in RESTful API development, JWT-based Authentication and Authorization, Protected Routes, CRUD workflows, server-side pagination, search, filtering, sorting, API integration and responsive UI development. Experienced with OpenAI/OpenRouter AI integration, Redis caching, TanStack Query, payment gateway integration, third-party service integration, Git-based development and production deployment using Vercel and Render.",
   achievements: [
-    "Built multiple full-stack MERN applications from scratch.",
+    "Built multiple production-ready full-stack MERN & AI applications from scratch.",
     "Integrated Razorpay payment gateway and Nodemailer for automated order/booking emails.",
+    "Implemented AI workout & diet planners using OpenAI / OpenRouter APIs.",
     "Implemented Redis caching and JWT authentication with protected routes.",
-    "Successfully deployed full-stack applications using Vercel and Render."
+    "Successfully deployed full-stack applications using Vercel, Render, and MongoDB Atlas."
   ]
 };
 
@@ -36,9 +37,9 @@ export const HONEST_METRICS = [
     detail: "React, Node, Express, MongoDB"
   },
   {
-    value: "3+",
+    value: "4+",
     label: "Deployed Full-Stack Apps",
-    detail: "AstroGanesh, MegaMart, Library"
+    detail: "FitAI, AstroGanesh, MegaMart, Library"
   },
   {
     value: "6 Months",
@@ -128,8 +129,20 @@ export const SKILL_CATEGORIES = [
       { name: "Express.js", level: "Proficient", icon: "Boxes" },
       { name: "RESTful APIs", level: "Proficient", icon: "Network" },
       { name: "JWT & Auth", level: "Proficient", icon: "ShieldCheck" },
+      { name: "Joi Validation", level: "Proficient", icon: "ShieldCheck" },
       { name: "bcrypt.js", level: "Proficient", icon: "ShieldCheck" },
       { name: "Nodemailer", level: "Proficient", icon: "Send" }
+    ]
+  },
+  {
+    id: "ai-services",
+    title: "AI & External Integrations",
+    icon: "Sparkles",
+    skills: [
+      { name: "OpenAI / OpenRouter", level: "Proficient", icon: "Sparkles" },
+      { name: "Razorpay Gateway", level: "Proficient", icon: "CreditCard" },
+      { name: "HMAC Signatures", level: "Proficient", icon: "ShieldCheck" },
+      { name: "AI Prompt Workflows", level: "Proficient", icon: "Atom" }
     ]
   },
   {
@@ -146,10 +159,9 @@ export const SKILL_CATEGORIES = [
   },
   {
     id: "tools",
-    title: "Tools, Payment & Cloud",
+    title: "Tools & Deployment",
     icon: "Wrench",
     skills: [
-      { name: "Razorpay Integration", level: "Proficient", icon: "CreditCard" },
       { name: "Git & GitHub", level: "Proficient", icon: "GitBranch" },
       { name: "Postman", level: "Proficient", icon: "Send" },
       { name: "Vercel & Render", level: "Proficient", icon: "Zap" },
@@ -160,6 +172,7 @@ export const SKILL_CATEGORIES = [
 
 export const CORE_CONCEPTS = [
   "RESTful APIs Architecture",
+  "OpenAI & AI Engine Integration",
   "JWT Authentication & Authorization",
   "Protected Routes & Middleware",
   "CRUD Operations",
@@ -172,6 +185,80 @@ export const CORE_CONCEPTS = [
 ];
 
 export const PROJECTS = [
+  {
+    id: "fitai",
+    title: "FitAI – AI-Powered Fitness & Workout Platform",
+    shortTitle: "FitAI Fitness Platform",
+    tagline: "Full-Stack AI Fitness & Workout Planner with OpenAI / OpenRouter, Razorpay Memberships & JWT Auth",
+    category: "Full-Stack MERN & AI Platform",
+    featured: true,
+    badge: "Featured AI Platform",
+    overview: "An AI-powered full-stack fitness platform that dynamically generates personalized workout routines and custom meal plans using OpenAI / OpenRouter AI models. Features secure JWT authentication, bcrypt password hashing, Joi validation schema, interactive workout logging, product and order management, and Razorpay payment integration for premium membership tiers.",
+    problemSolved: "Personalized fitness coaching and nutrition consulting are typically costly or rigid. FitAI utilizes AI automation to instantly generate personalized workout routines and customized nutrition strategies tailored to individual fitness metrics, backed by secure subscription billing and profile management.",
+    imageBg: "from-cyan-500/20 via-blue-600/20 to-purple-600/20",
+    accentColor: "cyan",
+    techStack: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "OpenAI API",
+      "Razorpay",
+      "JWT Auth",
+      "Joi Validation",
+      "Tailwind CSS",
+      "Axios"
+    ],
+    features: [
+      {
+        title: "AI Workout & Nutrition Generation",
+        desc: "Integrated OpenAI / OpenRouter API to dynamically generate personalized fitness regimens and custom nutrition plans based on user profiles and fitness goals."
+      },
+      {
+        title: "JWT Authentication & Joi Validation",
+        desc: "Engineered secure user registration and login workflows with bcrypt password hashing, JWT token authorization, cookie parsing, and Joi payload validation."
+      },
+      {
+        title: "Razorpay Memberships & Billing",
+        desc: "Integrated Razorpay payment gateway with cryptographic HMAC-SHA256 signature verification for subscription plans and membership tier upgrades."
+      },
+      {
+        title: "Fitness Products & Order Tracking",
+        desc: "Implemented fitness equipment catalog, cart workflows, and order lifecycle management with MongoDB and Mongoose ODM persistence."
+      },
+      {
+        title: "Responsive Frontend & Cloud Deployment",
+        desc: "Developed a modern, responsive user interface deployed on Vercel with a resilient Node.js / Express backend hosted on Render."
+      }
+    ],
+    architecture: {
+      client: "React.js Single Page Application with dynamic fitness forms, AI workout dashboard, membership checkout, and responsive Tailwind UI",
+      server: "Node.js & Express.js REST API with structured controllers, OpenAI / OpenRouter prompt handlers, and error middleware",
+      auth: "JWT-based authentication with bcrypt password encryption, cookie tokens, and Joi input validation schema",
+      database: "MongoDB Atlas persistence with structured Mongoose schemas for Users, Workouts, Memberships, Products, and Orders",
+      integrations: "OpenAI / OpenRouter API, Razorpay Payment Gateway, Vercel & Render cloud hosting"
+    },
+    myContribution: [
+      "Designed and built the full-stack AI fitness platform architecture connecting React frontend with Express REST APIs.",
+      "Integrated OpenAI / OpenRouter API endpoints to generate custom workout plans and dietary suggestions.",
+      "Implemented JWT authentication, cookie management, bcrypt password hashing, and Joi validation schemas.",
+      "Integrated Razorpay payment checkout with cryptographic HMAC-SHA256 signature verification for membership purchases.",
+      "Structured Mongoose schemas for users, workouts, memberships, products, and order lifecycle persistence.",
+      "Deployed frontend client to Vercel and backend services with MongoDB Atlas database cluster."
+    ],
+    deployments: [
+      { name: "Frontend", platform: "Vercel" },
+      { name: "Backend", platform: "Render" },
+      { name: "Database", platform: "MongoDB Atlas" },
+      { name: "AI Engine", platform: "OpenAI / OpenRouter" }
+    ],
+    links: {
+      github: "https://github.com/shivamkesarwani2107-hash/FitAI-frontend",
+      githubFrontend: "https://github.com/shivamkesarwani2107-hash/FitAI-frontend",
+      githubBackend: "https://github.com/shivamkesarwani2107-hash/FitAI-backend",
+      live: "https://fit-ai-frontend-seven.vercel.app/"
+    }
+  },
   {
     id: "astroganesh",
     title: "AstroGanesh – Production Astrology Platform",
@@ -414,7 +501,7 @@ export const ARCHITECTURE_FLOW = [
     step: "03",
     title: "Node.js & Express Server",
     tech: "Node.js, Express.js, Controllers, Error Middleware",
-    description: "High-performance asynchronous runtime executing request controllers, input sanitization, business logic, and centralized error handling.",
+    description: "High-performance asynchronous runtime executing request controllers, input sanitization, business logic, OpenAI integration, and centralized error handling.",
     badge: "Application Core",
     icon: "Server",
     color: "indigo"
@@ -423,8 +510,8 @@ export const ARCHITECTURE_FLOW = [
     id: "auth",
     step: "04",
     title: "JWT Authentication & Security",
-    tech: "JWT Authentication, bcrypt.js, Authorization, Protected Routes",
-    description: "Stateless security layer verifying bearer tokens, decoding user claims, hashing passwords with bcrypt.js, and safeguarding private routes.",
+    tech: "JWT Authentication, bcrypt.js, Joi Validation, Protected Routes",
+    description: "Stateless security layer verifying bearer tokens, decoding user claims, validating request payloads with Joi, hashing passwords with bcrypt.js, and safeguarding private routes.",
     badge: "Security Layer",
     icon: "ShieldCheck",
     color: "emerald"
@@ -442,9 +529,9 @@ export const ARCHITECTURE_FLOW = [
   {
     id: "external",
     step: "06",
-    title: "Payment, Emails & Cloud",
-    tech: "Razorpay, Nodemailer, Vercel, Render, Postman, Git",
-    description: "Production integrations including Razorpay payment processing, Nodemailer automated confirmation emails, and deployment on Vercel & Render.",
+    title: "AI, Payments & Cloud",
+    tech: "OpenAI API, Razorpay, Nodemailer, Vercel, Render, Postman, Git",
+    description: "Production integrations including OpenAI / OpenRouter intelligent workout planning, Razorpay payment processing with HMAC signature verification, automated emails, and cloud deployments.",
     badge: "Services & Cloud",
     icon: "CreditCard",
     color: "purple"
@@ -452,21 +539,21 @@ export const ARCHITECTURE_FLOW = [
 ];
 
 export const ABOUT_INFO = {
-  summary: "MERN Stack Developer with hands-on experience developing and deploying full-stack web applications using React.js, Node.js, Express.js and MongoDB. Skilled in RESTful API development, JWT authentication, React Query, Redis caching, Razorpay integration and responsive UI development.",
+  summary: "MERN Stack Developer with hands-on experience developing and deploying full-stack web applications using React.js, Node.js, Express.js, and MongoDB. Skilled in RESTful API development, OpenAI / AI integration, JWT authentication, React Query, Redis caching, Razorpay payment integration, and modern responsive UI development.",
   pillars: [
     {
       title: "Practical MERN Stack Development",
-      desc: "Hands-on experience building full-stack applications with React.js, Node.js, Express.js and MongoDB from scratch.",
+      desc: "Hands-on experience building full-stack applications with React.js, Node.js, Express.js, and MongoDB from scratch.",
       icon: "Code2"
     },
     {
       title: "API Architecture & Security",
-      desc: "Skilled in developing RESTful APIs, JWT Authentication with role-based authorization, bcrypt.js, and backend input validations.",
+      desc: "Skilled in developing RESTful APIs, JWT Authentication with role-based authorization, Joi schema validation, and bcrypt.js password encryption.",
       icon: "Sparkles"
     },
     {
-      title: "Caching & Payment Integration",
-      desc: "Experienced with Redis in-memory caching for low-latency queries and Razorpay gateway integration with Nodemailer email receipts.",
+      title: "AI & Payment Integration",
+      desc: "Experienced with OpenAI / OpenRouter AI models for personalized automation, Redis in-memory caching, and Razorpay gateway integration.",
       icon: "CreditCard"
     },
     {
@@ -476,3 +563,4 @@ export const ABOUT_INFO = {
     }
   ]
 };
+

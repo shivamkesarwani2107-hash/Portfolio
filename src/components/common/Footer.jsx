@@ -10,20 +10,20 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-slate-800 bg-dark-950/80 pt-16 pb-12 overflow-hidden w-full max-w-full">
+    <footer className="relative border-t border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-dark-950/80 backdrop-blur-md pt-16 pb-12 overflow-hidden w-full max-w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 w-full">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           {/* Brand Info & Social Icons */}
           <div className="space-y-4 max-w-md">
             <div className="flex items-center gap-3">
-              <span className="text-xl font-bold text-white font-display">
-                {PERSONAL_INFO.name}<span className="text-emerald-400">.</span>
+              <span className="text-xl font-bold text-slate-900 dark:text-white font-display">
+                {PERSONAL_INFO.name}<span className="text-emerald-500 dark:text-emerald-400">.</span>
               </span>
               <Badge variant="emerald" size="sm" dot={true}>
                 {PERSONAL_INFO.availabilityBadge}
               </Badge>
             </div>
-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
               MERN Stack Developer building responsive frontends, modular REST APIs, and structured database systems with React, Node.js, Express, and MongoDB.
             </p>
 
@@ -33,29 +33,29 @@ export default function Footer() {
                 href={PERSONAL_INFO.socials.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-xl bg-dark-900 hover:bg-dark-800 text-slate-400 hover:text-white border border-slate-800 hover:border-slate-700 transition-colors"
+                className="p-2.5 rounded-xl bg-slate-100 dark:bg-dark-900 hover:bg-slate-200 dark:hover:bg-dark-800 text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors shadow-sm"
                 aria-label="GitHub Profile"
                 title="GitHub"
               >
-                <GithubIcon className="w-4 h-4 text-emerald-400" />
+                <GithubIcon className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               </a>
               <a
                 href={PERSONAL_INFO.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-xl bg-dark-900 hover:bg-dark-800 text-slate-400 hover:text-white border border-slate-800 hover:border-slate-700 transition-colors"
+                className="p-2.5 rounded-xl bg-slate-100 dark:bg-dark-900 hover:bg-slate-200 dark:hover:bg-dark-800 text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors shadow-sm"
                 aria-label="LinkedIn Profile"
                 title="LinkedIn"
               >
-                <LinkedinIcon className="w-4 h-4 text-blue-400" />
+                <LinkedinIcon className="w-4 h-4 text-blue-600 dark:text-blue-400" />
               </a>
               <a
                 href={PERSONAL_INFO.socials.email}
-                className="p-2 rounded-xl bg-dark-900 hover:bg-dark-800 text-slate-400 hover:text-white border border-slate-800 hover:border-slate-700 transition-colors"
+                className="p-2.5 rounded-xl bg-slate-100 dark:bg-dark-900 hover:bg-slate-200 dark:hover:bg-dark-800 text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 transition-colors shadow-sm"
                 aria-label="Send Email"
                 title="Email"
               >
-                <Mail className="w-4 h-4 text-slate-300" />
+                <Mail className="w-4 h-4 text-slate-600 dark:text-slate-300" />
               </a>
             </div>
           </div>
@@ -64,44 +64,44 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-4 sm:gap-6">
             <a
               href="#home"
-              className="text-xs sm:text-sm text-slate-400 hover:text-white transition-colors"
+              className="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-white transition-colors"
             >
               Home
             </a>
             <a
               href="#projects"
-              className="text-xs sm:text-sm text-slate-400 hover:text-white transition-colors"
+              className="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-white transition-colors"
             >
               Projects
             </a>
             <a
               href="#experience"
-              className="text-xs sm:text-sm text-slate-400 hover:text-white transition-colors"
+              className="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-white transition-colors"
             >
               Experience
             </a>
             <a
               href="#skills"
-              className="text-xs sm:text-sm text-slate-400 hover:text-white transition-colors"
+              className="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-white transition-colors"
             >
               Skills
             </a>
             <a
               href="#architecture"
-              className="text-xs sm:text-sm text-slate-400 hover:text-white transition-colors"
+              className="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-white transition-colors"
             >
               Architecture
             </a>
             <a
               href="#contact"
-              className="text-xs sm:text-sm text-slate-400 hover:text-white transition-colors"
+              className="text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-white transition-colors"
             >
               Contact
             </a>
 
             <button
               onClick={scrollToTop}
-              className="p-2.5 rounded-xl bg-dark-900 hover:bg-dark-800 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white transition-all shadow-sm group ml-auto md:ml-0"
+              className="p-2.5 rounded-xl bg-slate-100 dark:bg-dark-900 hover:bg-slate-200 dark:hover:bg-dark-800 border border-slate-200 dark:border-slate-800 hover:border-slate-300 dark:hover:border-slate-700 text-slate-700 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all shadow-sm group ml-auto md:ml-0"
               title="Scroll to top"
               aria-label="Scroll to top"
             >
@@ -111,7 +111,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom copyright and stack */}
-        <div className="pt-8 border-t border-slate-850 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="pt-8 border-t border-slate-200 dark:border-slate-850 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
           <div className="flex items-center gap-1.5 font-mono">
             <span>© {new Date().getFullYear()} {PERSONAL_INFO.name}. All rights reserved.</span>
           </div>

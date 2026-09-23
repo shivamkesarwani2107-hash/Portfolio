@@ -21,7 +21,14 @@ export default function App() {
   const [resumeModalOpen, setResumeModalOpen] = useState(false);
   const [completionModalOpen, setCompletionModalOpen] = useState(false);
   const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
-  const [darkMode, setDarkMode] = useState(true);
+  
+  // Default to light theme as requested
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem('theme');
+    if (saved) return saved === 'dark';
+    return false; // Default light theme
+  });
+  
   const [toast, setToast] = useState({ message: '', type: 'success' });
 
   // Handle section spy on scroll
@@ -60,15 +67,17 @@ export default function App() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Sync dark mode class
+  // Sync dark mode class & local storage
   useEffect(() => {
     const root = document.documentElement;
     if (darkMode) {
       root.classList.add('dark');
       root.classList.remove('light');
+      localStorage.setItem('theme', 'dark');
     } else {
       root.classList.remove('dark');
       root.classList.add('light');
+      localStorage.setItem('theme', 'light');
     }
   }, [darkMode]);
 
@@ -81,7 +90,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#090a0f] text-slate-100 selection:bg-emerald-500/20 selection:text-emerald-300 relative w-full max-w-full overflow-x-hidden">
+    <div className="min-h-screen bg-slate-50 dark:bg-[#0b0f19] text-slate-800 dark:text-slate-100 selection:bg-emerald-500/20 selection:text-emerald-700 dark:selection:text-emerald-300 relative w-full max-w-full overflow-x-hidden transition-colors duration-300">
       {/* Top Fixed Header */}
       <Navbar
         activeSection={activeSection}
@@ -100,6 +109,7 @@ export default function App() {
           }}
           onOpenResume={() => setResumeModalOpen(true)}
         />
+
 
         <ProjectsSection
           onOpenCaseStudy={(project) => setSelectedCaseStudy(project)}

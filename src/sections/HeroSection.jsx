@@ -18,40 +18,40 @@ export default function HeroSection({ onOpenContact, onOpenResume }) {
   return (
     <section id="home" className="relative min-h-[90vh] flex flex-col justify-center pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden w-full max-w-full">
       {/* Background Ambient Glow & Grid Lines */}
-      <div className="absolute inset-0 bg-grid-mesh opacity-50 pointer-events-none" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] max-w-full h-[350px] bg-gradient-to-tr from-emerald-500/10 via-blue-500/10 to-indigo-500/0 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 bg-grid-mesh opacity-60 dark:opacity-40 pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] max-w-full h-[350px] bg-gradient-to-tr from-emerald-500/15 via-blue-500/15 to-indigo-500/0 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-10 lg:space-y-14">
         {/* Hero Content */}
         <div className="max-w-4xl space-y-6">
-          {/* Availability Pill Banner (Matches Reference) */}
+          {/* Availability Pill Banner */}
           <div className="inline-flex max-w-full">
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-dark-900/90 border border-slate-700/60 backdrop-blur-md shadow-sm max-w-full">
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/90 dark:bg-dark-900/90 border border-slate-200/90 dark:border-slate-700/60 backdrop-blur-md shadow-sm max-w-full">
               <span className="relative flex h-2 w-2 shrink-0">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
               </span>
-              <span className="text-xs sm:text-sm font-medium text-slate-300 truncate">
+              <span className="text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300 truncate">
                 {PERSONAL_INFO.noticeNotice}
               </span>
             </div>
           </div>
 
           {/* Main Hero Heading */}
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.1] font-display break-words">
-            Hi, I'm <span className="text-white">{PERSONAL_INFO.name}.</span>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-[1.1] font-display break-words">
+            Hi, I'm <span className="text-slate-900 dark:text-white">{PERSONAL_INFO.name}.</span>
           </h1>
 
           {/* Subheading / Tech highlights */}
-          <p className="text-lg sm:text-xl lg:text-2xl text-slate-400 font-normal leading-relaxed max-w-3xl">
-            <span className="text-slate-200 font-medium">{PERSONAL_INFO.title}</span> building modern, scalable, and user-focused full-stack web applications using{' '}
-            <strong className="text-white font-semibold">React</strong>,{' '}
-            <strong className="text-white font-semibold">Node.js</strong>,{' '}
-            <strong className="text-white font-semibold">Express</strong>, and{' '}
-            <strong className="text-white font-semibold">MongoDB</strong>.
+          <p className="text-lg sm:text-xl lg:text-2xl text-slate-600 dark:text-slate-400 font-normal leading-relaxed max-w-3xl">
+            <span className="text-slate-900 dark:text-slate-200 font-semibold">{PERSONAL_INFO.title}</span> building modern, scalable, and user-focused full-stack web applications using{' '}
+            <strong className="text-slate-900 dark:text-white font-semibold">React</strong>,{' '}
+            <strong className="text-slate-900 dark:text-white font-semibold">Node.js</strong>,{' '}
+            <strong className="text-slate-900 dark:text-white font-semibold">Express</strong>, and{' '}
+            <strong className="text-slate-900 dark:text-white font-semibold">MongoDB</strong>.
           </p>
 
-          {/* Action CTA Buttons (Matches Reference) */}
+          {/* Action CTA Buttons */}
           <div className="flex flex-wrap items-center gap-3.5 pt-2">
             <Button
               variant="primary"
@@ -59,7 +59,7 @@ export default function HeroSection({ onOpenContact, onOpenResume }) {
               onClick={scrollToProjects}
               icon={ArrowRight}
               iconPosition="right"
-              className="shadow-lg shadow-white/5"
+              className="shadow-md shadow-slate-900/10 dark:shadow-white/5"
             >
               View Projects
             </Button>
@@ -86,18 +86,18 @@ export default function HeroSection({ onOpenContact, onOpenResume }) {
           </div>
         </div>
 
-        {/* Honest Developer Metrics Bar (Matches Reference Layout with 100% truthful stats) */}
-        <div className="pt-6 border-t border-slate-800/80">
+        {/* Honest Developer Metrics Bar */}
+        <div className="pt-6 border-t border-slate-200 dark:border-slate-800/80">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             {HONEST_METRICS.map((metric, idx) => (
               <div key={idx} className="space-y-1 min-w-0">
-                <div className="text-xs sm:text-sm font-medium text-slate-400 truncate">
+                <div className="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 truncate">
                   {metric.label}
                 </div>
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight font-display">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-display">
                   {metric.value}
                 </div>
-                <div className="text-[11px] sm:text-xs text-slate-400 truncate">
+                <div className="text-[11px] sm:text-xs text-slate-500 dark:text-slate-400 truncate">
                   {metric.detail}
                 </div>
               </div>

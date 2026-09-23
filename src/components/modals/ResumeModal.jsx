@@ -46,17 +46,17 @@ export default function ResumeModal({ isOpen, onClose }) {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-6 overflow-y-auto w-full max-w-full">
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 bg-black/80 backdrop-blur-md transition-opacity"
+        className="fixed inset-0 bg-slate-900/60 dark:bg-black/80 backdrop-blur-md transition-opacity"
         onClick={onClose}
       />
 
       {/* Modal Container */}
-      <div className="relative w-full max-w-4xl bg-dark-900 border border-slate-700/80 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden z-10 my-2 sm:my-4 max-h-[92vh] flex flex-col">
+      <div className="relative w-full max-w-4xl bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-700/80 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden z-10 my-2 sm:my-4 max-h-[92vh] flex flex-col">
         {/* Modal Action Top Bar */}
-        <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 sm:py-4 border-b border-slate-800 bg-dark-850 shrink-0">
+        <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 sm:py-4 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-dark-850 shrink-0">
           <div className="flex items-center gap-2 min-w-0 pr-2">
-            <FileText className="w-5 h-5 text-emerald-400 shrink-0" />
-            <h3 className="text-sm sm:text-base font-bold text-white font-display truncate">
+            <FileText className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
+            <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white font-display truncate">
               Resume Preview — {PERSONAL_INFO.name}
             </h3>
           </div>
@@ -84,7 +84,7 @@ export default function ResumeModal({ isOpen, onClose }) {
             </Button>
             <button
               onClick={onClose}
-              className="p-1.5 text-slate-400 hover:text-white bg-dark-800 hover:bg-dark-700 border border-slate-700/80 rounded-full transition-colors ml-1"
+              className="p-1.5 text-slate-400 hover:text-slate-700 dark:hover:text-white bg-slate-100 hover:bg-slate-200 dark:bg-dark-800 dark:hover:bg-dark-700 border border-slate-200 dark:border-slate-700/80 rounded-full transition-colors ml-1"
               aria-label="Close modal"
             >
               <X className="w-5 h-5" />
@@ -93,25 +93,25 @@ export default function ResumeModal({ isOpen, onClose }) {
         </div>
 
         {/* Modal Scrollable Resume Sheet */}
-        <div className="p-4 sm:p-10 overflow-y-auto custom-scrollbar space-y-6 sm:space-y-8 bg-dark-950/60 font-sans">
+        <div className="p-4 sm:p-10 overflow-y-auto custom-scrollbar space-y-6 sm:space-y-8 bg-slate-50/70 dark:bg-dark-950/60 font-sans">
           {/* Resume Header */}
-          <div className="text-center space-y-3 pb-6 border-b border-slate-800">
-            <h1 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight font-display break-words">
+          <div className="text-center space-y-3 pb-6 border-b border-slate-200 dark:border-slate-800">
+            <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-display break-words">
               {PERSONAL_INFO.name}
             </h1>
-            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-6 text-xs sm:text-sm text-slate-300">
-              <a href={`tel:${PERSONAL_INFO.phone}`} className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
-                <Phone className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-6 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
+              <a href={`tel:${PERSONAL_INFO.phone}`} className="flex items-center gap-1.5 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                <Phone className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
                 <span>{PERSONAL_INFO.phone}</span>
               </a>
-              <span className="text-slate-600 hidden sm:inline">•</span>
-              <a href={`mailto:${PERSONAL_INFO.email}`} className="flex items-center gap-1.5 hover:text-emerald-400 transition-colors break-all">
-                <Mail className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+              <span className="text-slate-400 hidden sm:inline">•</span>
+              <a href={`mailto:${PERSONAL_INFO.email}`} className="flex items-center gap-1.5 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors break-all">
+                <Mail className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 shrink-0" />
                 <span>{PERSONAL_INFO.email}</span>
               </a>
-              <span className="text-slate-600 hidden sm:inline">•</span>
-              <span className="flex items-center gap-1.5 text-slate-400">
-                <MapPin className="w-3.5 h-3.5 text-rose-400 shrink-0" />
+              <span className="text-slate-400 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1.5 text-slate-600 dark:text-slate-400">
+                <MapPin className="w-3.5 h-3.5 text-rose-500 shrink-0" />
                 <span>{PERSONAL_INFO.location}</span>
               </span>
             </div>
@@ -121,19 +121,19 @@ export default function ResumeModal({ isOpen, onClose }) {
                 href={PERSONAL_INFO.socials.github} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-slate-300 hover:text-white"
+                className="flex items-center gap-1.5 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
               >
-                <GithubIcon className="w-3.5 h-3.5 text-emerald-400" />
+                <GithubIcon className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                 <span>GitHub Profile</span>
               </a>
-              <span className="text-slate-700">•</span>
+              <span className="text-slate-300 dark:text-slate-700">•</span>
               <a 
                 href={PERSONAL_INFO.socials.linkedin} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-slate-300 hover:text-white"
+                className="flex items-center gap-1.5 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white"
               >
-                <LinkedinIcon className="w-3.5 h-3.5 text-blue-400" />
+                <LinkedinIcon className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400" />
                 <span>LinkedIn Profile</span>
               </a>
             </div>
@@ -141,63 +141,63 @@ export default function ResumeModal({ isOpen, onClose }) {
 
           {/* Professional Summary */}
           <div className="space-y-2">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-emerald-400 border-b border-slate-800 pb-1 flex items-center gap-2">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 border-b border-slate-200 dark:border-slate-800 pb-1 flex items-center gap-2">
               <span>Professional Summary</span>
             </h2>
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
               {RESUME_DATA.summary}
             </p>
           </div>
 
           {/* Technical Skills */}
           <div className="space-y-3">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-emerald-400 border-b border-slate-800 pb-1">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 border-b border-slate-200 dark:border-slate-800 pb-1">
               Technical Skills
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
-              <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80">
-                <span className="font-semibold text-white">Languages: </span>
-                <span className="text-slate-300">JavaScript (ES6+), HTML5, CSS3</span>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700 dark:text-slate-300">
+              <div className="p-3 rounded-xl bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800/80 shadow-sm">
+                <span className="font-semibold text-slate-900 dark:text-white">Languages: </span>
+                <span className="text-slate-700 dark:text-slate-300">JavaScript (ES6+), HTML5, CSS3</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80">
-                <span className="font-semibold text-white">Frontend Engineering: </span>
-                <span className="text-slate-300">React.js, React Router DOM, Tailwind CSS, TanStack Query, Axios, Responsive Web Design</span>
+              <div className="p-3 rounded-xl bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800/80 shadow-sm">
+                <span className="font-semibold text-slate-900 dark:text-white">Frontend Engineering: </span>
+                <span className="text-slate-700 dark:text-slate-300">React.js, React Router DOM, Tailwind CSS, TanStack Query, Axios, Responsive Web Design</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80">
-                <span className="font-semibold text-white">Backend Engineering: </span>
-                <span className="text-slate-300">Node.js, Express.js, RESTful APIs, API Design, API Integration, CRUD Operations</span>
+              <div className="p-3 rounded-xl bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800/80 shadow-sm">
+                <span className="font-semibold text-slate-900 dark:text-white">Backend Engineering: </span>
+                <span className="text-slate-700 dark:text-slate-300">Node.js, Express.js, RESTful APIs, API Design, API Integration, CRUD Operations</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80">
-                <span className="font-semibold text-white">Databases & Caching: </span>
-                <span className="text-slate-300">MongoDB, Mongoose, Redis, Data Modeling, Database Operations</span>
+              <div className="p-3 rounded-xl bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800/80 shadow-sm">
+                <span className="font-semibold text-slate-900 dark:text-white">Databases & Caching: </span>
+                <span className="text-slate-700 dark:text-slate-300">MongoDB, Mongoose, Redis, Data Modeling, Database Operations</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80">
-                <span className="font-semibold text-white">Security & Payments: </span>
-                <span className="text-slate-300">JWT, Authentication, Authorization, Protected Routes, bcrypt.js, Razorpay, Payment Integration</span>
+              <div className="p-3 rounded-xl bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800/80 shadow-sm">
+                <span className="font-semibold text-slate-900 dark:text-white">AI & External APIs: </span>
+                <span className="text-slate-700 dark:text-slate-300">OpenAI API, OpenRouter, Razorpay Payment Gateway, HMAC-SHA256, Nodemailer</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80">
-                <span className="font-semibold text-white">Developer Tools & Deployment: </span>
-                <span className="text-slate-300">Git, GitHub, Postman, VS Code, Vercel, Render, Nodemailer</span>
+              <div className="p-3 rounded-xl bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800/80 shadow-sm">
+                <span className="font-semibold text-slate-900 dark:text-white">Developer Tools & Deployment: </span>
+                <span className="text-slate-700 dark:text-slate-300">Git, GitHub, Postman, VS Code, Vercel, Render</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-dark-900 border border-slate-800/80 sm:col-span-2">
-                <span className="font-semibold text-white">Software Engineering Concepts: </span>
-                <span className="text-slate-300">Client-Server Architecture, Server-Side Pagination, Search, Filtering, Sorting, API Caching, Query Invalidation, State Management, Data Validation, Debugging</span>
+              <div className="p-3 rounded-xl bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800/80 shadow-sm sm:col-span-2">
+                <span className="font-semibold text-slate-900 dark:text-white">Software Engineering Concepts: </span>
+                <span className="text-slate-700 dark:text-slate-300">Client-Server Architecture, Server-Side Pagination, Search, Filtering, Sorting, API Caching, Query Invalidation, State Management, Data Validation (Joi), Debugging</span>
               </div>
             </div>
           </div>
 
           {/* Projects */}
           <div className="space-y-4">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-emerald-400 border-b border-slate-800 pb-1">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 border-b border-slate-200 dark:border-slate-800 pb-1">
               Featured Projects
             </h2>
 
             <div className="space-y-4">
               {PROJECTS.map((proj) => (
-                <div key={proj.id} className="p-4 rounded-xl bg-dark-900 border border-slate-800/80 space-y-2.5">
+                <div key={proj.id} className="p-4 sm:p-5 rounded-xl bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800/80 shadow-sm space-y-2.5">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
-                      <h3 className="text-sm sm:text-base font-bold text-white font-display">
+                      <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white font-display">
                         {proj.title}
                       </h3>
                       <Badge variant="tech" size="sm">
@@ -211,17 +211,37 @@ export default function ResumeModal({ isOpen, onClose }) {
                           href={proj.links.live} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-emerald-400 hover:underline flex items-center gap-1"
+                          className="text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1 font-medium"
                         >
                           Live Demo <ExternalLink className="w-3 h-3" />
                         </a>
                       )}
-                      {proj.links.github && (
+                      {proj.links.githubFrontend && (
+                        <a 
+                          href={proj.links.githubFrontend} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1 font-medium"
+                        >
+                          Frontend Repo <ExternalLink className="w-3 h-3" />
+                        </a>
+                      )}
+                      {proj.links.githubBackend && (
+                        <a 
+                          href={proj.links.githubBackend} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1 font-medium"
+                        >
+                          Backend Repo <ExternalLink className="w-3 h-3" />
+                        </a>
+                      )}
+                      {!proj.links.githubFrontend && proj.links.github && (
                         <a 
                           href={proj.links.github} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-blue-400 hover:underline flex items-center gap-1"
+                          className="text-blue-600 dark:text-blue-400 hover:underline flex items-center gap-1 font-medium"
                         >
                           GitHub <ExternalLink className="w-3 h-3" />
                         </a>
@@ -229,10 +249,10 @@ export default function ResumeModal({ isOpen, onClose }) {
                     </div>
                   </div>
 
-                  <ul className="space-y-1 text-xs text-slate-300 list-disc list-inside">
+                  <ul className="space-y-1 text-xs text-slate-700 dark:text-slate-300 list-disc list-inside">
                     {proj.features.map((f, fIdx) => (
                       <li key={fIdx}>
-                        <strong className="text-slate-200">{f.title}:</strong> {f.desc}
+                        <strong className="text-slate-900 dark:text-slate-200">{f.title}:</strong> {f.desc}
                       </li>
                     ))}
                   </ul>
@@ -243,22 +263,22 @@ export default function ResumeModal({ isOpen, onClose }) {
 
           {/* Experience */}
           <div className="space-y-4">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-emerald-400 border-b border-slate-800 pb-1">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 border-b border-slate-200 dark:border-slate-800 pb-1">
               Project & Practical Experience
             </h2>
 
             <div className="space-y-3">
               {EXPERIENCES.map((exp, idx) => (
-                <div key={idx} className="p-4 rounded-xl bg-dark-900 border border-slate-800/80 space-y-2">
+                <div key={idx} className="p-4 sm:p-5 rounded-xl bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800/80 shadow-sm space-y-2">
                   <div className="flex items-center justify-between flex-wrap gap-1">
                     <div>
-                      <h3 className="text-sm font-bold text-white">{exp.role}</h3>
-                      <div className="text-xs text-emerald-400 font-medium">{exp.company} • {exp.location}</div>
+                      <h3 className="text-sm font-bold text-slate-900 dark:text-white">{exp.role}</h3>
+                      <div className="text-xs text-emerald-600 dark:text-emerald-400 font-medium">{exp.company} • {exp.location}</div>
                     </div>
-                    <span className="text-xs font-mono text-slate-400">{exp.duration}</span>
+                    <span className="text-xs font-mono text-slate-500 dark:text-slate-400">{exp.duration}</span>
                   </div>
 
-                  <ul className="space-y-1 text-xs text-slate-300 list-disc list-inside">
+                  <ul className="space-y-1 text-xs text-slate-700 dark:text-slate-300 list-disc list-inside">
                     {exp.highlights.map((h, hIdx) => (
                       <li key={hIdx}>{h}</li>
                     ))}
@@ -271,27 +291,27 @@ export default function ResumeModal({ isOpen, onClose }) {
           {/* Education & Achievements */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="space-y-2">
-              <h2 className="text-sm font-bold uppercase tracking-wider text-emerald-400 border-b border-slate-800 pb-1">
+              <h2 className="text-sm font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 border-b border-slate-200 dark:border-slate-800 pb-1">
                 Education
               </h2>
-              <div className="p-3.5 rounded-xl bg-dark-900 border border-slate-800/80 space-y-1 text-xs">
-                <div className="font-bold text-white text-sm">University of Allahabad</div>
-                <div className="text-slate-300">Bachelor of Commerce (B.Com.)</div>
-                <div className="text-slate-400 flex justify-between pt-1">
+              <div className="p-3.5 rounded-xl bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800/80 shadow-sm space-y-1 text-xs">
+                <div className="font-bold text-slate-900 dark:text-white text-sm">University of Allahabad</div>
+                <div className="text-slate-700 dark:text-slate-300">Bachelor of Commerce (B.Com.)</div>
+                <div className="text-slate-500 dark:text-slate-400 flex justify-between pt-1">
                   <span>Prayagraj, Uttar Pradesh</span>
-                  <span className="font-mono text-emerald-400">Graduation: 2027</span>
+                  <span className="font-mono text-emerald-600 dark:text-emerald-400">Graduation: 2027</span>
                 </div>
               </div>
             </div>
 
             <div className="space-y-2">
-              <h2 className="text-sm font-bold uppercase tracking-wider text-emerald-400 border-b border-slate-800 pb-1">
+              <h2 className="text-sm font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 border-b border-slate-200 dark:border-slate-800 pb-1">
                 Key Achievements
               </h2>
-              <div className="p-3.5 rounded-xl bg-dark-900 border border-slate-800/80 space-y-1 text-xs text-slate-300">
+              <div className="p-3.5 rounded-xl bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-800/80 shadow-sm space-y-1 text-xs text-slate-700 dark:text-slate-300">
                 {RESUME_DATA.achievements.map((ach, aIdx) => (
                   <div key={aIdx} className="flex items-start gap-1.5">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                     <span>{ach}</span>
                   </div>
                 ))}
@@ -301,7 +321,7 @@ export default function ResumeModal({ isOpen, onClose }) {
         </div>
 
         {/* Footer info */}
-        <div className="px-6 py-3 border-t border-slate-800 bg-dark-850 flex items-center justify-between text-xs text-slate-400 shrink-0">
+        <div className="px-6 py-3 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-dark-850 flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 shrink-0">
           <span>References available upon request.</span>
           <Button variant="secondary" size="sm" onClick={onClose}>
             Close Resume

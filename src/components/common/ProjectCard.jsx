@@ -1,17 +1,18 @@
 import React from 'react';
-import { ExternalLink, FolderGit2, BookOpen, Check, Layers, ArrowUpRight, ShieldCheck, Sparkles, Film, BookMarked, Code2, ShoppingCart } from 'lucide-react';
+import { ExternalLink, FolderGit2, BookOpen, Check, Activity, Sparkles, BookMarked, ShoppingCart } from 'lucide-react';
 import Button from './Button';
 import Badge from './Badge';
 
 export default function ProjectCard({ project, onOpenCaseStudy }) {
   const getProjectIcon = () => {
-    if (project.id === 'astroganesh') return <Sparkles className="w-5 h-5 text-amber-400" />;
-    if (project.id === 'megamart') return <ShoppingCart className="w-5 h-5 text-emerald-400" />;
-    return <BookMarked className="w-5 h-5 text-blue-400" />;
+    if (project.id === 'fitai') return <Activity className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />;
+    if (project.id === 'astroganesh') return <Sparkles className="w-5 h-5 text-amber-600 dark:text-amber-400" />;
+    if (project.id === 'megamart') return <ShoppingCart className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />;
+    return <BookMarked className="w-5 h-5 text-blue-600 dark:text-blue-400" />;
   };
 
   return (
-    <div className="group relative bg-dark-900 border border-slate-800/90 hover:border-slate-700/80 rounded-2xl sm:rounded-3xl p-5 sm:p-8 transition-all duration-300 hover:shadow-2xl hover:shadow-black/60 glow-card flex flex-col justify-between overflow-hidden w-full max-w-full">
+    <div className="group relative bg-white dark:bg-dark-900 border border-slate-200/90 dark:border-slate-800/90 hover:border-slate-300 dark:hover:border-slate-700/80 rounded-2xl sm:rounded-3xl p-5 sm:p-8 transition-all duration-300 shadow-sm hover:shadow-xl dark:hover:shadow-2xl dark:hover:shadow-black/60 glow-card flex flex-col justify-between overflow-hidden w-full max-w-full">
       {/* Background Gradient Tint */}
       <div className={`absolute top-0 right-0 w-80 max-w-full h-80 bg-gradient-to-bl ${project.imageBg} rounded-full blur-3xl pointer-events-none opacity-40 group-hover:opacity-70 transition-opacity`} />
 
@@ -19,7 +20,7 @@ export default function ProjectCard({ project, onOpenCaseStudy }) {
         {/* Top Badges & Category */}
         <div className="flex flex-wrap items-center justify-between gap-2">
           <div className="flex items-center gap-2">
-            <span className="p-2 rounded-xl bg-dark-800 border border-slate-700/60 text-emerald-400">
+            <span className="p-2 rounded-xl bg-slate-100 dark:bg-dark-800 border border-slate-200 dark:border-slate-700/60">
               {getProjectIcon()}
             </span>
             <Badge variant="blue" size="sm">
@@ -33,26 +34,26 @@ export default function ProjectCard({ project, onOpenCaseStudy }) {
 
         {/* Project Header Info */}
         <div className="space-y-2">
-          <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight font-display group-hover:text-emerald-300 transition-colors break-words">
+          <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white tracking-tight font-display group-hover:text-emerald-600 dark:group-hover:text-emerald-300 transition-colors break-words">
             {project.shortTitle}
           </h3>
-          <p className="text-sm font-medium text-slate-300">
+          <p className="text-sm font-medium text-slate-700 dark:text-slate-300">
             {project.tagline}
           </p>
-          <p className="text-xs sm:text-sm text-slate-400 leading-relaxed pt-1">
+          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed pt-1">
             {project.overview}
           </p>
         </div>
 
         {/* Key Features Preview */}
-        <div className="space-y-2 pt-2 border-t border-slate-800/80">
-          <div className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+        <div className="space-y-2 pt-2 border-t border-slate-200 dark:border-slate-800/80">
+          <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
             Key Highlights
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {project.features.slice(0, 4).map((feature, idx) => (
-              <div key={idx} className="flex items-start gap-2 text-xs text-slate-300">
-                <Check className="w-3.5 h-3.5 text-emerald-400 shrink-0 mt-0.5" />
+              <div key={idx} className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
+                <Check className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                 <span className="line-clamp-2">{feature.title}</span>
               </div>
             ))}
@@ -61,10 +62,10 @@ export default function ProjectCard({ project, onOpenCaseStudy }) {
 
         {/* Deployment Info if available */}
         {project.deployments && (
-          <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400 font-mono pt-1">
-            <span className="text-slate-400">Hosted:</span>
+          <div className="flex flex-wrap items-center gap-2 text-xs text-slate-500 dark:text-slate-400 font-mono pt-1">
+            <span>Hosted:</span>
             {project.deployments.map((d, idx) => (
-              <span key={idx} className="px-2 py-0.5 rounded-md bg-dark-800 border border-slate-700/60 text-slate-300 break-words">
+              <span key={idx} className="px-2 py-0.5 rounded-md bg-slate-100 dark:bg-dark-800 border border-slate-200 dark:border-slate-700/60 text-slate-700 dark:text-slate-300 break-words">
                 {d.name} → {d.platform}
               </span>
             ))}
@@ -82,7 +83,7 @@ export default function ProjectCard({ project, onOpenCaseStudy }) {
       </div>
 
       {/* Action Buttons & Repos */}
-      <div className="relative pt-6 mt-6 border-t border-slate-800/80 flex flex-wrap items-center gap-2.5 sm:gap-3">
+      <div className="relative pt-6 mt-6 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap items-center gap-2.5 sm:gap-3">
         <Button
           variant="primary"
           size="sm"
@@ -106,7 +107,18 @@ export default function ProjectCard({ project, onOpenCaseStudy }) {
           </Button>
         )}
 
-        {project.links.github && (
+        {project.links.githubFrontend ? (
+          <Button
+            variant="outline"
+            size="sm"
+            href={project.links.githubFrontend}
+            target="_blank"
+            icon={FolderGit2}
+            iconPosition="left"
+          >
+            Frontend
+          </Button>
+        ) : project.links.github && (
           <Button
             variant="outline"
             size="sm"
@@ -118,7 +130,21 @@ export default function ProjectCard({ project, onOpenCaseStudy }) {
             GitHub Repo
           </Button>
         )}
+
+        {project.links.githubBackend && (
+          <Button
+            variant="outline"
+            size="sm"
+            href={project.links.githubBackend}
+            target="_blank"
+            icon={FolderGit2}
+            iconPosition="left"
+          >
+            Backend
+          </Button>
+        )}
       </div>
     </div>
   );
 }
+

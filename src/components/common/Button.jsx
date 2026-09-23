@@ -25,11 +25,11 @@ export default function Button({
   };
 
   const variantStyles = {
-    primary: "bg-white text-dark-900 hover:bg-slate-100 font-semibold shadow-sm hover:shadow active:scale-[0.98]",
-    secondary: "bg-dark-800/80 hover:bg-dark-700/90 text-slate-200 hover:text-white border border-slate-700/60 hover:border-slate-500/80 active:scale-[0.98]",
-    outline: "bg-transparent text-slate-300 hover:text-white border border-slate-700/80 hover:border-slate-500 hover:bg-dark-800/50 active:scale-[0.98]",
-    ghost: "bg-transparent text-slate-400 hover:text-slate-200 hover:bg-dark-800/60",
-    emerald: "bg-emerald-500 hover:bg-emerald-400 text-dark-950 font-semibold shadow-lg shadow-emerald-500/20 active:scale-[0.98]",
+    primary: "bg-slate-900 text-white hover:bg-slate-800 dark:bg-white dark:text-dark-950 dark:hover:bg-slate-100 font-semibold shadow-sm hover:shadow active:scale-[0.98]",
+    secondary: "bg-white hover:bg-slate-100 text-slate-800 dark:bg-dark-800/90 dark:hover:bg-dark-700/90 dark:text-slate-200 dark:hover:text-white border border-slate-200 dark:border-slate-700/60 active:scale-[0.98] shadow-sm",
+    outline: "bg-transparent text-slate-700 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white border border-slate-300 dark:border-slate-700/80 hover:border-slate-400 dark:hover:border-slate-500 hover:bg-slate-100/80 dark:hover:bg-dark-800/50 active:scale-[0.98]",
+    ghost: "bg-transparent text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-dark-800/60",
+    emerald: "bg-emerald-600 hover:bg-emerald-500 text-white dark:bg-emerald-500 dark:hover:bg-emerald-400 dark:text-dark-950 font-semibold shadow-md shadow-emerald-500/20 active:scale-[0.98]",
   };
 
   const combinedStyles = `${baseStyles} ${sizeStyles[size] || sizeStyles.md} ${variantStyles[variant] || variantStyles.primary} ${className}`;

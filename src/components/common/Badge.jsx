@@ -17,14 +17,14 @@ export default function Badge({
   };
 
   const variantStyles = {
-    emerald: "bg-emerald-500/10 text-emerald-300 border-emerald-500/25",
-    blue: "bg-blue-500/10 text-blue-300 border-blue-500/25",
-    indigo: "bg-indigo-500/10 text-indigo-300 border-indigo-500/25",
-    purple: "bg-purple-500/10 text-purple-300 border-purple-500/25",
-    cyan: "bg-cyan-500/10 text-cyan-300 border-cyan-500/25",
-    amber: "bg-amber-500/10 text-amber-300 border-amber-500/25",
-    gray: "bg-slate-800/80 text-slate-300 border-slate-700/60",
-    tech: "bg-dark-800/90 text-slate-300 border-slate-700/50 font-mono text-[11px]",
+    emerald: "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-500/10 dark:text-emerald-300 dark:border-emerald-500/25",
+    blue: "bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-500/10 dark:text-blue-300 dark:border-blue-500/25",
+    indigo: "bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-500/10 dark:text-indigo-300 dark:border-indigo-500/25",
+    purple: "bg-purple-50 text-purple-700 border-purple-200 dark:bg-purple-500/10 dark:text-purple-300 dark:border-purple-500/25",
+    cyan: "bg-cyan-50 text-cyan-700 border-cyan-200 dark:bg-cyan-500/10 dark:text-cyan-300 dark:border-cyan-500/25",
+    amber: "bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-500/10 dark:text-amber-300 dark:border-amber-500/25",
+    gray: "bg-slate-100 text-slate-700 border-slate-200 dark:bg-slate-800/80 dark:text-slate-300 dark:border-slate-700/60",
+    tech: "bg-slate-100 text-slate-700 border-slate-200 dark:bg-dark-800/90 dark:text-slate-300 dark:border-slate-700/50 font-mono text-[11px]",
   };
 
   return (

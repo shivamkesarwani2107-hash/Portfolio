@@ -35,10 +35,10 @@ export default function CommandPalette({
       category: "Navigation",
       items: [
         { id: "nav-home", title: "Home / Hero", subtitle: "Jump to introduction & overview", icon: Sparkles, action: () => scrollToSection('home') },
-        { id: "nav-projects", title: "Featured Projects", subtitle: "AstroGanesh, MegaMart & Library System", icon: FolderGit2, action: () => scrollToSection('projects') },
+        { id: "nav-projects", title: "Featured Projects", subtitle: "FitAI, AstroGanesh, MegaMart & Library System", icon: FolderGit2, action: () => scrollToSection('projects') },
         { id: "nav-experience", title: "Experience & Certifications", subtitle: "MERN Stack Developer Intern at Devlupers", icon: Briefcase, action: () => scrollToSection('experience') },
-        { id: "nav-skills", title: "Technical Skills", subtitle: "Frontend, Backend, Database, Tools", icon: Code, action: () => scrollToSection('skills') },
-        { id: "nav-architecture", title: "Full-Stack Architecture", subtitle: "MERN system flow & service integrations", icon: Layers, action: () => scrollToSection('architecture') },
+        { id: "nav-skills", title: "Technical Skills", subtitle: "Frontend, Backend, Database, AI & Tools", icon: Code, action: () => scrollToSection('skills') },
+        { id: "nav-architecture", title: "Full-Stack Architecture", subtitle: "MERN system flow, AI workflows & payment systems", icon: Layers, action: () => scrollToSection('architecture') },
         { id: "nav-about", title: "About Me & Education", subtitle: "B.Com background & software engineering focus", icon: User, action: () => scrollToSection('about') },
         { id: "nav-contact", title: "Contact Information", subtitle: "Get in touch for opportunities", icon: Mail, action: () => scrollToSection('contact') },
       ]
@@ -194,14 +194,14 @@ export default function CommandPalette({
     <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-20 px-3 sm:px-6 w-full max-w-full overflow-hidden">
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 bg-black/70 backdrop-blur-sm transition-opacity"
+        className="fixed inset-0 bg-slate-900/50 dark:bg-black/70 backdrop-blur-sm transition-opacity"
         onClick={onClose}
       />
 
       {/* Modal Dialog */}
-      <div className="relative w-full max-w-2xl bg-dark-900 border border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden z-10 animate-scale-up">
+      <div className="relative w-full max-w-2xl bg-white dark:bg-dark-900 border border-slate-200 dark:border-slate-700/80 rounded-2xl shadow-2xl overflow-hidden z-10 animate-scale-up">
         {/* Search Input Bar */}
-        <div className="flex items-center px-4 py-3.5 border-b border-slate-800 bg-dark-850/80">
+        <div className="flex items-center px-4 py-3.5 border-b border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-dark-850/80">
           <Search className="w-5 h-5 text-slate-400 shrink-0 mr-3" />
           <input
             ref={inputRef}
@@ -212,32 +212,32 @@ export default function CommandPalette({
               setSelectedIndex(0);
             }}
             placeholder="Search projects, skills, experience, or actions..."
-            className="w-full bg-transparent text-slate-100 placeholder-slate-400 text-sm focus:outline-none"
+            className="w-full bg-transparent text-slate-900 dark:text-slate-100 placeholder-slate-400 text-sm focus:outline-none"
           />
           {query && (
             <button
               onClick={() => setQuery('')}
-              className="text-slate-400 hover:text-slate-200 p-1 rounded hover:bg-slate-800"
+              className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1 rounded hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors"
             >
               <X className="w-4 h-4" />
             </button>
           )}
-          <kbd className="hidden sm:inline-flex items-center gap-1 text-[11px] font-mono text-slate-400 bg-dark-800 border border-slate-700/80 px-2 py-0.5 rounded ml-2">
+          <kbd className="hidden sm:inline-flex items-center gap-1 text-[11px] font-mono text-slate-500 dark:text-slate-400 bg-slate-200 dark:bg-dark-800 border border-slate-300 dark:border-slate-700/80 px-2 py-0.5 rounded ml-2">
             ESC
           </kbd>
         </div>
 
         {/* Search Results List */}
-        <div className="max-h-[60vh] overflow-y-auto p-2 divide-y divide-slate-800/40">
+        <div className="max-h-[60vh] overflow-y-auto p-2 divide-y divide-slate-100 dark:divide-slate-800/40 custom-scrollbar">
           {flatFilteredItems.length === 0 ? (
             <div className="text-center py-10 px-4">
-              <p className="text-sm text-slate-400">No results found for "{query}"</p>
-              <p className="text-xs text-slate-500 mt-1">Try searching for "AstroGanesh", "MegaMart", "Node.js", "Resume", or "Contact"</p>
+              <p className="text-sm text-slate-500 dark:text-slate-400">No results found for "{query}"</p>
+              <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Try searching for "FitAI", "AstroGanesh", "MegaMart", "Node.js", "Resume", or "Contact"</p>
             </div>
           ) : (
             filteredGroups.map((group) => (
               <div key={group.category} className="py-2">
-                <div className="px-3 py-1.5 text-[11px] font-semibold tracking-wider text-slate-400 uppercase">
+                <div className="px-3 py-1.5 text-[11px] font-semibold tracking-wider text-slate-500 dark:text-slate-400 uppercase">
                   {group.category}
                 </div>
                 <div className="space-y-1">
@@ -253,20 +253,20 @@ export default function CommandPalette({
                         onMouseEnter={() => setSelectedIndex(currentIndex)}
                         className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-left transition-colors ${
                           isSelected
-                            ? 'bg-emerald-500/15 text-emerald-200 border border-emerald-500/30'
-                            : 'text-slate-300 hover:bg-slate-800/60 hover:text-slate-100 border border-transparent'
+                            ? 'bg-emerald-50 dark:bg-emerald-500/15 text-emerald-900 dark:text-emerald-200 border border-emerald-200 dark:border-emerald-500/30'
+                            : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800/60 hover:text-slate-900 dark:hover:text-slate-100 border border-transparent'
                         }`}
                       >
                         <div className="flex items-center gap-3 min-w-0 pr-2">
-                          <div className={`p-2 rounded-lg shrink-0 ${isSelected ? 'bg-emerald-500/20 text-emerald-300' : 'bg-dark-800 text-slate-400'}`}>
+                          <div className={`p-2 rounded-lg shrink-0 ${isSelected ? 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-300' : 'bg-slate-100 dark:bg-dark-800 text-slate-500 dark:text-slate-400'}`}>
                             <ItemIcon className="w-4 h-4" />
                           </div>
                           <div className="min-w-0">
                             <div className="text-sm font-medium truncate">{item.title}</div>
-                            <div className="text-xs text-slate-400 truncate">{item.subtitle}</div>
+                            <div className="text-xs text-slate-500 dark:text-slate-400 truncate">{item.subtitle}</div>
                           </div>
                         </div>
-                        <ArrowRight className={`w-4 h-4 shrink-0 ${isSelected ? 'text-emerald-400 translate-x-0.5' : 'text-slate-600'} transition-transform`} />
+                        <ArrowRight className={`w-4 h-4 shrink-0 ${isSelected ? 'text-emerald-600 dark:text-emerald-400 translate-x-0.5' : 'text-slate-400 dark:text-slate-600'} transition-transform`} />
                       </button>
                     );
                   })}
@@ -277,19 +277,19 @@ export default function CommandPalette({
         </div>
 
         {/* Footer shortcuts */}
-        <div className="px-4 py-2.5 border-t border-slate-800 bg-dark-950/60 flex items-center justify-between text-[11px] text-slate-400 font-mono gap-2">
+        <div className="px-4 py-2.5 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-dark-950/60 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 font-mono gap-2">
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1">
-              <kbd className="bg-dark-800 border border-slate-700 px-1.5 py-0.5 rounded text-[10px]">↑</kbd>
-              <kbd className="bg-dark-800 border border-slate-700 px-1.5 py-0.5 rounded text-[10px]">↓</kbd>
+              <kbd className="bg-slate-200 dark:bg-dark-800 border border-slate-300 dark:border-slate-700 px-1.5 py-0.5 rounded text-[10px]">↑</kbd>
+              <kbd className="bg-slate-200 dark:bg-dark-800 border border-slate-300 dark:border-slate-700 px-1.5 py-0.5 rounded text-[10px]">↓</kbd>
               to navigate
             </span>
             <span className="flex items-center gap-1">
-              <kbd className="bg-dark-800 border border-slate-700 px-1.5 py-0.5 rounded text-[10px]">↵</kbd>
+              <kbd className="bg-slate-200 dark:bg-dark-800 border border-slate-300 dark:border-slate-700 px-1.5 py-0.5 rounded text-[10px]">↵</kbd>
               to select
             </span>
           </div>
-          <span className="hidden sm:inline">Shivam Kesarwani Portfolio</span>
+          <span className="hidden sm:inline font-sans">Shivam Kesarwani Portfolio</span>
         </div>
       </div>
     </div>

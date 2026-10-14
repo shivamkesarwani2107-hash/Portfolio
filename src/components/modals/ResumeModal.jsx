@@ -110,6 +110,9 @@ export default function ResumeModal({ isOpen, onClose }) {
             <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight font-display break-words">
               {PERSONAL_INFO.name}
             </h1>
+            <p className="text-sm sm:text-base font-semibold text-blue-600 dark:text-blue-400">
+              Full Stack Developer | MERN Stack | AI Integration
+            </p>
             <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-slate-700 dark:text-slate-300">
               <a href={`tel:${PERSONAL_INFO.phone}`} className="flex items-center gap-1.5 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                 <Phone className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />

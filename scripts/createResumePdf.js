@@ -57,7 +57,9 @@ function createResumePdf() {
 
   // Header (Centered)
   drawText('F1', 19, 210, curY, 'Shivam Kesarwani');
-  curY -= 15;
+  curY -= 14;
+  drawText('F1', 10, 160, curY, 'Full Stack Developer | MERN Stack | AI Integration', [0, 0.35, 0.75]);
+  curY -= 13;
   
   // Contact row with clickable links
   const contactY = curY;
